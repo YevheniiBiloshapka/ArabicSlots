@@ -1,0 +1,46 @@
+html {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color:transparent;
+}
+
+
+body {
+    font-family: $font-family;
+    font-style: normal;
+    color: $cl-white-900;
+    background-color: $bg-main;
+    overflow-x: hidden;
+    margin: 0;
+    position: relative;
+    &.white{
+        background-color: #FFFFFF;
+    }
+
+}
+
+main {
+    position: relative;
+    width: 100%;
+}
+
+
+body.modal-open {
+    overflow: hidden;
+}
+
+
+
+
+.skeleton{
+    transition: transform 0.15s cubic-bezier(0.11, 0, 0.5, 0);
+    background: linear-gradient(100deg, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, .5) 50%, rgba(255, 255, 255, 0) 60%) rgba(117, 117, 117, 0.5);
+    background-size: 200% 100%;
+    background-position-x: 180%;
+    animation: 1s loading ease-in-out infinite;
+}
+
+@keyframes loading {
+    to {
+        background-position-x: -20%;
+    }
+}

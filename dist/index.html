@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" style="overflow-x:hidden ">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/index.min.css">
+
+
+	<title>Главная</title>
+	<link rel="apple-touch-icon" sizes="180x180" href="./files/favicon_io/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="./files/favicon_io/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="./files/favicon_io/favicon-16x16.png">
+<link rel="manifest" href="./files/favicon_io/site.webmanifest">
+
+</head>
+
+<body>
+
+<!-- !main-->
+<main class='container'>
+	<h1>Best Online Casinos in New Zealand |
+		Top NZ Casino Sites in 2024</h1>
+	<section class='container' style='display: flex; flex-direction: column; gap: 30px; align-items: center;width: 100%;margin: 40px auto'>
+    <h2>Button</h2>
+    <div style='display: grid; grid-template-columns: 1fr 1fr; gap: 10px 20px; align-items: center;width: 100%; border: 1px dashed #9747FF; padding:45px; border-radius: 15px;'>
+      <button class='button'>Button</button>
+      <button class='button small' disabled>Button small</button>
+      <button class='button second'>Second</button>
+      <button class='button second small' disabled>Second small</button>
+      <button class='button text'>Button Text</button>
+      <button class='button text small' disabled>Button Text small</button>
+    </div>
+
+  <h2>Inputs</h2>
+
+  <form style='display: grid; grid-template-columns: 1fr 1fr;  gap: 10px; align-items: center;width: 100%; border: 1px dashed #9747FF; padding:45px; border-radius: 15px;'>
+    <!-- ! Default-->
+    <div  class='input'>
+      <label class='input__label' for='default'>Default Input</label>
+      <div class='input__wrapper'>
+        <input id='default' class='input__field' type='text' placeholder='Default Input'>
+      </div>
+    </div>
+
+    <!-- ! Error-->
+    <div  class='input error'  >
+      <label class='input__label' for='first_name'>Enter First Name error</label>
+      <div class='input__wrapper'>
+        <input id='first_name' class='input__field' type='text' placeholder='Enter First Name' required>
+      </div>
+      <span class='input__message'>Enter First Name error</span>
+    </div>
+
+    <!-- ! icon before-->
+    <div  class='input' >
+      <label class='input__label' for='second_name'>Icon input before</label>
+      <div class='input__wrapper icon before '>
+        <svg class="input--icon__before" width="18" height="18" >
+          <use href="../img/icons/icons.svg#select-arrow"></use>
+        </svg>
+        <input id='second_name' class='input__field' type='text' placeholder='Icon input' required>
+      </div>
+      <span class='input__message'>error</span>
+    </div>
+
+    <!-- ! icon after-->
+    <div  class='input' >
+      <label class='input__label' for='after'>Icon input after</label>
+      <div class='input__wrapper icon after '>
+        <input id='after' class='input__field' type='text' placeholder='Icon input' required>
+        <svg class="input--icon__after" width="18" height="18" >
+          <use href="../img/icons/icons.svg#select-arrow"></use>
+        </svg>
+      </div>
+      <span class='input__message'>error</span>
+    </div>
+
+    <!-- ! icon 2 icon-->
+    <div  class='input' >
+      <label class='input__label' for='twoIcon'>Two icon</label>
+      <div class='input__wrapper icon after before'>
+        <svg class="input--icon__before" width="18" height="18" >
+          <use href="../img/icons/icons.svg#select-arrow"></use>
+        </svg>
+        <input id='twoIcon' class='input__field' type='text' placeholder='two icon' required>
+        <svg class="input--icon__after" width="18" height="18" >
+          <use href="../img/icons/icons.svg#select-arrow"></use>
+        </svg>
+      </div>
+      <span class='input__message'>error</span>
+    </div>
+
+    <!-- ! disabled-->
+    <div  class='input disabled' >
+      <label class='input__label' for='disabled'>Disabled</label>
+      <div class='input__wrapper icon after before'>
+        <svg class="input--icon__before" width="18" height="18" >
+          <use href="../img/icons/icons.svg#select-arrow"></use>
+        </svg>
+        <input id='disabled' class='input__field' type='text' placeholder='two icon' required disabled>
+        <svg class="input--icon__after"  width="18" height="18" >
+          <use href="../img/icons/icons.svg#select-arrow"></use>
+        </svg>
+      </div>
+      <span class='input__message'>error</span>
+    </div>
+  </form>
+
+  <h2>Selects</h2>
+  <div style='display: flex; flex-direction: row; gap: 10px; align-items: center;width: 100%; border: 1px dashed #9747FF; padding:45px; border-radius: 15px;'>
+    <!-- ! Default-->
+    <div  class='input'>
+      <label class='input__label' for='default'>Default Input</label>
+      <div class='input__wrapper'>
+        <input id='default' class='input__field' type='text' placeholder='Default Input'>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+</main>
+<footer class="footer">
+
+</footer>
+
+<script src="js/index.min.js"></script>
+
+</body>
+</html>
