@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" style="overflow-x:hidden ">
+<html lang="en" >
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/index.min.css">
-
 
 	<title>Главная</title>
 	@@include('html/favicon.html',{})
@@ -13,11 +12,42 @@
 </head>
 
 <body>
-
+@@include('html/header.html',{})
 <!-- !main-->
-<main class='container'>
-	<h1>Best Online Casinos in New Zealand |
-		Top NZ Casino Sites in 2024</h1>
+<main >
+<!--	hero-->
+	<section class='container hero'>
+		<div class='hero__wrapper'>
+			<div class='hero__info'>
+					<p class='hero__info--text author'>
+						<span class='hero__info--text-label '>Author:</span>
+						Grace Tennet
+					</p>
+					<p class='hero__info--text update'>
+						<span class='hero__info--text-label'>Update:</span>
+						October 2, 2024
+					</p>
+					<p class='hero__info--checked'>
+						<span>
+							<svg width='16' height='16'>
+								<use href='../img/icons/icons.svg#checked'></use>
+							</svg>
+						</span>
+						Fact Checked
+					</p>
+				</div>
+				<h1 class='hero__title'>Best Online Casinos in New Zealand |
+					Top NZ Casino Sites in 2024</h1>
+				<p class='hero__desc'>Kia ora and welcome to NZCasinoHEX! We are one of the most trusted and comprehensive resources for New Zealand gamblers. With more than a decade of experience behind our belt, we know how to choose the best online casino in New Zealand that accept NZD, has the best selections of payment methods and attractive bonuses. And we are ready to share this knowledge with you.</p>
+				<button class='button text small hero__btn '>
+					More info
+					<svg width='16' height='16' fill='#fff'>
+						<use href='../img/icons/icons.svg#arrowDown' fill='#fff'></use>
+					</svg>
+				</button>
+		</div>
+	</section>
+
 	@@include('html/components.html',{})
 </main>
 @@include('html/footer.html',{})

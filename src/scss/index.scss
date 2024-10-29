@@ -1,5 +1,5 @@
 @import "utils/fonts";
-//@import 'utils/normalize';
+@import 'utils/normalize';
 @import 'utils/variables';
 @import 'utils/scrollbar';
 @import 'utils/mixin';
@@ -10,14 +10,15 @@
 @import 'components/container';
 @import 'components/button';
 @import 'components/input';
+@import 'components/select';
 
 //@import 'components/accordion';
 //@import 'components/modal';
-//@import 'components/select';
 //main
 
 
-// ! index page
+// ! sections
+@import 'pages/hero';
 
 
 

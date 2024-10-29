@@ -1,6 +1,8 @@
-<section class='container' style='display: flex; flex-direction: column; gap: 30px; align-items: center;width: 100%;margin: 40px auto'>
-    <h2>Button</h2>
-    <div style='display: grid; grid-template-columns: 1fr 1fr; gap: 10px 20px; align-items: center;width: 100%; border: 1px dashed #9747FF; padding:45px; border-radius: 15px;'>
+<section class='container' style='display: flex; flex-direction: column; gap: 30px; align-items: center;width: 100%;padding: 150px 0;'>
+
+  <!--! Buttons-->
+    <h2>Buttons</h2>
+    <div style='display: grid; grid-template-columns: 1fr ; gap: 10px 20px; align-items: center;width: 100%; border: 1px dashed #9747FF; padding:45px; border-radius: 15px;'>
       <button class='button'>Button</button>
       <button class='button small' disabled>Button small</button>
       <button class='button second'>Second</button>
@@ -9,9 +11,9 @@
       <button class='button text small' disabled>Button Text small</button>
     </div>
 
+  <!--! inputs-->
   <h2>Inputs</h2>
-
-  <form style='display: grid; grid-template-columns: 1fr 1fr;  gap: 10px; align-items: center;width: 100%; border: 1px dashed #9747FF; padding:45px; border-radius: 15px;'>
+  <form style='display: grid; grid-template-columns: 1fr ;  gap: 10px 20px; align-items: center;width: 100%; border: 1px dashed #9747FF; padding:45px; border-radius: 15px;'>
     <!-- ! Default-->
     <div  class='input'>
       <label class='input__label' for='default'>Default Input</label>
@@ -84,15 +86,163 @@
     </div>
   </form>
 
+  <!--! Selects-->
   <h2>Selects</h2>
-  <div style='display: flex; flex-direction: row; gap: 10px; align-items: center;width: 100%; border: 1px dashed #9747FF; padding:45px; border-radius: 15px;'>
-    <!-- ! Default-->
-    <div  class='input'>
-      <label class='input__label' for='default'>Default Input</label>
-      <div class='input__wrapper'>
-        <input id='default' class='input__field' type='text' placeholder='Default Input'>
+  <div style='display: grid; grid-template-columns: 1fr; gap: 10px 20px; align-items: center;width: 100%; border: 1px dashed #9747FF; padding:45px; border-radius: 15px;'>
+
+    <!--            ! select-->
+    <div class='select' data-action='test-select'>
+      <label class="select__label" for='test'>Slots</label>
+      <div class='select__wrapper'>
+        <div class='select__wrapper--field'>
+          <p class='select__wrapper--field-value'><span></span> Slots </p>
+          <svg class='select__wrapper--field-icon' xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M1.64645 4.14645C1.84171 3.95118 2.15829 3.95118 2.35355 4.14645L6 7.79289L9.64645 4.14645C9.84171 3.95118 10.1583 3.95118 10.3536 4.14645C10.5488 4.34171 10.5488 4.65829 10.3536 4.85355L6.35355 8.85355C6.15829 9.04882 5.84171 9.04882 5.64645 8.85355L1.64645 4.85355C1.45118 4.65829 1.45118 4.34171 1.64645 4.14645Z" />
+          </svg>
+        </div>
+        <input class='select__input' id='test' type='text'
+               value />
+        <div class='select__dropdown'>
+          <ul class='select__dropdown-list'>
+            <li class='select__dropdown-item' data-value='NZ'>
+              <p>
+                New Zealand
+              </p>
+            </li>
+            <li class='select__dropdown-item' data-value='SA'>
+              <p>
+                Saudi Arabia
+              </p>
+            </li>
+            <li class='select__dropdown-item' data-value='AR'>
+              <p>
+                United Arab Emirates
+              </p>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
 
+    <!--            ! select mit icon-->
+    <div class='select icon' data-action='icon-select'>
+      <label class="select__label" for='icon'>Language</label>
+      <div class='select__wrapper'>
+        <div class='select__wrapper--field'>
+          <p class='select__wrapper--field-value'><span></span> Language </p>
+          <svg class='select__wrapper--field-icon' xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M1.64645 4.14645C1.84171 3.95118 2.15829 3.95118 2.35355 4.14645L6 7.79289L9.64645 4.14645C9.84171 3.95118 10.1583 3.95118 10.3536 4.14645C10.5488 4.34171 10.5488 4.65829 10.3536 4.85355L6.35355 8.85355C6.15829 9.04882 5.84171 9.04882 5.64645 8.85355L1.64645 4.85355C1.45118 4.65829 1.45118 4.34171 1.64645 4.14645Z" />
+          </svg>
+        </div>
+        <input class='select__input' id='icon' type='text'
+               value />
+        <div class='select__dropdown'>
+          <ul class='select__dropdown-list'>
+            <li class='select__dropdown-item' data-value='NZ'>
+              <svg class="input--icon__before" width="18" height="18" >
+                <use href="../img/icons/icons.svg#NZ"></use>
+              </svg>
+              <p>
+                New Zealand
+              </p>
+            </li>
+            <li class='select__dropdown-item' data-value='SA'>
+              <svg class="input--icon__before" width="18" height="18" >
+                <use href="../img/icons/icons.svg#AR"></use>
+              </svg>
+              <p>
+                Saudi Arabia
+              </p>
+            </li>
+            <li class='select__dropdown-item' data-value='AR'>
+              <svg class="input--icon__before" width="18" height="18" >
+                <use href="../img/icons/icons.svg#UAE"></use>
+              </svg>
+              <p>
+                United Arab Emirates
+              </p>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!--            ! small mit icon-->
+    <div class='select small  ' data-action='test-select-small'>
+      <label class="select__label" for='iconSmall'>Small Slots</label>
+      <div class='select__wrapper'>
+        <div class='select__wrapper--field'>
+          <p class='select__wrapper--field-value'><span></span> Slot </p>
+          <svg class='select__wrapper--field-icon' xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M1.64645 4.14645C1.84171 3.95118 2.15829 3.95118 2.35355 4.14645L6 7.79289L9.64645 4.14645C9.84171 3.95118 10.1583 3.95118 10.3536 4.14645C10.5488 4.34171 10.5488 4.65829 10.3536 4.85355L6.35355 8.85355C6.15829 9.04882 5.84171 9.04882 5.64645 8.85355L1.64645 4.85355C1.45118 4.65829 1.45118 4.34171 1.64645 4.14645Z" />
+          </svg>
+        </div>
+        <input class='select__input' id='iconSmall' type='text'
+               value />
+        <div class='select__dropdown'>
+          <ul class='select__dropdown-list'>
+            <li class='select__dropdown-item' data-value='NZ'>
+              <p>
+                New Zealand
+              </p>
+            </li>
+            <li class='select__dropdown-item' data-value='SA'>
+              <p>
+                Saudi Arabia
+              </p>
+            </li>
+            <li class='select__dropdown-item' data-value='AR'>
+              <p>
+                United Arab Emirates
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!--            ! small mit icon-->
+    <div class='select small icon' data-action='icon-select-small'>
+      <label class="select__label" for='iconSmallSelect'>Small mit Icon</label>
+      <div class='select__wrapper'>
+        <div class='select__wrapper--field'>
+          <p class='select__wrapper--field-value'><span></span> Language </p>
+          <svg class='select__wrapper--field-icon' xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M1.64645 4.14645C1.84171 3.95118 2.15829 3.95118 2.35355 4.14645L6 7.79289L9.64645 4.14645C9.84171 3.95118 10.1583 3.95118 10.3536 4.14645C10.5488 4.34171 10.5488 4.65829 10.3536 4.85355L6.35355 8.85355C6.15829 9.04882 5.84171 9.04882 5.64645 8.85355L1.64645 4.85355C1.45118 4.65829 1.45118 4.34171 1.64645 4.14645Z" />
+          </svg>
+        </div>
+        <input class='select__input' id='iconSmallSelect' type='text'
+               value />
+        <div class='select__dropdown'>
+          <ul class='select__dropdown-list'>
+            <li class='select__dropdown-item' data-value='NZ'>
+              <svg class="input--icon__before" width="18" height="18" >
+                <use href="../img/icons/icons.svg#NZ"></use>
+              </svg>
+              <p>
+                New Zealand
+              </p>
+            </li>
+            <li class='select__dropdown-item' data-value='SA'>
+              <svg class="input--icon__before" width="18" height="18" >
+                <use href="../img/icons/icons.svg#AR"></use>
+              </svg>
+              <p>
+                Saudi Arabia
+              </p>
+            </li>
+            <li class='select__dropdown-item' data-value='AR'>
+              <svg class="input--icon__before" width="18" height="18" >
+                <use href="../img/icons/icons.svg#UAE"></use>
+              </svg>
+              <p>
+                United Arab Emirates
+              </p>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
 </section>

@@ -38,14 +38,21 @@
 }
 
 $breakpoints: (
-  mob: 320px,
+  mob: 375px,
   tab: 744px,
   desk: 1280px,
+  deskL: 1440px,
 );
 
 @mixin media-query($breakpoint) {
   $breakpoint-value: map-get($breakpoints, $breakpoint);
   @media (min-width: $breakpoint-value) {
+    @content;
+  }
+}
+@mixin media-queryMax($breakpoint) {
+  $breakpoint-value: map-get($breakpoints, $breakpoint);
+  @media (max-width: $breakpoint-value) {
     @content;
   }
 }

@@ -3,17 +3,10 @@
     margin-left: auto;
     margin-right: auto;
     padding: 0 16px;
-    width: 375px;
-
-    @media screen and (min-width: 744px) {
-        width: 744px;
-    }
-    @media screen and (min-width: 1280px) {
-        width: 1280px;
-    }
-    @media screen and (min-width: 1440px) {
-        width: 1344px;
-    }
+    @include media-query(mob){width: 375px;}
+    @include media-query(tab){width: 744px;}
+    @include media-query(desk){width: 1280px;}
+    @include media-query(deskL){width: 1344px;}
 }
 
 

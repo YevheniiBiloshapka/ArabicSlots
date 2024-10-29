@@ -9,6 +9,7 @@
   padding: 12px 16px;
 
   border-radius: $br8;
+  white-space: nowrap;
   cursor: pointer;
   -webkit-user-select: none !important;
   -moz-user-select: none !important;
@@ -24,7 +25,9 @@
   @include transition();
   color: $cl-grey-900;
   background: $gr-gold;
-
+  & svg{
+    fill: $cl-white-800;
+  }
   &:hover{
     background: $gr-gold-hover;
   }
