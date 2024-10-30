@@ -1,0 +1,152 @@
+.top-casino{
+  padding: 24px 0;
+  background-color: $bg-elem;
+
+  @include media-query(desk){
+    padding: 64px 0;
+  }
+}
+.top-casino__container{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+  @include media-query(desk){
+    gap: 16px;
+    margin-bottom: 56px;
+  }
+}
+.top-casino__description-box{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  & .top-casino__title,& h2{
+    color: $cl-white-900;
+    @include font-title(h2-mob);
+  }
+  & .top-casino__desc,& p{
+    color: $cl-white-700;
+    @include font-body(16-reg);
+  }
+  @include media-query(desk){
+    gap: 16px;
+    & .top-casino__title,& h2{
+      @include font-title(h2);
+    }
+    & .top-casino__desc,& p{
+      @include font-body(18-reg);
+    }
+  }
+}
+.top-casino__feature{
+  display: flex;
+  flex-direction: column;
+  gap:12px;
+
+  &--btn{
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    padding: 8px 16px;
+    gap: 8px;
+
+
+    @include font-body(18-med);
+    border-radius: $br8;
+    color: $cl-white-900;
+    background-color: $cl-white-25;
+    border: none;
+    outline: none;
+    @include transition();
+    &:not(.top-casino__feature--list--item):hover{
+      background-color: $cl-grey-700;
+    }
+  }
+  &--list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  @include media-query(desk){
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+}
+.top-casino__modal-disclaimer{
+  & .modal{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 16px;
+    width: 100%;
+    max-width: 500px;
+
+    border-radius: $br16;
+    border: 1px solid $cl-white-400;
+    background: $cl-grey-800;
+  }
+  &--title{
+    color: $cl-white-900;
+    @include font-body(16-bold);
+    margin-bottom: 8px;
+  }
+  &--desc{
+    color: $cl-white-600;
+    @include font-body(14-reg);
+    &:not(:last-child){
+      margin-bottom: 8px;
+    }
+  }
+  &--btn-close{
+    position: absolute;
+    top: 16px;
+    right: 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    $size: 24px;
+    width: $size;
+    height: $size;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    @include transition();
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.80292 2.80268C3.09582 2.50978 3.57069 2.50978 3.86358 2.80268L9.99992 8.93901L16.1363 2.80268C16.4291 2.50978 16.904 2.50978 17.1969 2.80268C17.4898 3.09557 17.4898 3.57044 17.1969 3.86334L11.0606 9.99967L17.1969 16.136C17.4898 16.4289 17.4898 16.9038 17.1969 17.1967C16.904 17.4896 16.4291 17.4896 16.1363 17.1967L9.99992 11.0603L3.86358 17.1967C3.57069 17.4896 3.09582 17.4896 2.80292 17.1967C2.51003 16.9038 2.51003 16.4289 2.80292 16.136L8.93926 9.99967L2.80292 3.86334C2.51003 3.57044 2.51003 3.09557 2.80292 2.80268Z' fill='%23ffffff'/%3E%3C/svg%3E");
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    &:hover::before {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.80292 2.80268C3.09582 2.50978 3.57069 2.50978 3.86358 2.80268L9.99992 8.93901L16.1363 2.80268C16.4291 2.50978 16.904 2.50978 17.1969 2.80268C17.4898 3.09557 17.4898 3.57044 17.1969 3.86334L11.0606 9.99967L17.1969 16.136C17.4898 16.4289 17.4898 16.9038 17.1969 17.1967C16.904 17.4896 16.4291 17.4896 16.1363 17.1967L9.99992 11.0603L3.86358 17.1967C3.57069 17.4896 3.09582 17.4896 2.80292 17.1967C2.51003 16.9038 2.51003 16.4289 2.80292 16.136L8.93926 9.99967L2.80292 3.86334C2.51003 3.57044 2.51003 3.09557 2.80292 2.80268Z' fill='%23BABABA'/%3E%3C/svg%3E");
+    }
+  }
+  @include media-query(tab){
+    & .modal{
+      padding: 24px;
+    }
+    &--title{
+      @include font-body(18-bold);
+    }
+    &--desc{
+      @include font-body(16-reg);
+    }
+  }
+}
+.top-casino{
+  &--load-more{
+    margin: 56px auto 0;
+  }
+  @include media-query(tab){
+    &--load-more{
+      margin: 56px auto 0;
+      max-width: 200px;
+    }
+  }
+}

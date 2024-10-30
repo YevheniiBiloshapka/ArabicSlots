@@ -1,10 +1,12 @@
 
 import { Header } from './components/header.js';
 import { customSelect } from './components/customSelect.js';
+import initModal from './components/modal.js'
+import heroShowMore from './components/heroShowMore.js';
+import casinoCards from './components/casinoCards.js';
 
-
-document.addEventListener('DOMContentLoaded', function () {
-
+const testSelect = () => {
+  // удалить
   const testSelect = document.querySelector('[data-action="test-select"]');
   const iconSelect = document.querySelector('[data-action="icon-select"]');
   const smallTestSelect = document.querySelector('[data-action="test-select-small"]');
@@ -30,6 +32,32 @@ document.addEventListener('DOMContentLoaded', function () {
       console.log('%ctypePaper:', 'color: coral; ', selectedValue);
     });
   }
+};
+const loadMoreBtn = () => {
+  const loadMoreBtns = document.querySelectorAll('[data-target-loading]');
+  if (loadMoreBtns) {
+    loadMoreBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        btn.classList.add('loading');
+        btn.setAttribute('disabled', 'true');
+
+        setTimeout(() => {
+          btn.classList.remove('loading');
+          btn.removeAttribute('disabled');
+        }, 4000);
+      });
+    });
+  }
+};
+
+document.addEventListener('DOMContentLoaded', function () {
+
+
+  testSelect()
   Header();
+  initModal()
+  heroShowMore()
+  casinoCards()
+  loadMoreBtn()
 
 });

@@ -15,7 +15,8 @@
 @@include('html/header.html',{})
 <!-- !main-->
 <main >
-<!--	hero-->
+
+<!--!	hero-->
 	<section class='container hero'>
 		<div class='hero__wrapper'>
 			<div class='hero__info'>
@@ -39,15 +40,20 @@
 				<h1 class='hero__title'>Best Online Casinos in New Zealand |
 					Top NZ Casino Sites in 2024</h1>
 				<p class='hero__desc'>Kia ora and welcome to NZCasinoHEX! We are one of the most trusted and comprehensive resources for New Zealand gamblers. With more than a decade of experience behind our belt, we know how to choose the best online casino in New Zealand that accept NZD, has the best selections of payment methods and attractive bonuses. And we are ready to share this knowledge with you.</p>
-				<button class='button text small hero__btn '>
+				<button class='button text small hero__btn ' data-more-info-open>
 					More info
 					<svg width='16' height='16' fill='#fff'>
 						<use href='../img/icons/icons.svg#arrowDown' fill='#fff'></use>
 					</svg>
 				</button>
 		</div>
+		<div class='hero__hidden-box' data-target-more-info>
+			@@include('html/pages/textImgBox.html',{})
+		</div>
 	</section>
-
+	<!--!	Top NZ Real Money Online Casinos 2024-->
+	@@include('html/pages/topCasino.html',{})
+	<!--!	components-->
 	@@include('html/components.html',{})
 </main>
 @@include('html/footer.html',{})

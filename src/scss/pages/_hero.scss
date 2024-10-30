@@ -1,6 +1,8 @@
 .hero{
   padding: 24px 16px 32px;
-  &__wrapper{}
+  &__wrapper{
+
+  }
   &__title{
     color: $cl-white-900;
     @include font-title(h1-mob);
@@ -13,6 +15,15 @@
   }
   &__btn{
     width: fit-content;
+    margin-bottom: 32px;
+    & svg{
+      @include transition();
+    }
+    &.show{
+      & svg{
+        transform: rotate(180deg);
+      }
+    }
   }
   @include media-query(tab){
     padding: 82px 16px;
@@ -89,5 +100,25 @@
     &--text.update{
       order: 3;
     }
+  }
+}
+
+.hero__hidden-box{
+  max-height: 0;
+  overflow: hidden ;
+
+  $transitionHeight:  max-height 0.5s ease-out;
+  -webkit-transition: $transitionHeight;
+  -moz-transition: $transitionHeight;
+  -o-transition: $transitionHeight;
+  transition: $transitionHeight;
+  &.show{
+    max-height:  2000px;
+    //закрытие
+    $transitionHeight: max-height 0.8s ease;
+    -webkit-transition: $transitionHeight;
+    -moz-transition: $transitionHeight;
+    -o-transition: $transitionHeight;
+    transition: $transitionHeight;
   }
 }

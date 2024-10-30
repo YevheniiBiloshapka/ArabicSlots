@@ -20,6 +20,7 @@
     text-decoration: none;
   }
 
+
   @include font-body(14-caps);
   border: none;
   @include transition();
@@ -91,5 +92,20 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
+  }
+}
+
+.button.loading{
+  & svg {
+    animation: loadingBtn 1s linear infinite;
+  }
+}
+
+@keyframes loadingBtn {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
