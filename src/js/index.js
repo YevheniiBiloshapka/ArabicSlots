@@ -33,6 +33,19 @@ const testSelect = () => {
     });
   }
 };
+const showTableContent = () => {
+
+  const tableContentBox = document.querySelectorAll('[data-target-table-content]');
+  if (tableContentBox) {
+    tableContentBox.forEach(table => {
+      const btn = table.querySelector('[data-table-content-btn]');
+      btn.addEventListener('click',()=>{
+        table.classList.toggle("show")
+      })
+      }
+    )
+  }
+};
 const loadMoreBtn = () => {
   const loadMoreBtns = document.querySelectorAll('[data-target-loading]');
   if (loadMoreBtns) {
@@ -59,5 +72,6 @@ document.addEventListener('DOMContentLoaded', function () {
   heroShowMore()
   casinoCards()
   loadMoreBtn()
+  showTableContent()
 
 });

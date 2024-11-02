@@ -1,0 +1,20 @@
+.best-casino{
+  margin-bottom: 48px;
+
+  &__list-desc{
+    margin-bottom: 16px;
+  }
+  &__table{
+    margin-bottom: 48px;
+  }
+  @include media-query(tab){
+    margin-bottom: 100px;
+
+    &__list-desc{
+      margin-bottom: 32px;
+    }
+    &__table{
+      margin-bottom: 90px;
+    }
+  }
+}

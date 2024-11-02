@@ -1,0 +1,23 @@
+.note{
+  display: flex;
+  gap: 8px;
+  padding: 8px 12px;
+  margin:48px auto 32px;
+  border-radius:$br12;
+  background: rgba(137, 236, 163, 0.08);
+  &__title{
+    color: $cl-white-500;
+    @include font-body(14-reg);
+  }
+  &__content{
+    color: $cl-white-900;
+    @include font-body(14-med);
+  }
+  @include media-query(tab){
+    padding:12px 24px;
+    margin: 100px auto 24px;
+    &__content{
+      @include font-body(16-med);
+    }
+  }
+}

@@ -17,8 +17,8 @@
 <main >
 
 <!--!	hero-->
-	<section class='container hero'>
-		<div class='hero__wrapper'>
+	<div class='container hero'>
+		<section class='hero__wrapper'>
 			<div class='hero__info'>
 					<p class='hero__info--text author'>
 						<span class='hero__info--text-label '>Author:</span>
@@ -46,15 +46,44 @@
 						<use href='../img/icons/icons.svg#arrowDown' fill='#fff'></use>
 					</svg>
 				</button>
-		</div>
+		</section>
 		<div class='hero__hidden-box' data-target-more-info>
-			@@include('html/pages/textImgBox.html',{})
+			@@include('html/pages/textImgRightBox.html',{})
+			@@include('html/pages/note.html',{})
 		</div>
-	</section>
+	</div>
 	<!--!	Top NZ Real Money Online Casinos 2024-->
 	@@include('html/pages/topCasino.html',{})
+	<!--!	note-->
+	@@include('html/pages/note.html',{})
+	<!--!	table of contents-->
+	@@include('html/pages/tableOfContents.html',{})
+	<!--!	text Img Right Box-->
+	@@include('html/pages/textImgRightBox.html',{})
+	<!--!	text Img left Box-->
+	@@include('html/pages/textImgLeftBox.html',{})
+	<!--!	how We Select-->
+	@@include('html/pages/howWeSelect.html',{})
+	<!--!	casino req-->
+	@@include('html/pages/casinoReq.html',{})
+	<!--!	casino types-->
+	@@include('html/pages/casinoTypes.html',{})
+	<!--!how It Works.html-->
+	@@include('html/pages/howItWorks.html',{})
+	<!--!Top 10.html-->
+	@@include('html/pages/bestCasino.html',{})
+	<!--!	NZ Casino Sites That Have Earned The Bad Reputation-->
+		@@include('html/pages/badCasinos.html',{})
+	<!--!	Online Casino Games for Real Money-->
+	@@include('html/pages/casinoGames.html',{})
+		<!--!	Best Online Pokie Sites-->
+		@@include('html/pages/bestOnlinePokieSites.html',{})
+			<!--!	Casino Sites with Table & Card Games-->
+			@@include('html/pages/tableCardGames.html',{})
+				<!--!	logo section-->
+				@@include('html/pages/logoSection.html',{})
 	<!--!	components-->
-	@@include('html/components.html',{})
+<!--	@@include('html/components.html',{})-->
 </main>
 @@include('html/footer.html',{})
 

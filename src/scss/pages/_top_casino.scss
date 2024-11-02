@@ -11,9 +11,15 @@
   flex-direction: column;
   gap: 12px;
   margin-bottom: 24px;
+  &.mg32{
+    margin-bottom: 32px;
+  }
   @include media-query(desk){
     gap: 16px;
     margin-bottom: 56px;
+    &.mg32{
+      margin-bottom: 32px;
+    }
   }
 }
 .top-casino__description-box{

@@ -1,0 +1,65 @@
+.casino-table{
+  width: 100%;
+  overflow-x:auto;
+  padding-bottom: 6px;
+}
+.casino-table table{
+  width: 100%;
+  min-width: 100%;
+  overflow: hidden;
+  border-spacing: 1;
+  border-collapse: collapse;
+  border-radius: $br16;
+  background-color:$cl-white-25;
+}
+
+.casino-table table thead{
+  background-color:$cl-white-25;
+  & tr{
+    border-bottom: 1px solid $cl-white-50;
+  }
+  & tr th{
+    white-space: nowrap;
+    color: $cl-white-900;
+    @include font-body(16-bold);
+    text-align: start;
+    padding: 13px 16px 12px ;
+    border-right: 1px solid $cl-white-50;
+    &:last-child{
+      border-bottom: 0;
+      border-right: 0;
+    }
+  }
+  @include media-query(desk){
+    & tr th{
+      white-space: normal;
+    }
+  }
+}
+.casino-table table tbody{
+  & tr{
+    border-bottom: 1px solid $cl-white-50;
+    @include transition();
+    &:last-child{
+      border-bottom: 0;
+    }
+    &:hover{
+      background-color: $cl-white-0;
+    }
+  }
+  & tr td{
+    white-space: nowrap;
+    padding: 12px 16px;
+    border-right: 1px solid $cl-white-50;
+    color: $cl-white-900;
+    @include font-body(14-reg);
+    &:last-child{
+      border-right: 0;
+    }
+  }
+  @include media-query(desk){
+    & tr td{
+      white-space: normal;
+    }
+  }
+}

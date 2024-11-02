@@ -376,6 +376,7 @@ template {
 }
 *::-webkit-scrollbar {
   width: 8px;
+  height: 6px;
   background-color: transparent;
 }
 *::-webkit-scrollbar-track {
@@ -526,6 +527,87 @@ body.modal-open {
     background-position-x: -20%;
   }
 }
+.section__header {
+  margin-bottom: 24px;
+}
+.section__header h2 {
+  color: #FFFFFF;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+.section__header p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+  line-height: 1.4;
+  font-weight: 400;
+}
+.section__header p:not(:last-child) {
+  margin-bottom: 8px;
+}
+.section__header.center {
+  text-align: center;
+}
+@media (min-width: 744px) {
+  .section__header {
+    margin-bottom: 32px;
+  }
+  .section__header h2 {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 16px;
+  }
+  .section__header p {
+    font-size: 18px;
+    line-height: 1.4;
+    font-weight: 400;
+  }
+  .section__header p:not(:last-child) {
+    margin-bottom: 12px;
+  }
+}
+
+.sub-title {
+  color: #FFFFFF;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+@media (min-width: 744px) {
+  .sub-title {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+}
+
+.sub-title--desc {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+  line-height: 1.4;
+  font-weight: 400;
+}
+@media (min-width: 744px) {
+  .sub-title--desc {
+    font-size: 18px;
+    line-height: 1.4;
+    font-weight: 400;
+  }
+}
+
+section.container {
+  margin-top: 48px;
+  margin-bottom: 48px;
+}
+@media (min-width: 744px) {
+  section.container {
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+}
+
 .container {
   margin-left: auto;
   margin-right: auto;
@@ -1046,10 +1128,122 @@ form .input {
   display: flex;
   flex-direction: column;
   gap: 40px;
+  list-style: none;
+  padding: 0;
 }
 @media (min-width: 744px) {
   .casino-card__list {
     gap: 40px;
+  }
+}
+
+.casino-best-card__list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  list-style: none;
+  padding: 0;
+}
+.casino-best-card__list--item {
+  display: flex;
+  flex-direction: column;
+}
+.casino-best-card__list--item__title {
+  margin-bottom: 16px;
+}
+.casino-best-card__list--item__desc {
+  margin-top: 32px;
+  margin-bottom: 16px;
+}
+@media (min-width: 744px) {
+  .casino-best-card__list {
+    gap: 82px;
+  }
+  .casino-best-card__list--item__title {
+    margin-bottom: 32px;
+  }
+  .casino-best-card__list--item__desc {
+    margin-top: 56px;
+    margin-bottom: 24px;
+  }
+}
+
+.casino-best-card__list--item .casino-best-card__list--item--box {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.casino-best-card__list--item .casino-best-card__list--item--box .casino-best-card__list--item__benefits {
+  padding: 12px;
+  border-radius: 12px;
+}
+.casino-best-card__list--item .casino-best-card__list--item--box .casino-best-card__list--item__benefits--title {
+  margin-bottom: 12px;
+  font-size: 18px;
+  line-height: 1.4;
+  font-weight: 700;
+}
+.casino-best-card__list--item .casino-best-card__list--item--box .casino-best-card__list--item__benefits ul {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.casino-best-card__list--item .casino-best-card__list--item--box .casino-best-card__list--item__benefits ul li {
+  display: inline-flex;
+  gap: 12px;
+  color: #FFFFFF;
+  font-size: 16px;
+  line-height: 1.4;
+  font-weight: 500;
+}
+.casino-best-card__list--item .casino-best-card__list--item--box .casino-best-card__list--item__benefits ul li::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  min-width: 16px;
+  min-height: 16px;
+  margin-top: 4px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.casino-best-card__list--item .casino-best-card__list--item--box .casino-best-card__list--item__benefits.advantages {
+  background: rgba(137, 236, 163, 0.12);
+}
+.casino-best-card__list--item .casino-best-card__list--item--box .casino-best-card__list--item__benefits.advantages .casino-best-card__list--item__benefits--title {
+  color: #89ECA3;
+}
+.casino-best-card__list--item .casino-best-card__list--item--box .casino-best-card__list--item__benefits.advantages ul li:before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='16' viewBox='0 0 17 16' fill='none'%3E %3Cpath d='M16.0522 8C16.0522 12.4183 12.4705 16 8.05225 16C3.63397 16 0.0522461 12.4183 0.0522461 8C0.0522461 3.58172 3.63397 0 8.05225 0C12.4705 0 16.0522 3.58172 16.0522 8Z' fill='%231A9F3E'/%3E %3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M12.1212 4.5653C12.5454 4.91886 12.6028 5.54943 12.2492 5.97371L8.43968 10.5451C8.25981 10.761 7.99744 10.8912 7.71677 10.9039C7.4361 10.9167 7.16302 10.8107 6.96435 10.6121L4.67864 8.32634C4.28811 7.93582 4.28811 7.30265 4.67864 6.91213C5.06916 6.5216 5.70232 6.5216 6.09285 6.91213L7.60426 8.42354L10.7128 4.69334C11.0663 4.26906 11.6969 4.21174 12.1212 4.5653Z' fill='white'/%3E %3C/svg%3E");
+}
+.casino-best-card__list--item .casino-best-card__list--item--box .casino-best-card__list--item__benefits.disadvantages {
+  background: rgba(246, 125, 125, 0.12);
+}
+.casino-best-card__list--item .casino-best-card__list--item--box .casino-best-card__list--item__benefits.disadvantages .casino-best-card__list--item__benefits--title {
+  color: #F67D7D;
+}
+.casino-best-card__list--item .casino-best-card__list--item--box .casino-best-card__list--item__benefits.disadvantages ul li:before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='16' viewBox='0 0 17 16' fill='none'%3E%3Cg clip-path='url(%23clip0_455_53632)'%3E%3Cpath d='M8.875 0C4.46362 0 0.875 3.58862 0.875 8C0.875 12.4114 4.46362 16 8.875 16C13.2864 16 16.875 12.4114 16.875 8C16.875 3.58862 13.2864 0 8.875 0ZM12.375 8.66663H5.375C5.00696 8.66663 4.70837 8.36804 4.70837 8C4.70837 7.63196 5.00696 7.33337 5.375 7.33337H12.375C12.743 7.33337 13.0416 7.63196 13.0416 8C13.0416 8.36804 12.743 8.66663 12.375 8.66663Z' fill='%23F67D7D'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_455_53632'%3E%3Crect width='16' height='16' fill='white' transform='translate(0.875)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+}
+@media (min-width: 744px) {
+  .casino-best-card__list--item .casino-best-card__list--item--box {
+    flex-direction: row;
+    gap: 32px;
+  }
+  .casino-best-card__list--item .casino-best-card__list--item--box .casino-best-card__list--item__benefits {
+    flex: 1 0 calc(50% - 32px);
+    padding: 20px;
+  }
+  .casino-best-card__list--item .casino-best-card__list--item--box .casino-best-card__list--item__benefits--title {
+    margin-bottom: 16px;
+    font-size: 22px;
+    line-height: 1.4;
+    font-weight: 700;
+  }
+  .casino-best-card__list--item .casino-best-card__list--item--box .casino-best-card__list--item__benefits ul li {
+    font-size: 18px;
+    line-height: 1.4;
+    font-weight: 500;
   }
 }
 
@@ -1058,6 +1252,7 @@ form .input {
   border-radius: 16px;
   border: 1px solid #FFFFFF;
   background-color: rgba(255, 255, 255, 0.04);
+  z-index: 0;
 }
 .casino-card__show-btn {
   position: absolute;
@@ -1208,6 +1403,7 @@ form .input {
 
 .casino-card__top--info-box--item.rating {
   position: relative;
+  z-index: 0;
   background-color: rgba(255, 255, 255, 0.04);
   cursor: pointer;
   transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
@@ -1713,6 +1909,76 @@ form .input {
   background-color: #d4a628;
 }
 
+.casino-table {
+  width: 100%;
+  overflow-x: auto;
+  padding-bottom: 6px;
+}
+
+.casino-table table {
+  width: 100%;
+  min-width: 100%;
+  overflow: hidden;
+  border-spacing: 1;
+  border-collapse: collapse;
+  border-radius: 16px;
+  background-color: rgba(255, 255, 255, 0.04);
+}
+
+.casino-table table thead {
+  background-color: rgba(255, 255, 255, 0.04);
+}
+.casino-table table thead tr {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+.casino-table table thead tr th {
+  white-space: nowrap;
+  color: #FFFFFF;
+  font-size: 16px;
+  line-height: 1.4;
+  font-weight: 700;
+  text-align: start;
+  padding: 13px 16px 12px;
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+.casino-table table thead tr th:last-child {
+  border-bottom: 0;
+  border-right: 0;
+}
+@media (min-width: 1280px) {
+  .casino-table table thead tr th {
+    white-space: normal;
+  }
+}
+
+.casino-table table tbody tr {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.casino-table table tbody tr:last-child {
+  border-bottom: 0;
+}
+.casino-table table tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.02);
+}
+.casino-table table tbody tr td {
+  white-space: nowrap;
+  padding: 12px 16px;
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  color: #FFFFFF;
+  font-size: 14px;
+  line-height: 1.4;
+  font-weight: 400;
+}
+.casino-table table tbody tr td:last-child {
+  border-right: 0;
+}
+@media (min-width: 1280px) {
+  .casino-table table tbody tr td {
+    white-space: normal;
+  }
+}
+
 .hero {
   padding: 24px 16px 32px;
 }
@@ -1834,6 +2100,9 @@ form .input {
   -o-transition: max-height 0.5s ease-out;
   transition: max-height 0.5s ease-out;
 }
+.hero__hidden-box .container {
+  width: 100%;
+}
 .hero__hidden-box.show {
   max-height: 2000px;
   -webkit-transition: max-height 0.8s ease;
@@ -1842,30 +2111,45 @@ form .input {
   transition: max-height 0.8s ease;
 }
 
-.text-img-box {
+.text-img-right-box {
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   gap: 32px;
 }
+@media (min-width: 744px) {
+  .text-img-right-box {
+    flex-direction: row;
+    gap: 32px;
+  }
+}
 @media (min-width: 1280px) {
-  .text-img-box {
+  .text-img-right-box {
     flex-direction: row;
     gap: 64px;
   }
 }
 
-.text-img-box__content {
+.text-img-right-box__content {
   display: flex;
   flex-direction: column;
-  gap: 14px;
 }
-.text-img-box__content p {
+.text-img-right-box__content h2 {
+  color: #FFFFFF;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+.text-img-right-box__content p {
   color: rgba(255, 255, 255, 0.7);
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.4;
   font-weight: 400;
 }
-.text-img-box__content ul {
+.text-img-right-box__content p:not(:last-child) {
+  margin-bottom: 8px;
+}
+.text-img-right-box__content ul {
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -1874,10 +2158,10 @@ form .input {
   line-height: 1.4;
   font-weight: 500;
 }
-.text-img-box__content ul li {
+.text-img-right-box__content ul li {
   position: relative;
 }
-.text-img-box__content ul li::before {
+.text-img-right-box__content ul li::before {
   margin-top: 5px;
   margin-right: 8px;
   content: "";
@@ -1888,16 +2172,27 @@ form .input {
   background-size: contain;
   background-repeat: no-repeat;
 }
-@media (min-width: 1280px) {
-  .text-img-box__content {
-    gap: 16px;
+@media (min-width: 744px) {
+  .text-img-right-box__content {
+    flex: 1;
   }
-  .text-img-box__content p {
-    font-size: 14px;
+}
+@media (min-width: 1280px) {
+  .text-img-right-box__content h2 {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 24px;
+  }
+  .text-img-right-box__content p {
+    font-size: 16px;
     line-height: 1.4;
     font-weight: 400;
   }
-  .text-img-box__content ul {
+  .text-img-right-box__content p:not(:last-child) {
+    margin-bottom: 12px;
+  }
+  .text-img-right-box__content ul {
     color: #FFFFFF;
     font-size: 18px;
     line-height: 1.4;
@@ -1905,14 +2200,152 @@ form .input {
   }
 }
 
-.text-img-box__img {
+.text-img-right-box__img {
   flex: 1;
+  height: 300px;
+  max-height: 300px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.text-img-right-box__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  margin: 0;
+}
+@media (min-width: 744px) {
+  .text-img-right-box__img {
+    border-radius: 16px;
+  }
 }
 @media (min-width: 1280px) {
-  .text-img-box__img {
+  .text-img-right-box__img {
     flex: 1 0 400px;
+    max-width: 400px;
     width: 400px;
     height: 337px;
+    max-height: 337px;
+  }
+}
+
+.text-img-left-box {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+@media (min-width: 744px) {
+  .text-img-left-box {
+    flex-direction: row;
+    align-items: center;
+    gap: 32px;
+    margin-bottom: 100px;
+  }
+}
+@media (min-width: 1280px) {
+  .text-img-left-box {
+    flex-direction: row;
+    gap: 64px;
+  }
+}
+
+.text-img-left-box__content {
+  display: flex;
+  flex-direction: column;
+}
+.text-img-left-box__content h2 {
+  color: #FFFFFF;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+.text-img-left-box__content p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  line-height: 1.4;
+  font-weight: 400;
+}
+.text-img-left-box__content p:not(:last-child) {
+  margin-bottom: 8px;
+}
+.text-img-left-box__content ul {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  color: #FFFFFF;
+  font-size: 16px;
+  line-height: 1.4;
+  font-weight: 500;
+}
+.text-img-left-box__content ul li {
+  position: relative;
+}
+.text-img-left-box__content ul li::before {
+  margin-top: 5px;
+  margin-right: 8px;
+  content: "";
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='17' viewBox='0 0 17 17' fill='none'%3E%3Ccircle cx='8.0332' cy='8.04779' r='8' fill='%231A9F3E'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M12.1016 4.61309C12.5259 4.96665 12.5832 5.59722 12.2297 6.0215L8.42015 10.5929C8.24028 10.8088 7.97791 10.939 7.69724 10.9517C7.41657 10.9644 7.14349 10.8585 6.94482 10.6598L4.6591 8.37413C4.26858 7.98361 4.26858 7.35044 4.6591 6.95992C5.04963 6.5694 5.68279 6.5694 6.07332 6.95992L7.58473 8.47133L10.6932 4.74113C11.0468 4.31685 11.6774 4.25953 12.1016 4.61309Z' fill='%23ffffff'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+@media (min-width: 744px) {
+  .text-img-left-box__content {
+    flex: 1;
+  }
+}
+@media (min-width: 1280px) {
+  .text-img-left-box__content h2 {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 24px;
+  }
+  .text-img-left-box__content p {
+    font-size: 16px;
+    line-height: 1.4;
+    font-weight: 400;
+  }
+  .text-img-left-box__content p:not(:last-child) {
+    margin-bottom: 12px;
+  }
+  .text-img-left-box__content ul {
+    color: #FFFFFF;
+    font-size: 18px;
+    line-height: 1.4;
+    font-weight: 500;
+  }
+}
+
+.text-img-left-box__img {
+  flex: 1;
+  height: 280px;
+  max-height: 280px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.text-img-left-box__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  margin: 0;
+}
+@media (min-width: 744px) {
+  .text-img-left-box__img {
+    border-radius: 16px;
+  }
+}
+@media (min-width: 1280px) {
+  .text-img-left-box__img {
+    flex: 1 0 400px;
+    width: 580px;
+    height: 476px;
+    max-width: 580px;
+    max-height: 476px;
   }
 }
 
@@ -1932,10 +2365,16 @@ form .input {
   gap: 12px;
   margin-bottom: 24px;
 }
+.top-casino__container.mg32 {
+  margin-bottom: 32px;
+}
 @media (min-width: 1280px) {
   .top-casino__container {
     gap: 16px;
     margin-bottom: 56px;
+  }
+  .top-casino__container.mg32 {
+    margin-bottom: 32px;
   }
 }
 
@@ -2085,6 +2524,801 @@ form .input {
   .top-casino--load-more {
     margin: 56px auto 0;
     max-width: 200px;
+  }
+}
+
+.note {
+  display: flex;
+  gap: 8px;
+  padding: 8px 12px;
+  margin: 48px auto 32px;
+  border-radius: 12px;
+  background: rgba(137, 236, 163, 0.08);
+}
+.note__title {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
+  line-height: 1.4;
+  font-weight: 400;
+}
+.note__content {
+  color: #FFFFFF;
+  font-size: 14px;
+  line-height: 1.4;
+  font-weight: 500;
+}
+@media (min-width: 744px) {
+  .note {
+    padding: 12px 24px;
+    margin: 100px auto 24px;
+  }
+  .note__content {
+    font-size: 16px;
+    line-height: 1.4;
+    font-weight: 500;
+  }
+}
+
+.table-of-contents {
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  border-radius: 20px;
+  background: #191919;
+}
+.table-of-contents__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.table-of-contents__title {
+  color: #FFFFFF;
+  font-size: 18px;
+  line-height: 1.4;
+  font-weight: 500;
+}
+.table-of-contents__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  border-radius: 8px;
+  background: #FFFFFF;
+  border: none;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.table-of-contents__btn::before {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 18 18' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M8.60225 4.85225C8.82192 4.63258 9.17808 4.63258 9.39775 4.85225L15.3977 10.8523C15.6174 11.0719 15.6174 11.4281 15.3977 11.6477C15.1781 11.8674 14.8219 11.8674 14.6023 11.6477L9 6.0455L3.39775 11.6477C3.17808 11.8674 2.82192 11.8674 2.60225 11.6477C2.38258 11.4281 2.38258 11.0719 2.60225 10.8523L8.60225 4.85225Z' fill='%23111111'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.table-of-contents__btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+.table-of-contents__btn:hover:before {
+  transform: rotate(180deg);
+}
+.table-of-contents.show .table-of-contents__btn:before {
+  transform: rotate(180deg);
+}
+.table-of-contents.show .table-of-contents__wrapper {
+  max-height: 2000px;
+  pointer-events: unset;
+  transition: max-height 0.8s linear;
+}
+@media (min-width: 744px) {
+  .table-of-contents {
+    padding: 16px;
+  }
+}
+
+.table-of-contents__wrapper {
+  max-height: 0;
+  pointer-events: none;
+  overflow: hidden;
+  transition: max-height 0.6s linear;
+}
+
+.table-of-contents__list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-top: 16px;
+}
+.table-of-contents__list--item {
+  display: inline-flex;
+  gap: 6px;
+  width: fit-content;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 16px;
+  line-height: 1.4;
+  font-weight: 400;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.table-of-contents__list--item:before {
+  margin-top: 8px;
+  display: inline-flex;
+  content: " ";
+  width: 6px;
+  height: 6px;
+  min-width: 6px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 100px;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.table-of-contents__list--item:hover {
+  color: #F5DC64;
+}
+.table-of-contents__list--item:hover:before {
+  background: linear-gradient(90deg, #F0C645 0%, #FAF283 49.5%, #EBC944 100%);
+}
+@media (min-width: 744px) {
+  .table-of-contents__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.casino-criteria {
+  padding: 24px 0;
+  background-color: #191919;
+}
+@media (min-width: 744px) {
+  .casino-criteria {
+    padding: 48px 0;
+  }
+}
+
+.casino-criteria__list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+@media (min-width: 744px) {
+  .casino-criteria__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 32px 24px;
+  }
+}
+
+.casino-criteria__list--item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.04);
+}
+.casino-criteria__list--item--header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.casino-criteria__list--item--icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.04);
+}
+.casino-criteria__list--item--icon svg {
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
+}
+.casino-criteria__list--item--title {
+  color: #FFFFFF;
+  font-size: 16px;
+  line-height: 1.4;
+  font-weight: 700;
+}
+.casino-criteria__list--item--desc {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+  line-height: 1.4;
+  font-weight: 400;
+}
+@media (min-width: 744px) {
+  .casino-criteria__list--item {
+    flex: 1 0 calc(50% - 24px);
+    padding: 20px;
+    gap: 16px;
+  }
+  .casino-criteria__list--item--icon {
+    width: 64px;
+    height: 64px;
+    min-width: 64px;
+  }
+  .casino-criteria__list--item--icon svg {
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+  }
+  .casino-criteria__list--item--title {
+    font-size: 22px;
+    line-height: 1.4;
+    font-weight: 700;
+  }
+  .casino-criteria__list--item--desc {
+    font-size: 16px;
+    line-height: 1.4;
+    font-weight: 400;
+  }
+}
+@media (min-width: 1280px) {
+  .casino-criteria__list--item {
+    flex: 1 0 calc(33.3333% - 24px);
+  }
+}
+
+.casino-req__list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+@media (min-width: 744px) {
+  .casino-req__list {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+}
+
+.casino-req__list--item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.04);
+}
+.casino-req__list--item--title {
+  display: inline-flex;
+  gap: 12px;
+  color: #FFFFFF;
+  font-size: 16px;
+  line-height: 1.4;
+  font-weight: 700;
+}
+.casino-req__list--item--title::before {
+  margin-top: 1px;
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 19px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='19' viewBox='0 0 18 19' fill='none'%3E%3Cpath d='M18 9.5C18 14.4706 13.9706 18.5 9 18.5C4.02944 18.5 0 14.4706 0 9.5C0 4.52944 4.02944 0.5 9 0.5C13.9706 0.5 18 4.52944 18 9.5Z' fill='%231A9F3E'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M13.4973 5.7318C13.9216 6.08537 13.9789 6.71593 13.6254 7.14021L9.33965 12.2831C9.15978 12.4989 8.89741 12.6291 8.61674 12.6419C8.33607 12.6546 8.06299 12.5487 7.86432 12.35L5.29289 9.77856C4.90237 9.38804 4.90237 8.75487 5.29289 8.36435C5.68342 7.97382 6.31658 7.97382 6.70711 8.36435L8.50423 10.1615L12.0889 5.85984C12.4425 5.43556 13.0731 5.37824 13.4973 5.7318Z' fill='white'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.casino-req__list--item--desc {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+  line-height: 1.4;
+  font-weight: 400;
+}
+@media (min-width: 744px) {
+  .casino-req__list--item {
+    flex: 1 0 calc(50% - 24px);
+    padding: 20px;
+  }
+  .casino-req__list--item--title {
+    font-size: 22px;
+    line-height: 1.4;
+    font-weight: 700;
+  }
+  .casino-req__list--item--title:before {
+    margin-top: 5px;
+  }
+  .casino-req__list--item--desc {
+    font-size: 16px;
+    line-height: 1.4;
+    font-weight: 400;
+  }
+}
+@media (min-width: 1280px) {
+  .casino-req__list--item {
+    max-width: calc(50% - 24px);
+  }
+}
+
+.casino-types {
+  padding: 24px 0;
+  background-color: #191919;
+}
+@media (min-width: 744px) {
+  .casino-types {
+    padding: 48px 0;
+  }
+}
+
+.casino-types__list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+@media (min-width: 744px) {
+  .casino-types__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.casino-types__list--item {
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.04);
+  padding: 20px;
+}
+.casino-types__list--item--img {
+  width: 100%;
+  height: 200px;
+  max-height: 200px;
+  margin-bottom: 16px;
+  object-fit: contain;
+  object-position: center;
+}
+.casino-types__list--item--title {
+  color: #FFFFFF;
+  font-size: 20px;
+  line-height: 1.4;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+@media (min-width: 744px) {
+  .casino-types__list--item {
+    flex: 1 0 calc(50% - 24px);
+  }
+  .casino-types__list--item--title {
+    font-size: 22px;
+    line-height: 1.4;
+    font-weight: 700;
+  }
+}
+@media (min-width: 1280px) {
+  .casino-types__list--item {
+    flex: 1 0 calc(20% - 24px);
+  }
+}
+
+.how-it-work__desc {
+  color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  margin-top: 24px;
+  font-size: 16px;
+  line-height: 1.4;
+  font-weight: 400;
+}
+@media (min-width: 744px) {
+  .how-it-work__desc {
+    margin-top: 48px;
+    font-size: 18px;
+    line-height: 1.4;
+    font-weight: 400;
+  }
+}
+
+.how-it-work__labels {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px 16px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.02);
+  margin-bottom: 24px;
+}
+.how-it-work__labels--item {
+  display: inline-flex;
+  gap: 8px;
+}
+.how-it-work__labels--item--name {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
+  line-height: 1.4;
+  font-weight: 400;
+  min-width: 56px;
+}
+.how-it-work__labels--item--value {
+  color: #FFFFFF;
+  font-size: 16px;
+  line-height: 1.4;
+  font-weight: 500;
+}
+@media (min-width: 1280px) {
+  .how-it-work__labels {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 32px;
+    max-width: fit-content;
+    margin: 0 auto 24px;
+    padding: 12px 24px;
+  }
+  .how-it-work__labels--item {
+    align-items: center;
+  }
+  .how-it-work__labels--item--name {
+    min-width: fit-content;
+  }
+}
+
+.how-it-work__list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 0;
+  counter-reset: custom-counter;
+  list-style: none;
+}
+@media (min-width: 744px) {
+  .how-it-work__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+  .how-it-work__list--item {
+    flex: 1 0 calc(50% - 24px);
+  }
+}
+@media (min-width: 1280px) {
+  .how-it-work__list--item {
+    flex: 1 0 calc(20% - 24px);
+  }
+}
+
+.how-it-work__list--item {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: #191919;
+  counter-increment: custom-counter;
+}
+.how-it-work__list--item--title {
+  color: #FFFFFF;
+  font-size: 18px;
+  line-height: 1.4;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.how-it-work__list--item--desc {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+  line-height: 1.4;
+  font-weight: 400;
+}
+.how-it-work__list--item--box {
+  padding-top: 24px;
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-between;
+}
+.how-it-work__list--item--number:before {
+  content: "0" counter(custom-counter);
+  font-size: 56px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1;
+  background: linear-gradient(90deg, #F0C645 0%, #FAF283 49.5%, #EBC944 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.how-it-work__list--item--btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  border: none;
+  border-radius: 100px;
+  background-color: rgba(255, 255, 255, 0.02);
+}
+.how-it-work__list--item--btn::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none"><g clip-path="url(%23clip0_444_53621)"><path fill-rule="evenodd" clip-rule="evenodd" d="M1.5415 10.1665C1.5415 9.61422 1.98922 9.1665 2.5415 9.1665L19.2082 9.1665C19.7605 9.1665 20.2082 9.61422 20.2082 10.1665C20.2082 10.7188 19.7605 11.1665 19.2082 11.1665L2.5415 11.1665C1.98922 11.1665 1.5415 10.7188 1.5415 10.1665Z" fill="white"/><path fill-rule="evenodd" clip-rule="evenodd" d="M12.6679 3.6259C13.0584 3.23538 13.6916 3.23538 14.0821 3.6259L19.9154 9.45923C20.306 9.84976 20.306 10.4829 19.9154 10.8734L14.0821 16.7068C13.6916 17.0973 13.0584 17.0973 12.6679 16.7068C12.2774 16.3163 12.2774 15.6831 12.6679 15.2926L17.7941 10.1663L12.6679 5.04011C12.2774 4.64959 12.2774 4.01643 12.6679 3.6259Z" fill="white"/></g><defs><clipPath id="clip0_444_53621"><rect width="20" height="20" fill="white" transform="translate(0.875 0.166504)"/></clipPath></defs></svg>');
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: rotate(90deg);
+}
+.how-it-work__list--item:last-child .how-it-work__list--item--btn:before {
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 24px;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M21.5152 5.2318C21.9395 5.58537 21.9968 6.21593 21.6432 6.64021L11.6432 18.6402C11.4634 18.856 11.201 18.9863 10.9203 18.999C10.6396 19.0117 10.3666 18.9058 10.1679 18.7071L4.16789 12.7071C3.77737 12.3166 3.77737 11.6834 4.16789 11.2929C4.55842 10.9024 5.19158 10.9024 5.58211 11.2929L10.8078 16.5186L20.1068 5.35984C20.4603 4.93556 21.0909 4.87824 21.5152 5.2318Z" fill="white"/></svg>');
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: rotate(0);
+}
+@media (min-width: 744px) {
+  .how-it-work__list--item--title {
+    font-size: 20px;
+    line-height: 1.4;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+  .how-it-work__list--item--desc {
+    font-size: 16px;
+    line-height: 1.4;
+    font-weight: 400;
+  }
+  .how-it-work__list--item--box {
+    padding-top: 24px;
+  }
+  .how-it-work__list--item--number:before {
+    font-size: 80px;
+  }
+  .how-it-work__list--item--btn {
+    width: 64px;
+    height: 64px;
+    min-width: 64px;
+  }
+  .how-it-work__list--item--btn::before {
+    width: 24px;
+    height: 24px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M1 12C1 11.4477 1.44772 11 2 11L22 11C22.5523 11 23 11.4477 23 12C23 12.5523 22.5523 13 22 13L2 13C1.44772 13 1 12.5523 1 12Z" fill="white"/><path fill-rule="evenodd" clip-rule="evenodd" d="M14.2929 4.29289C14.6834 3.90237 15.3166 3.90237 15.7071 4.29289L22.7071 11.2929C23.0976 11.6834 23.0976 12.3166 22.7071 12.7071L15.7071 19.7071C15.3166 20.0976 14.6834 20.0976 14.2929 19.7071C13.9024 19.3166 13.9024 18.6834 14.2929 18.2929L20.5858 12L14.2929 5.70711C13.9024 5.31658 13.9024 4.68342 14.2929 4.29289Z" fill="white"/></svg>');
+    transform: rotate(0deg);
+  }
+}
+
+.best-casino {
+  margin-bottom: 48px;
+}
+.best-casino__list-desc {
+  margin-bottom: 16px;
+}
+.best-casino__table {
+  margin-bottom: 48px;
+}
+@media (min-width: 744px) {
+  .best-casino {
+    margin-bottom: 100px;
+  }
+  .best-casino__list-desc {
+    margin-bottom: 32px;
+  }
+  .best-casino__table {
+    margin-bottom: 90px;
+  }
+}
+
+.bad-casinos {
+  background: #191919;
+  padding: 24px 0;
+}
+@media (min-width: 744px) {
+  .bad-casinos {
+    padding: 48px 0;
+  }
+}
+
+.bad-casinos__list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+@media (min-width: 744px) {
+  .bad-casinos__list {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+.bad-casinos__list--item {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.04);
+}
+.bad-casinos__list--item--img {
+  margin-bottom: 16px;
+  width: 100%;
+  height: 200px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.bad-casinos__list--item--img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.bad-casinos__list--item--title {
+  color: #FFFFFF;
+  font-size: 20px;
+  line-height: 1.4;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.bad-casinos__list--item__issues {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.bad-casinos__list--item__issues--item {
+  display: inline-flex;
+  gap: 12px;
+  color: #FFFFFF;
+  font-size: 18px;
+  line-height: 1.4;
+  font-weight: 500;
+}
+.bad-casinos__list--item__issues--item::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  min-width: 16px;
+  margin-top: 4px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='16' viewBox='0 0 17 16' fill='none'%3E%3Cg clip-path='url(%23clip0_455_53632)'%3E%3Cpath d='M8.875 0C4.46362 0 0.875 3.58862 0.875 8C0.875 12.4114 4.46362 16 8.875 16C13.2864 16 16.875 12.4114 16.875 8C16.875 3.58862 13.2864 0 8.875 0ZM12.375 8.66663H5.375C5.00696 8.66663 4.70837 8.36804 4.70837 8C4.70837 7.63196 5.00696 7.33337 5.375 7.33337H12.375C12.743 7.33337 13.0416 7.63196 13.0416 8C13.0416 8.36804 12.743 8.66663 12.375 8.66663Z' fill='%23F67D7D'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_455_53632'%3E%3Crect width='16' height='16' fill='white' transform='translate(0.875)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+@media (min-width: 744px) {
+  .bad-casinos__list--item {
+    flex: 1 0 calc(50% - 24px);
+    max-width: calc(50% - 24px);
+  }
+  .bad-casinos__list--item--title {
+    font-size: 22px;
+    line-height: 1.4;
+    font-weight: 700;
+  }
+}
+@media (min-width: 1280px) {
+  .bad-casinos__list--item {
+    flex: 1 0 calc(33.3333% - 24px);
+    max-width: calc(33.3333% - 24px);
+  }
+}
+
+.casino-games {
+  margin-top: 48px;
+  margin-bottom: 48px;
+}
+@media (min-width: 744px) {
+  .casino-games {
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+}
+
+.casino-games__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+.casino-games__list__item {
+  flex: 1 0 calc(50% - 16px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+  gap: 12px;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.04);
+}
+@media (min-width: 744px) {
+  .casino-games__list__item {
+    flex: 1 0 calc(25% - 16px);
+  }
+}
+@media (min-width: 1280px) {
+  .casino-games__list__item {
+    flex: 1 calc(12.5% - 16px);
+    max-width: calc(12.5% - 16px);
+  }
+}
+
+.table-card-games__list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+@media (min-width: 1280px) {
+  .table-card-games__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.table-card-games__list--item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 20px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.04);
+}
+.table-card-games__list--item--title {
+  color: #FFFFFF;
+  font-size: 22px;
+  line-height: 1.4;
+  font-weight: 700;
+}
+.table-card-games__list--item--desc {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 16px;
+  line-height: 1.4;
+  font-weight: 400;
+}
+@media (min-width: 1280px) {
+  .table-card-games__list--item {
+    flex: 1 0 calc(33.3333% - 24px);
+  }
+}
+
+.table-card-games.col-two .sub-title, .table-card-games.col-two .sub-title--desc {
+  text-align: center;
+}
+@media (min-width: 744px) {
+  .table-card-games.col-two .table-card-games__list--item {
+    flex: 1 0 calc(50% - 24px);
+  }
+}
+@media (min-width: 1280px) {
+  .table-card-games.col-two .sub-title--desc {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.logo-section__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+@media (min-width: 744px) {
+  .logo-section__list {
+    gap: 24px;
+  }
+}
+.logo-section__list--item {
+  flex: 1 0 calc(50% - 12px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 16px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.04);
+}
+.logo-section__list--item svg {
+  width: 100%;
+  height: 70px;
+}
+@media (min-width: 744px) {
+  .logo-section__list--item {
+    flex: 1 0 calc(33.3333% - 24px);
+    max-width: calc(33.3333% - 24px);
+  }
+}
+@media (min-width: 1280px) {
+  .logo-section__list--item {
+    flex: 1 0 calc(12.5% - 24px);
+    max-width: calc(12.5% - 24px);
   }
 }
 

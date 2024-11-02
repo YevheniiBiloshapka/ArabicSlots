@@ -1,0 +1,48 @@
+
+.table-card-games__list{
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  @include media-query(tab){}
+  @include media-query(desk){
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+.table-card-games__list--item{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 20px;
+
+  border-radius: $br12;
+  background: $cl-white-25;
+  &--title{
+    color: $cl-white-900;
+    @include font-body(22-bold);
+  }
+  &--desc{
+    color: $cl-white-700;
+     @include font-body(16-reg);
+  }
+  @include media-query(desk){
+    flex: 1 0 calc(33.3333% - 24px);
+  }
+}
+.table-card-games.col-two{
+  & .sub-title, & .sub-title--desc{
+    text-align: center;
+  }
+  @include media-query(tab){
+    & .table-card-games__list--item{
+      flex: 1 0 calc(50% - 24px);
+    }
+  }
+  @include media-query(desk){
+    & .sub-title--desc{
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}

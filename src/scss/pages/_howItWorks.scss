@@ -1,0 +1,176 @@
+.how-it-work__desc{
+  color: $cl-white-700;
+  text-align: center;
+  margin-top: 24px;
+  @include font-body(16-reg);
+
+  @include media-query(tab){
+    margin-top: 48px;
+    @include font-body(18-reg);
+  }
+}
+.how-it-work__labels{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px 16px;
+  border-radius: $br12;
+  background: $cl-white-0;
+  margin-bottom: 24px;
+  &--item{
+    display: inline-flex;
+
+    gap: 8px;
+    &--name{
+      color: $cl-white-500;
+      @include font-body(14-reg);
+      min-width: 56px;
+    }
+    &--value{
+      color: $cl-white-900;
+      @include font-body(16-med);
+    }
+  }
+
+  @include media-query(desk){
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 32px;
+    max-width: fit-content;
+    margin: 0 auto 24px;
+    padding: 12px 24px;
+    &--item{
+      align-items: center;
+      &--name{
+        min-width: fit-content;
+      }
+    }
+  }
+}
+
+
+.how-it-work__list{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 0;
+  counter-reset: custom-counter;
+  list-style: none;
+
+  @include media-query(tab){
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 24px;
+    &--item{
+      flex: 1 0 calc(50% - 24px);
+    }
+  }
+  @include media-query(desk){
+    &--item{
+      flex: 1 0 calc(20% - 24px);
+    }
+  }
+}
+
+.how-it-work__list--item{
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: $br12;
+  background-color: $bg-elem;
+  counter-increment: custom-counter;
+  &--title{
+    color: $cl-white-900;
+
+    @include font-body(18-bold);
+    margin-bottom: 8px;
+  }
+  &--desc{
+    color: $cl-white-700;
+    @include font-body(14-reg);
+  }
+  &--box{
+    padding-top: 24px;
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-between;
+  }
+  &--number:before{
+    content: '0' counter(custom-counter);
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1;
+
+    background: $gr-gold;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  &--btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    $size: 48px;
+    width: $size;
+    height: $size;
+    min-width: $size;
+    border: none;
+    border-radius: 100px;
+    background-color: $cl-white-0;
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none"><g clip-path="url(%23clip0_444_53621)"><path fill-rule="evenodd" clip-rule="evenodd" d="M1.5415 10.1665C1.5415 9.61422 1.98922 9.1665 2.5415 9.1665L19.2082 9.1665C19.7605 9.1665 20.2082 9.61422 20.2082 10.1665C20.2082 10.7188 19.7605 11.1665 19.2082 11.1665L2.5415 11.1665C1.98922 11.1665 1.5415 10.7188 1.5415 10.1665Z" fill="white"/><path fill-rule="evenodd" clip-rule="evenodd" d="M12.6679 3.6259C13.0584 3.23538 13.6916 3.23538 14.0821 3.6259L19.9154 9.45923C20.306 9.84976 20.306 10.4829 19.9154 10.8734L14.0821 16.7068C13.6916 17.0973 13.0584 17.0973 12.6679 16.7068C12.2774 16.3163 12.2774 15.6831 12.6679 15.2926L17.7941 10.1663L12.6679 5.04011C12.2774 4.64959 12.2774 4.01643 12.6679 3.6259Z" fill="white"/></g><defs><clipPath id="clip0_444_53621"><rect width="20" height="20" fill="white" transform="translate(0.875 0.166504)"/></clipPath></defs></svg>');
+      background-size: contain;
+      background-repeat: no-repeat;
+      transform: rotate(90deg);
+    }
+  }
+  &:last-child{
+    & .how-it-work__list--item--btn{
+      &:before{
+        content: '';
+        display: inline-block;
+        width: 25px;
+        height: 24px;
+        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M21.5152 5.2318C21.9395 5.58537 21.9968 6.21593 21.6432 6.64021L11.6432 18.6402C11.4634 18.856 11.201 18.9863 10.9203 18.999C10.6396 19.0117 10.3666 18.9058 10.1679 18.7071L4.16789 12.7071C3.77737 12.3166 3.77737 11.6834 4.16789 11.2929C4.55842 10.9024 5.19158 10.9024 5.58211 11.2929L10.8078 16.5186L20.1068 5.35984C20.4603 4.93556 21.0909 4.87824 21.5152 5.2318Z" fill="white"/></svg>');
+        background-size: contain;
+        background-repeat: no-repeat;
+        transform: rotate(0);
+      }
+    }
+  }
+  @include media-query(tab){
+    &--title{
+      @include font-body(20-bold);
+      margin-bottom: 16px;
+    }
+    &--desc{
+      @include font-body(16-reg);
+    }
+    &--box{
+      padding-top: 24px;
+    }
+    &--number:before{
+      font-size: 80px;
+    }
+    &--btn{
+      $size: 64px;
+      width: $size;
+      height: $size;
+      min-width: $size;
+      &::before {
+        width: 24px;
+        height: 24px;
+        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M1 12C1 11.4477 1.44772 11 2 11L22 11C22.5523 11 23 11.4477 23 12C23 12.5523 22.5523 13 22 13L2 13C1.44772 13 1 12.5523 1 12Z" fill="white"/><path fill-rule="evenodd" clip-rule="evenodd" d="M14.2929 4.29289C14.6834 3.90237 15.3166 3.90237 15.7071 4.29289L22.7071 11.2929C23.0976 11.6834 23.0976 12.3166 22.7071 12.7071L15.7071 19.7071C15.3166 20.0976 14.6834 20.0976 14.2929 19.7071C13.9024 19.3166 13.9024 18.6834 14.2929 18.2929L20.5858 12L14.2929 5.70711C13.9024 5.31658 13.9024 4.68342 14.2929 4.29289Z" fill="white"/></svg>');
+        transform: rotate(0deg);
+      }
+    }
+  }
+}
