@@ -1,0 +1,14 @@
+.faq{
+  padding: 24px 0;
+  background: $bg-elem;
+  & h2{
+    margin-bottom: 16px;
+  }
+  @include media-query(tab){
+    padding: 64px 0;
+    & h2{
+      text-align: center;
+      margin-bottom: 48px;
+    }
+  }
+}

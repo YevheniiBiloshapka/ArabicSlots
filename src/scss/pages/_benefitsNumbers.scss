@@ -1,0 +1,56 @@
+.benefits-number{
+  padding: 24px 0;
+  background: $bg-elem;
+  @include media-query(tab){
+    padding: 64px 0;
+  }
+}
+
+.benefits-number--table{
+  display: flex;
+  width: 100%;
+  & tbody{
+    width: 100%;
+  }
+  & tr{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+  }
+  & tr td{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+    padding: 16px 20px;
+    border-radius: 8px;
+    background: $cl-white-25;
+
+    & p:first-child{
+      color: $cl-white-700;
+      @include font-body(14-med);
+    }
+    & p:last-child{
+      color: $cl-white-900;
+
+      @include font-title(h1-mob);
+    }
+  }
+  @include media-query(tab){
+    & tr{
+      flex-direction: row;
+      gap: 24px;
+    }
+    & tr td{
+      padding: 24px 11px 24px 20px;
+      & p:first-child{
+        @include font-body(18-med);
+      }
+      & p:last-child{
+        @include font-title(h1);
+      }
+    }
+  }
+}

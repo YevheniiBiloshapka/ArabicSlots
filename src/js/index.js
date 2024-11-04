@@ -1,9 +1,9 @@
-
 import { Header } from './components/header.js';
 import { customSelect } from './components/customSelect.js';
-import initModal from './components/modal.js'
+import initModal from './components/modal.js';
 import heroShowMore from './components/heroShowMore.js';
 import casinoCards from './components/casinoCards.js';
+import { toggleAccordion } from './components/toggleAccordion.js';
 
 const testSelect = () => {
   // удалить
@@ -73,5 +73,6 @@ document.addEventListener('DOMContentLoaded', function () {
   casinoCards()
   loadMoreBtn()
   showTableContent()
+  toggleAccordion()
 
 });

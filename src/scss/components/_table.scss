@@ -1,9 +1,16 @@
+
 .casino-table{
   width: 100%;
   overflow-x:auto;
   padding-bottom: 6px;
 }
-.casino-table table{
+.table__wrapper{
+  width: 100%;
+  overflow-x:auto;
+  padding-bottom: 6px;
+}
+
+table:not(.our-team__table){
   width: 100%;
   min-width: 100%;
   overflow: hidden;
@@ -13,7 +20,7 @@
   background-color:$cl-white-25;
 }
 
-.casino-table table thead{
+table:not(.our-team__table) thead:not(.our-team__table){
   background-color:$cl-white-25;
   & tr{
     border-bottom: 1px solid $cl-white-50;
@@ -36,7 +43,7 @@
     }
   }
 }
-.casino-table table tbody{
+table:not(.our-team__table) tbody:not(.our-team__table){
   & tr{
     border-bottom: 1px solid $cl-white-50;
     @include transition();
@@ -57,9 +64,42 @@
       border-right: 0;
     }
   }
+  & tr th{
+    white-space: nowrap;
+    color: $cl-white-900;
+    @include font-body(16-bold);
+    text-align: start;
+    padding: 13px 16px 12px ;
+    border-right: 1px solid $cl-white-50;
+    background-color:$cl-white-25;
+    &:last-child{
+      border-bottom: 0;
+      border-right: 0;
+    }
+  }
   @include media-query(desk){
     & tr td{
       white-space: normal;
+
+    }
+    & tr th{
+      white-space: normal;
+    }
+  }
+}
+
+table:not(.our-team__table) {
+  & td a, & th a{
+     @include font-body(14-bold);
+    background: $gr-gold;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    &:hover{
+      background: $gr-gold-hover;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
   }
 }

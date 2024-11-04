@@ -16,16 +16,15 @@
 @import 'components/casinoCard';
 @import 'components/progress-bar';
 @import 'components/table';
+@import 'components/accordion';
 
-//@import 'components/accordion';
 //@import 'components/modal';
 //main
 
 
 // ! sections
 @import 'pages/hero';
-@import 'pages/textImgRightBox';
-@import 'pages/textImgLeftBox';
+@import 'pages/contentSection';
 @import 'pages/top_casino';
 @import 'pages/note';
 @import 'pages/tableOfContents';
@@ -38,6 +37,11 @@
 @import 'pages/casinoGames';
 @import 'pages/tableCardGames';
 @import 'pages/logoSection';
+@import 'pages/benefits';
+@import 'pages/benefitsNumbers';
+@import 'pages/ourTeam';
+@import 'pages/faq';
+
 
 
 

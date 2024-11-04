@@ -1,0 +1,125 @@
+.our-team__table{
+  width: 100%;
+  & tbody{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+  }
+  @include media-query(desk){
+    & tbody{
+      flex-direction: row;
+      gap: 24px;
+    }
+  }
+}
+
+.our-team__card{
+    display: flex;
+    flex-direction: column;
+  padding: 12px;
+  border-radius: 16px;
+  background: $bg-elem;
+
+  @include media-query(tab){
+    padding: 24px;
+  }
+  @include media-query(desk){
+    flex: 1 0 calc(33.3333% - 24px);
+  }
+}
+
+.our-team__card__header{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  & .our-team__card--box{
+    gap: 8px;
+  }
+  @include media-query(tab){
+  }
+}
+.our-team__card--img{
+  border-radius: 1000px;
+  overflow: hidden;
+  object-fit: cover;
+  object-position:center;
+
+}
+.our-team__card--box{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  & p{
+    text-align: center;
+    display: inline-flex;
+    @include font-body(14-reg);
+    padding: 6px 10px;
+    border-radius: $br6;
+  }
+  & p:nth-child(odd) {
+    color: $cl-blue-300;
+    background: rgba(87, 234, 234, 0.08);
+  }
+  & p:nth-child(even) {
+    color: $cl-yellow-400;
+    background: linear-gradient(90deg, rgba(240, 198, 69, 0.09) 0%, rgba(250, 242, 131, 0.09) 49.5%, rgba(235, 201, 68, 0.09) 100%);
+  }
+
+}
+.our-team__card--name{
+  color:$cl-white-900;
+
+  margin-bottom: 4px;
+  @include font-body(20-bold);
+  @include media-query(tab){
+    @include font-body(24-bold);
+  }
+}
+.our-team__card--role{
+  color:$cl-white-900;
+@include font-body(14-med);
+  margin-bottom: 8px;
+  @include media-query(tab){
+    margin-bottom: 16px;
+    @include font-body(18-med);
+  }
+}
+.our-team__card--desc{
+  color:$cl-white-600;
+  @include font-body(14-reg);
+  margin-bottom: 16px;
+  @include media-query(tab){
+    @include font-body(18-reg);
+  }
+}
+.our-team__card--social{
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  & a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    $size: 32px;
+    width: $size;
+    height: $size;
+    min-width: $size;
+    min-height: $size;
+    background: $cl-white-25;
+    border-radius: 400px;
+    @include transition();
+    & svg{
+      $size: 16px;
+      width: $size;
+      height: $size;
+      min-width: $size;
+      min-height: $size;
+    }
+  }
+
+}
