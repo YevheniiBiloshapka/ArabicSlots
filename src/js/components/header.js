@@ -1,4 +1,4 @@
-import controlBodyScroll from './bodyScrollControl.js'
+import controlBodyScroll from './bodyScrollControl.js';
 
 const handleLanguageSwitcher = () => {
   const selects = document.querySelectorAll('[data-action="header-language-switcher"]');
@@ -18,7 +18,7 @@ const handleLanguageSwitcher = () => {
       item.addEventListener('click', (event) => {
         event.preventDefault();
         const selectedValue = item.getAttribute('data-value');
-        fieldIcon.querySelector('use').setAttribute('href', `../img/icons/icons.svg#${selectedValue}`);
+        fieldIcon.querySelector('use').setAttribute('href', `./img/icons/icons.svg#${selectedValue}`);
         fieldValue.textContent = selectedValue;
         const input = select.querySelector('.select__input');
         if (input) input.value = selectedValue;

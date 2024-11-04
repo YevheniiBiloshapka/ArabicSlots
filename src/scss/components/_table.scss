@@ -10,7 +10,7 @@
   padding-bottom: 6px;
 }
 
-table:not(.our-team__table){
+table:not(.our-team__table,.benefits-number--table){
   width: 100%;
   min-width: 100%;
   overflow: hidden;
@@ -20,7 +20,7 @@ table:not(.our-team__table){
   background-color:$cl-white-25;
 }
 
-table:not(.our-team__table) thead:not(.our-team__table){
+table:not(.our-team__table,.benefits-number--table) thead:not(.our-team__table,.benefits-number--table){
   background-color:$cl-white-25;
   & tr{
     border-bottom: 1px solid $cl-white-50;
@@ -43,7 +43,7 @@ table:not(.our-team__table) thead:not(.our-team__table){
     }
   }
 }
-table:not(.our-team__table) tbody:not(.our-team__table){
+table:not(.our-team__table,.benefits-number--table) tbody:not(.our-team__table){
   & tr{
     border-bottom: 1px solid $cl-white-50;
     @include transition();
@@ -88,7 +88,7 @@ table:not(.our-team__table) tbody:not(.our-team__table){
   }
 }
 
-table:not(.our-team__table) {
+table:not(.our-team__table,.benefits-number--table) {
   & td a, & th a{
      @include font-body(14-bold);
     background: $gr-gold;
