@@ -57,3 +57,11 @@
     max-width: calc(50% - 24px);
   }
 }
+.casino-req.three-column{
+  @include media-query(desk){
+    & .casino-req__list--item{
+      flex: 1 0 calc(33.3333% - 24px);
+    }
+  }
+}
+

@@ -1,0 +1,58 @@
+$starSize: 14px;
+$clipPathStart: path("M6.003 1.32952C6.36907 0.434813 7.6602 0.445759 8.00697 1.35752L8.00999 1.36546L9.21513 4.70395C9.22557 4.72861 9.25279 4.74935 9.2873 4.74935H12.2547C13.2576 4.74935 13.7307 6.00884 12.9337 6.64846L10.8339 8.53771C10.8243 8.54633 10.8144 8.55457 10.8042 8.56242C10.7934 8.57075 10.7855 8.58229 10.7816 8.5954C10.7777 8.60851 10.7781 8.6225 10.7827 8.63537C10.7888 8.65268 10.794 8.67031 10.7983 8.6882L11.5638 11.9328C11.8906 12.9246 10.7538 13.7083 9.92664 13.1409L7.06699 11.3264C7.06035 11.3221 7.05381 11.3178 7.04738 11.3133C7.03335 11.3034 7.01662 11.2981 6.99946 11.2981C6.98231 11.2981 6.96558 11.3034 6.95155 11.3133C6.94511 11.3178 6.93858 11.3221 6.93194 11.3264L4.0724 13.1408C3.24554 13.7086 2.10834 12.9237 2.43512 11.9328L3.20066 8.6882C3.20488 8.67031 3.21008 8.65268 3.21624 8.63537C3.22082 8.6225 3.22121 8.6085 3.21734 8.5954C3.21348 8.58229 3.20556 8.57075 3.19473 8.56242C3.18452 8.55457 3.17461 8.54633 3.16504 8.53771L1.06533 6.64855C0.266587 6.00827 0.743066 4.74935 1.74363 4.74935H4.71271C4.72829 4.7494 4.74352 4.74472 4.75638 4.73593C4.76843 4.72769 4.77788 4.7162 4.78363 4.70282L5.98842 1.36549C5.99284 1.35324 5.99771 1.34125 6.003 1.32952Z");
+
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.rating label {
+  position: relative;
+  cursor: pointer;
+  width: $starSize;
+  height: $starSize;
+
+}
+
+// inactive star
+.rating label::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: $cl-white-75;
+  clip-path: $clipPathStart;
+  border-radius: 3px;
+  transition: 300ms ease-in-out;
+  scale: 1;
+}
+
+// hover star
+.rating {
+  label:has(~ label:hover)::after,
+  label:has(~ label > :checked)::after,
+  label:has(:checked)::after,
+  label:hover::after {
+    background: $gr-gold;
+    scale: 1.02;
+  }
+
+  label:hover ~ label::after {
+    scale: 1;
+  }
+
+}
+

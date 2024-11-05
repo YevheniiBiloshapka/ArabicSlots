@@ -6,33 +6,32 @@
 @import 'utils/reset';
 @import 'utils/base';
 
-
 // ? components
 @import 'components/container';
 @import 'components/button';
 @import 'components/input';
 @import 'components/select';
 @import 'components/modal';
-@import 'components/casinoCard';
 @import 'components/progress-bar';
 @import 'components/table';
 @import 'components/accordion';
+@import 'components/topInfoBar';
+@import 'components/rating';
 
-//@import 'components/modal';
-//main
-
+// ! casino sections
+@import 'components/casinoCard';
+@import 'pages/top_casino';
+@import 'pages/bestCasino';
 
 // ! sections
 @import 'pages/hero';
 @import 'pages/contentSection';
-@import 'pages/top_casino';
 @import 'pages/note';
 @import 'pages/tableOfContents';
-@import 'pages/howWeselect';
+@import 'pages/casinoСriteria';
 @import 'pages/casinoReq';
 @import 'pages/casinoTypes';
 @import 'pages/howItWorks';
-@import 'pages/bestCasino';
 @import 'pages/badCasinos';
 @import 'pages/casinoGames';
 @import 'pages/tableCardGames';
@@ -41,11 +40,11 @@
 @import 'pages/benefitsNumbers';
 @import 'pages/ourTeam';
 @import 'pages/faq';
+@import 'pages/anotherCategories';
+@import 'pages/funFact';
+@import 'pages/favouriteSlots';
 
-
-
-
-// header footer
+// ! header footer
 @import 'components/header';
 @import 'components/footer';
 

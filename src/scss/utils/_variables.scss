@@ -33,27 +33,27 @@ $font-title: (
         ),
 );
 $font-body: (
-      14-reg:(
-              font-size: 14px,
-              line-height: 1.4,
-              font-weight: 400,
-      ),
-      14-med:(
-              font-size: 14px,
-              line-height: 1.4,
-              font-weight: 500,
-      ),
-      14-bold:(
-              font-size: 14px,
-              line-height: 1.4,
-              font-weight: 700,
-      ),
-      14-caps:(
-              text-transform: uppercase,
-              font-size: 14px,
-              font-weight: 700,
-              line-height: 1.4,
-      ),
+        14-reg:(
+                font-size: 14px,
+                line-height: 1.4,
+                font-weight: 400,
+        ),
+        14-med:(
+                font-size: 14px,
+                line-height: 1.4,
+                font-weight: 500,
+        ),
+        14-bold:(
+                font-size: 14px,
+                line-height: 1.4,
+                font-weight: 700,
+        ),
+        14-caps:(
+                text-transform: uppercase,
+                font-size: 14px,
+                font-weight: 700,
+                line-height: 1.4,
+        ),
         16-reg:(
                 font-size: 16px,
                 line-height: 1.4,
@@ -174,85 +174,90 @@ $br1: 1px;
 
 //Colors
 //base white
-$cl-white-900:#FFFFFF;
-$cl-white-800:rgba(255, 255, 255, 0.90);
-$cl-white-700:rgba(255, 255, 255, 0.80);
-$cl-white-600:rgba(255, 255, 255, 0.70);
-$cl-white-500:rgba(255, 255, 255, 0.60);
-$cl-white-400:rgba(255, 255, 255, 0.44);
-$cl-white-300:rgba(255, 255, 255, 0.32);
-$cl-white-200:rgba(255, 255, 255, 0.20);
-$cl-white-100:rgba(255, 255, 255, 0.16);
-$cl-white-75:rgba(255, 255, 255, 0.12);
-$cl-white-50:rgba(255, 255, 255, 0.08);
-$cl-white-25:rgba(255, 255, 255, 0.04);
-$cl-white-0:rgba(255, 255, 255, 0.02);
+$cl-white-900: #FFFFFF;
+$cl-white-800: rgba(255, 255, 255, 0.90);
+$cl-white-700: rgba(255, 255, 255, 0.80);
+$cl-white-600: rgba(255, 255, 255, 0.70);
+$cl-white-500: rgba(255, 255, 255, 0.60);
+$cl-white-400: rgba(255, 255, 255, 0.44);
+$cl-white-300: rgba(255, 255, 255, 0.32);
+$cl-white-200: rgba(255, 255, 255, 0.20);
+$cl-white-100: rgba(255, 255, 255, 0.16);
+$cl-white-75: rgba(255, 255, 255, 0.12);
+$cl-white-50: rgba(255, 255, 255, 0.08);
+$cl-white-25: rgba(255, 255, 255, 0.04);
+$cl-white-0: rgba(255, 255, 255, 0.02);
 
 //base black
-$cl-grey-900:#111;
-$cl-grey-800:#191919;
-$cl-grey-700:#2D2D2D;
-$cl-grey-600:#414141;
-$cl-grey-500:#6D6D6D;
-$cl-grey-400:#888;
-$cl-grey-300:#B0B0B0;
-$cl-grey-200:#D1D1D1;
-$cl-grey-100:#E7E7E7;
-$cl-grey-50:#F6F6F6;
+$cl-grey-900: #111;
+$cl-grey-800: #191919;
+$cl-grey-700: #2D2D2D;
+$cl-grey-600: #414141;
+$cl-grey-500: #6D6D6D;
+$cl-grey-400: #888;
+$cl-grey-300: #B0B0B0;
+$cl-grey-200: #D1D1D1;
+$cl-grey-100: #E7E7E7;
+$cl-grey-50: #F6F6F6;
 // green
-$cl-green-900:#165127;
-$cl-green-800:#18632E;
-$cl-green-700:#187D34;
-$cl-green-600:#1A9F3E;
-$cl-green-500:#27C050;
-$cl-green-400:#54DB78;
-$cl-green-300:#89ECA3;
-$cl-green-200:#BDF5CC;
-$cl-green-100:#DDFBE4;
-$cl-green-50:#F0FDF3;
+$cl-green-900: #165127;
+$cl-green-800: #18632E;
+$cl-green-700: #187D34;
+$cl-green-600: #1A9F3E;
+$cl-green-500: #27C050;
+$cl-green-400: #54DB78;
+$cl-green-300: #89ECA3;
+$cl-green-200: #BDF5CC;
+$cl-green-100: #DDFBE4;
+$cl-green-50: #F0FDF3;
 
 // yellow
-$cl-yellow-900:#6C3E17;
-$cl-yellow-800:#7F4C14;
-$cl-yellow-700:#995F0F;
-$cl-yellow-600:#C0840E;
-$cl-yellow-500:#DEAA14;
-$cl-yellow-400:#EEC221;
-$cl-yellow-300:#F5DC64;
-$cl-yellow-200:#F8EB90;
-$cl-yellow-100:#FBF6C6;
-$cl-yellow-50:#FDFBE9;
+$cl-yellow-900: #6C3E17;
+$cl-yellow-800: #7F4C14;
+$cl-yellow-700: #995F0F;
+$cl-yellow-600: #C0840E;
+$cl-yellow-500: #DEAA14;
+$cl-yellow-400: #EEC221;
+$cl-yellow-300: #F5DC64;
+$cl-yellow-200: #F8EB90;
+$cl-yellow-100: #FBF6C6;
+$cl-yellow-50: #FDFBE9;
 // blue
-$cl-blue-900:#1C535D;
-$cl-blue-800:#1D636D;
-$cl-blue-700:#187B86;
-$cl-blue-600:#159AA5;
-$cl-blue-500:#16BEC4;
-$cl-blue-400:#32DBDE;
-$cl-blue-300:#57EAEA;
-$cl-blue-200:#ACF5F4;
-$cl-blue-100:#D3FAF8;
-$cl-blue-50:#EEFDFB;
+$cl-blue-900: #1C535D;
+$cl-blue-800: #1D636D;
+$cl-blue-700: #187B86;
+$cl-blue-600: #159AA5;
+$cl-blue-500: #16BEC4;
+$cl-blue-400: #32DBDE;
+$cl-blue-300: #57EAEA;
+$cl-blue-200: #ACF5F4;
+$cl-blue-100: #D3FAF8;
+$cl-blue-50: #EEFDFB;
 // red
-$cl-red-900:#7D1F1F;
-$cl-red-800:#971D1D;
-$cl-red-700:#B61F1F;
-$cl-red-600:#D82A2A;
-$cl-red-500:#EC4747;
-$cl-red-400:#F67D7D;
-$cl-red-300:#FAA7A7;
-$cl-red-200:#FDCBCB;
-$cl-red-100:#FDE3E3;
-$cl-red-50:#FEF2F2;
+$cl-red-900: #7D1F1F;
+$cl-red-800: #971D1D;
+$cl-red-700: #B61F1F;
+$cl-red-600: #D82A2A;
+$cl-red-500: #EC4747;
+$cl-red-400: #F67D7D;
+$cl-red-300: #FAA7A7;
+$cl-red-200: #FDCBCB;
+$cl-red-100: #FDE3E3;
+$cl-red-50: #FEF2F2;
 // bg
-$bg-main:#111;
-$bg-elem:#191919;
+$bg-main: #111;
+$bg-elem: #191919;
 // grad
 $gr-gold: linear-gradient(90deg, #F0C645 0%, #FAF283 49.5%, #EBC944 100%);
 $gr-gold-hover: linear-gradient(90deg, #D2A827 0%, #DCD465 49.5%, #CDAB26 100%);
 $gr-stroke: linear-gradient(180deg, rgba(255, 255, 255, 0.16) 0%, rgba(255, 255, 255, 0.08) 100%);
 $gr-label-gold: linear-gradient(90deg, #FDB80A 0%, #B1870A 100%);
-$gr-label-silver:  linear-gradient(90deg, #495860 0%, #39464C 100%);
-$gr-label-bronze:  linear-gradient(90deg, #7A5630 0%, #694A29 100%);
+$gr-label-silver: linear-gradient(90deg, #495860 0%, #39464C 100%);
+$gr-label-bronze: linear-gradient(90deg, #7A5630 0%, #694A29 100%);
 //shadow
 $drop-shadow: 2px 2px 0px 0px rgba(255, 255, 255, 0.16);
+
+
+$animHeightOpen: 3s ease-out;
+$animHeightClose: 0.8s ease;
+$animHeightCloseSpeed: 0.4s ease;

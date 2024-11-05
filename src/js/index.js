@@ -1,7 +1,7 @@
 import { Header } from './components/header.js';
 import { customSelect } from './components/customSelect.js';
 import initModal from './components/modal.js';
-import heroShowMore from './components/heroShowMore.js';
+import { handleHeroRating, heroShowMore } from './components/heroShowMore.js';
 import casinoCards from './components/casinoCards.js';
 import { toggleAccordion } from './components/toggleAccordion.js';
 
@@ -38,12 +38,12 @@ const showTableContent = () => {
   const tableContentBox = document.querySelectorAll('[data-target-table-content]');
   if (tableContentBox) {
     tableContentBox.forEach(table => {
-      const btn = table.querySelector('[data-table-content-btn]');
-      btn.addEventListener('click',()=>{
-        table.classList.toggle("show")
-      })
-      }
-    )
+        const btn = table.querySelector('[data-table-content-btn]');
+        btn.addEventListener('click', () => {
+          table.classList.toggle('show');
+        });
+      },
+    );
   }
 };
 const loadMoreBtn = () => {
@@ -63,16 +63,16 @@ const loadMoreBtn = () => {
   }
 };
 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
 
 
-  testSelect()
   Header();
-  initModal()
-  heroShowMore()
-  casinoCards()
-  loadMoreBtn()
-  showTableContent()
-  toggleAccordion()
+  initModal();
+  heroShowMore();
+  handleHeroRating();
+  casinoCards();
+  loadMoreBtn();
+  showTableContent();
+  toggleAccordion();
 
 });

@@ -1,120 +1,160 @@
 html {
-    box-sizing: border-box;
-    -webkit-tap-highlight-color:transparent;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
 }
 
 
 body {
-    font-family: $font-family;
-    font-style: normal;
-    color: $cl-white-900;
-    background-color: $bg-main;
-    overflow-x: hidden;
-    margin: 0;
-    position: relative;
-    &.white{
-        background-color: #FFFFFF;
-    }
+  font-family: $font-family;
+  font-style: normal;
+  color: $cl-white-900;
+  background-color: $bg-main;
+  overflow-x: hidden;
+  margin: 0;
+  position: relative;
+
+  &.white {
+    background-color: #FFFFFF;
+  }
 
 }
 
 main {
-    position: relative;
-    width: 100%;
-    margin-top: 70px;
-    @include media-query(desk){
-        margin-top: 75px;
-    }
+  position: relative;
+  width: 100%;
+  margin-top: 70px;
+  @include media-query(desk) {
+    margin-top: 75px;
+  }
 }
 
 
 body.modal-open {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 
 .text-ellipsis {
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    -webkit-line-clamp: 9;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-line-clamp: 9;
 
 
-    min-height: 14em;
-    max-height: 14em;
+  min-height: 14em;
+  max-height: 14em;
 }
 
 
-.skeleton{
-    transition: transform 0.15s cubic-bezier(0.11, 0, 0.5, 0);
-    background: linear-gradient(100deg, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, .5) 50%, rgba(255, 255, 255, 0) 60%) rgba(117, 117, 117, 0.5);
-    background-size: 200% 100%;
-    background-position-x: 180%;
-    animation: 1s loading ease-in-out infinite;
+.skeleton {
+  transition: transform 0.15s cubic-bezier(0.11, 0, 0.5, 0);
+  background: linear-gradient(100deg, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, .5) 50%, rgba(255, 255, 255, 0) 60%) rgba(117, 117, 117, 0.5);
+  background-size: 200% 100%;
+  background-position-x: 180%;
+  animation: 1s loading ease-in-out infinite;
 }
 
 @keyframes loading {
-    to {
-        background-position-x: -20%;
-    }
+  to {
+    background-position-x: -20%;
+  }
 }
 
-.section__header{
-    margin-bottom: 24px;
+.section__header {
+  margin-bottom: 24px;
 
-    & h2{
-        color: $cl-white-900;
-        @include font-title(h2-mob);
-        margin-bottom: 12px;
-    }
-    & p{
-        color: $cl-white-700;
-        @include font-body(14-reg);
-        &:not(:last-child){
-            margin-bottom: 8px;
-        }
-    }
-    &.center{
-        text-align: center;
-    }
-    @include media-query(tab){
-        margin-bottom: 32px;
-
-        & h2{
-            @include font-title(h2);
-            margin-bottom: 16px;
-        }
-        & p{
-            @include font-body(18-reg);
-            &:not(:last-child){
-                margin-bottom: 12px;
-            }
-        }
-    }
-}
-.sub-title{
+  & h2 {
     color: $cl-white-900;
     @include font-title(h2-mob);
+    margin-bottom: 12px;
+  }
 
-    @include media-query(tab){
-        @include font-title(h2);
-    }
-}
-.sub-title--desc{
+  & p {
     color: $cl-white-700;
     @include font-body(14-reg);
 
-    @include media-query(tab){
-        @include font-body(18-reg);
+    &:not(:last-child) {
+      margin-bottom: 8px;
     }
+  }
+
+  &.center {
+    text-align: center;
+  }
+
+  @include media-query(tab) {
+    margin-bottom: 32px;
+
+    & h2 {
+      @include font-title(h2);
+      margin-bottom: 16px;
+    }
+    & p {
+      @include font-body(18-reg);
+
+      &:not(:last-child) {
+        margin-bottom: 12px;
+      }
+    }
+  }
+}
+
+.sub-title, h2 {
+  color: $cl-white-900;
+  @include font-title(h2-mob);
+
+  @include media-query(tab) {
+    @include font-title(h2);
+  }
+}
+
+.sub-title--desc {
+  color: $cl-white-700;
+  @include font-body(14-reg);
+
+  @include media-query(tab) {
+    @include font-body(18-reg);
+  }
 
 }
-section.container{
-    margin-top: 48px;
-    margin-bottom: 48px;
-    @include media-query(tab){
-        margin-top: 100px;
-        margin-bottom: 100px;
+
+section.container {
+  margin-top: 48px;
+  margin-bottom: 48px;
+  @include media-query(tab) {
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+}
+
+section.grey {
+  padding: 24px 0;
+  background-color: $bg-elem;
+
+  @include media-query(tab) {
+    padding: 64px 0;
+  }
+
+}
+
+
+blockquote {
+  border-radius: $br12;
+  background: rgba(137, 236, 163, 0.08);
+  padding: 16px 24px;
+  margin: 0 0 24px;
+
+  & p, & a, & h1, & h2, & h3, & h4, & h5, & h6 {
+    color: $cl-white-900;
+    @include font-title(h3-mob);
+  }
+
+  @include media-query(tab) {
+    padding: 32px 48px;
+    margin: 0 0 48px;
+    & p, & a, & h1, & h2, & h3, & h4, & h5, & h6 {
+      @include font-title(h3);
     }
+  }
 }

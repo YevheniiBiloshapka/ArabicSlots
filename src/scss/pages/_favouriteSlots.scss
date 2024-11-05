@@ -1,0 +1,183 @@
+
+.favourite-slots__list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+
+  @include media-query(tab) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    & .favourite-slots__item {
+      flex: 1 0 calc(50% - 16px);
+      max-width: calc(50% - 16px);
+    }
+  }
+  @include media-query(desk) {
+
+    & .favourite-slots__item {
+      flex: 1 0 calc(20% - 16px);
+      max-width: calc(20% - 16px);
+    }
+  }
+}
+
+.favourite-slots__item {
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  border-radius: $br12;
+  background: $cl-white-25;
+
+  & .button.second.small {
+    position: relative;
+    background: transparent;
+    overflow: hidden;
+    z-index: 0;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(238, 194, 33, 0.18);
+      backdrop-filter: blur(6px);
+      z-index: -1;
+      @include transition();
+    }
+
+    &:hover {
+      &::before {
+        background: rgba(238, 194, 33, 0.14);
+      }
+    }
+  }
+
+  &:hover {
+    & .favourite-slots__item--btn-box {
+      pointer-events: unset;
+      transform: translate(-50%, -50%);
+      transition: transform 0.5s ease;
+    }
+
+    & img {
+      filter: brightness(40%);
+    }
+  }
+}
+
+.favourite-slots__item--top-box {
+  overflow: hidden;
+  position: relative;
+  height: 140px;
+  min-height: 140px;
+  border-radius: $br12;
+
+  & img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 0;
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    @include transition(filter, 0.5s);
+  }
+
+  & .favourite-slots__item--btn-box {
+    pointer-events: none;
+    transition: transform 0.4s ease-out;
+
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -200%);
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    max-width: 200px;
+
+
+  }
+}
+
+.favourite-slots__item--info {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 3px;
+  padding: 16px;
+
+  &--box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+
+    margin-top: auto;
+  }
+
+  &--title {
+    color: $cl-white-900;
+    @include font-body(20-bold);
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+  }
+
+  &--desc {
+    color: $cl-white-400;
+    @include font-body(14-reg);
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-line-clamp: 1;
+  }
+
+  &--rating {
+    z-index: 0;
+    position: relative;
+    overflow: hidden;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-width: fit-content;
+    white-space: nowrap;
+    padding: 4px 4px;
+    border-radius: 2px;
+
+    color: $cl-yellow-400;
+    @include font(12px, 500, 100%);
+    background: $gr-gold;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    &:before {
+      position: absolute;
+      z-index: -1;
+      content: "";
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: $cl-white-25;
+    }
+  }
+}

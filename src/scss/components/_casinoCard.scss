@@ -8,32 +8,11 @@
   padding: 0;
 
   &--item{
+
     position: relative;
     list-style: none;
-    counter-increment: custom-counter;
     z-index: 0;
 
-    &::before {
-      position: absolute;
-      top: 6px;
-      left: 6px;
-      z-index: 22;
-
-      content: counter(custom-counter);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      $size:32px;
-      width: $size;
-      height: $size;
-      border-radius: 30px;
-      text-align: center;
-
-      color: $cl-white-900;
-       @include font-body(14-bold);
-
-      background: $cl-grey-600;
-    }
     &::after{
       position: absolute;
       top: 64px;
@@ -48,7 +27,7 @@
 
     }
     &:nth-child(1){
-      &:before{
+      & .casino-card__top--info:before{
         background: $gr-label-gold;
       }
       &::after{
@@ -56,7 +35,7 @@
       }
     }
     &:nth-child(2){
-      &:before{
+      & .casino-card__top--info:before{
         background: $gr-label-silver;
       }
       &::after{
@@ -64,21 +43,60 @@
       }
     }
     &:nth-child(3){
-      &:before{
+      & .casino-card__top--info:before{
         background: $gr-label-bronze;
       }
       &::after{
         background: $gr-label-bronze;
       }
     }
+    & .casino-card__top--info{
+      position: relative;
+      list-style: none;
+      counter-increment: custom-counter;
+      z-index: 10;
+      &::before {
+        position: absolute;
+        top: -6px;
+        left: -6px;
+        z-index: 11;
+
+        content: counter(custom-counter);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        $size:32px;
+        width: $size;
+        height: $size;
+        border-radius: 30px;
+        text-align: center;
+
+        color: $cl-white-900;
+        @include font-body(14-bold);
+
+        background: $cl-grey-600;
+      }
+    }
   }
+  & .casino-card{
+    z-index: 10;
+  }
+
   @include media-query(tab){
     gap:48px;
     &--item{
-      &::before {
-        top: 14px;
-        left: 22px;
+      &::after{
+        top: 20px;
+        left: -8px;
+        width: 8px;
+        height: 118px;
       }
+    }
+
+  }
+  @include media-query(desk){
+    &--item{
+
       &::after{
         top: 20px;
         left: -8px;
@@ -371,7 +389,7 @@
 //! casino INFO
 .casino-card__top--info-box--item.rating{
   position: relative;
-  z-index: 0;
+  z-index: 12;
   background-color: $cl-white-25;
   cursor: pointer;
   @include transition();
@@ -387,10 +405,10 @@
 }
 .casino-card__dropdown-rating{
   position: absolute;
-  top: 105%;
+  bottom: 105%;
   left: 0;
   max-height: 0;
-  z-index: 20;
+  z-index: 600;
   overflow: hidden;
   pointer-events: none;
   transition:max-height 0.6s linear; ;

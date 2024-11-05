@@ -46,3 +46,14 @@
     }
   }
 }
+
+.table-card-games {
+  @include media-query(desk){
+    & .top-info-bar__labels{
+      margin-bottom: 48px;
+    }
+    & .contentSection{
+      margin-bottom: 48px;
+    }
+  }
+}

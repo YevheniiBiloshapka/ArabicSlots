@@ -1,10 +1,4 @@
-.casino-types{
-  padding: 24px 0;
-  background-color: $bg-elem;
-  @include media-query(tab){
-    padding: 48px 0;
-  }
-}
+
 
 .casino-types__list{
   display: flex;
