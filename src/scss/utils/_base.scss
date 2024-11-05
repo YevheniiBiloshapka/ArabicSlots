@@ -2,6 +2,7 @@ html {
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
   touch-action: manipulation;
+  scroll-behavior: auto;
 }
 
 
@@ -32,6 +33,11 @@ main {
 
 body.modal-open {
   overflow: hidden;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
 }
 
 
