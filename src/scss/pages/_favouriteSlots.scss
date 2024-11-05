@@ -72,8 +72,8 @@
 .favourite-slots__item--top-box {
   overflow: hidden;
   position: relative;
-  height: 140px;
-  min-height: 140px;
+  height: 200px;
+  min-height: 200px;
   border-radius: $br12;
 
   & img {
@@ -110,13 +110,18 @@
 
 
   }
+
+  @include media-query(tab) {
+    height: 140px;
+    min-height: 140px;
+  }
 }
 
 .favourite-slots__item--info {
   display: flex;
   flex-direction: column;
   height: 100%;
-  gap: 3px;
+  gap: 8px;
   padding: 16px;
 
   &--box {

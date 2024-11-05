@@ -11,12 +11,12 @@ export default function controlBodyScroll(isOpen) {
 
   if (isOpen) {
 
+    body.classList.add('modal-open');
+    html.style.overflowY = 'hidden';
     if (window.innerWidth > 768) {
       body.style.paddingRight = `${scrollbarWidth}px`;
       header.style.paddingRight = `${scrollbarWidth}px`;
     }
-    body.classList.add('modal-open');
-    html.style.overflowY = 'hidden';
   } else {
     body.style.paddingRight = '';
     header.style.paddingRight = '';

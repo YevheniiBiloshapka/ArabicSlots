@@ -474,6 +474,7 @@ address {
 html {
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 
 body {
@@ -650,6 +651,11 @@ blockquote p, blockquote a, blockquote h1, blockquote h2, blockquote h3, blockqu
 @media (min-width: 375px) {
   .container {
     width: 375px;
+  }
+}
+@media (min-width: 400px) {
+  .container {
+    width: 400px;
   }
 }
 @media (min-width: 744px) {
@@ -1316,20 +1322,23 @@ table:not(.our-team__table, .benefits-number--table) td a:hover, table:not(.our-
   height: 20px;
   min-width: 20px;
   min-height: 20px;
-  margin-top: 3px;
   background: transparent;
   border: none;
 }
 .accordion__header--btn::before {
-  content: "";
   display: inline-block;
   width: 20px;
   height: 20px;
   min-width: 20px;
   min-height: 20px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M9.9985 1.33301C10.5508 1.33301 10.9985 1.78072 10.9985 2.33301V8.99801H17.6635C18.2158 8.99801 18.6635 9.44572 18.6635 9.99801C18.6635 10.5503 18.2158 10.998 17.6635 10.998H10.9985V17.663C10.9985 18.2153 10.5508 18.663 9.9985 18.663C9.44621 18.663 8.9985 18.2153 8.9985 17.663V10.998H2.3335C1.78121 10.998 1.3335 10.5503 1.3335 9.99801C1.3335 9.44572 1.78121 8.99801 2.3335 8.99801H8.9985V2.33301C8.9985 1.78072 9.44621 1.33301 9.9985 1.33301Z' fill='white' fill-opacity='0.44'/%3E%3C/svg%3E");
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M9.9985 1.33301C10.5508 1.33301 10.9985 1.78072 10.9985 2.33301V8.99801H17.6635C18.2158 8.99801 18.6635 9.44572 18.6635 9.99801C18.6635 10.5503 18.2158 10.998 17.6635 10.998H10.9985V17.663C10.9985 18.2153 10.5508 18.663 9.9985 18.663C9.44621 18.663 8.9985 18.2153 8.9985 17.663V10.998H2.3335C1.78121 10.998 1.3335 10.5503 1.3335 9.99801C1.3335 9.44572 1.78121 8.99801 2.3335 8.99801H8.9985V2.33301C8.9985 1.78072 9.44621 1.33301 9.9985 1.33301Z' fill='white' fill-opacity='0.44'/%3E%3C/svg%3E");
   background-size: contain;
   background-repeat: no-repeat;
+}
+@media (min-width: 1280px) {
+  .accordion__header--btn {
+    margin-top: 2px;
+  }
 }
 
 .accordion__content {
@@ -1351,7 +1360,7 @@ table:not(.our-team__table, .benefits-number--table) td a:hover, table:not(.our-
   transition: max-height 3s ease-out;
 }
 .accordion.show .accordion__header--btn::before {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M1.3335 10C1.3335 9.44772 1.78121 9 2.3335 9H17.3335C17.8858 9 18.3335 9.44772 18.3335 10C18.3335 10.5523 17.8858 11 17.3335 11H2.3335C1.78121 11 1.3335 10.5523 1.3335 10Z' fill='url(%23paint0_linear_507_50483)'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_507_50483' x1='1.3335' y1='9.99559' x2='18.3335' y2='9.99559' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23F0C645'/%3E%3Cstop offset='0.495' stop-color='%23FAF283'/%3E%3Cstop offset='1' stop-color='%23EBC944'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E");
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M1.3335 10C1.3335 9.44772 1.78121 9 2.3335 9H17.3335C17.8858 9 18.3335 9.44772 18.3335 10C18.3335 10.5523 17.8858 11 17.3335 11H2.3335C1.78121 11 1.3335 10.5523 1.3335 10Z' fill='url(%23paint0_linear_507_50483)'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_507_50483' x1='1.3335' y1='9.99559' x2='18.3335' y2='9.99559' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23F0C645'/%3E%3Cstop offset='0.495' stop-color='%23FAF283'/%3E%3Cstop offset='1' stop-color='%23EBC944'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E");
 }
 
 .top-info-bar__labels {
@@ -1730,7 +1739,7 @@ table:not(.our-team__table, .benefits-number--table) td a:hover, table:not(.our-
   color: #89ECA3;
 }
 .casino-best-card__list--item .casino-best-card__list--item--box .casino-best-card__list--item__benefits.advantages ul li:before {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='16' viewBox='0 0 17 16' fill='none'%3E %3Cpath d='M16.0522 8C16.0522 12.4183 12.4705 16 8.05225 16C3.63397 16 0.0522461 12.4183 0.0522461 8C0.0522461 3.58172 3.63397 0 8.05225 0C12.4705 0 16.0522 3.58172 16.0522 8Z' fill='%231A9F3E'/%3E %3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M12.1212 4.5653C12.5454 4.91886 12.6028 5.54943 12.2492 5.97371L8.43968 10.5451C8.25981 10.761 7.99744 10.8912 7.71677 10.9039C7.4361 10.9167 7.16302 10.8107 6.96435 10.6121L4.67864 8.32634C4.28811 7.93582 4.28811 7.30265 4.67864 6.91213C5.06916 6.5216 5.70232 6.5216 6.09285 6.91213L7.60426 8.42354L10.7128 4.69334C11.0663 4.26906 11.6969 4.21174 12.1212 4.5653Z' fill='white'/%3E %3C/svg%3E");
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='16' viewBox='0 0 17 16' fill='none'%3E %3Cpath d='M16.0522 8C16.0522 12.4183 12.4705 16 8.05225 16C3.63397 16 0.0522461 12.4183 0.0522461 8C0.0522461 3.58172 3.63397 0 8.05225 0C12.4705 0 16.0522 3.58172 16.0522 8Z' fill='%231A9F3E'/%3E %3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M12.1212 4.5653C12.5454 4.91886 12.6028 5.54943 12.2492 5.97371L8.43968 10.5451C8.25981 10.761 7.99744 10.8912 7.71677 10.9039C7.4361 10.9167 7.16302 10.8107 6.96435 10.6121L4.67864 8.32634C4.28811 7.93582 4.28811 7.30265 4.67864 6.91213C5.06916 6.5216 5.70232 6.5216 6.09285 6.91213L7.60426 8.42354L10.7128 4.69334C11.0663 4.26906 11.6969 4.21174 12.1212 4.5653Z' fill='white'/%3E %3C/svg%3E");
 }
 .casino-best-card__list--item .casino-best-card__list--item--box .casino-best-card__list--item__benefits.disadvantages {
   background: rgba(246, 125, 125, 0.12);
@@ -1739,7 +1748,7 @@ table:not(.our-team__table, .benefits-number--table) td a:hover, table:not(.our-
   color: #F67D7D;
 }
 .casino-best-card__list--item .casino-best-card__list--item--box .casino-best-card__list--item__benefits.disadvantages ul li:before {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='16' viewBox='0 0 17 16' fill='none'%3E%3Cg clip-path='url(%23clip0_455_53632)'%3E%3Cpath d='M8.875 0C4.46362 0 0.875 3.58862 0.875 8C0.875 12.4114 4.46362 16 8.875 16C13.2864 16 16.875 12.4114 16.875 8C16.875 3.58862 13.2864 0 8.875 0ZM12.375 8.66663H5.375C5.00696 8.66663 4.70837 8.36804 4.70837 8C4.70837 7.63196 5.00696 7.33337 5.375 7.33337H12.375C12.743 7.33337 13.0416 7.63196 13.0416 8C13.0416 8.36804 12.743 8.66663 12.375 8.66663Z' fill='%23F67D7D'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_455_53632'%3E%3Crect width='16' height='16' fill='white' transform='translate(0.875)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='16' viewBox='0 0 17 16' fill='none'%3E%3Cg clip-path='url(%23clip0_455_53632)'%3E%3Cpath d='M8.875 0C4.46362 0 0.875 3.58862 0.875 8C0.875 12.4114 4.46362 16 8.875 16C13.2864 16 16.875 12.4114 16.875 8C16.875 3.58862 13.2864 0 8.875 0ZM12.375 8.66663H5.375C5.00696 8.66663 4.70837 8.36804 4.70837 8C4.70837 7.63196 5.00696 7.33337 5.375 7.33337H12.375C12.743 7.33337 13.0416 7.63196 13.0416 8C13.0416 8.36804 12.743 8.66663 12.375 8.66663Z' fill='%23F67D7D'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_455_53632'%3E%3Crect width='16' height='16' fill='white' transform='translate(0.875)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
 }
 @media (min-width: 744px) {
   .casino-best-card__list--item .casino-best-card__list--item--box {
@@ -2514,16 +2523,15 @@ table:not(.our-team__table, .benefits-number--table) td a:hover, table:not(.our-
   transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .top-casino__modal-disclaimer--btn-close::before {
-  content: "";
   display: inline-block;
   width: 20px;
   height: 20px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.80292 2.80268C3.09582 2.50978 3.57069 2.50978 3.86358 2.80268L9.99992 8.93901L16.1363 2.80268C16.4291 2.50978 16.904 2.50978 17.1969 2.80268C17.4898 3.09557 17.4898 3.57044 17.1969 3.86334L11.0606 9.99967L17.1969 16.136C17.4898 16.4289 17.4898 16.9038 17.1969 17.1967C16.904 17.4896 16.4291 17.4896 16.1363 17.1967L9.99992 11.0603L3.86358 17.1967C3.57069 17.4896 3.09582 17.4896 2.80292 17.1967C2.51003 16.9038 2.51003 16.4289 2.80292 16.136L8.93926 9.99967L2.80292 3.86334C2.51003 3.57044 2.51003 3.09557 2.80292 2.80268Z' fill='%23ffffff'/%3E%3C/svg%3E");
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.80292 2.80268C3.09582 2.50978 3.57069 2.50978 3.86358 2.80268L9.99992 8.93901L16.1363 2.80268C16.4291 2.50978 16.904 2.50978 17.1969 2.80268C17.4898 3.09557 17.4898 3.57044 17.1969 3.86334L11.0606 9.99967L17.1969 16.136C17.4898 16.4289 17.4898 16.9038 17.1969 17.1967C16.904 17.4896 16.4291 17.4896 16.1363 17.1967L9.99992 11.0603L3.86358 17.1967C3.57069 17.4896 3.09582 17.4896 2.80292 17.1967C2.51003 16.9038 2.51003 16.4289 2.80292 16.136L8.93926 9.99967L2.80292 3.86334C2.51003 3.57044 2.51003 3.09557 2.80292 2.80268Z' fill='%23ffffff'/%3E%3C/svg%3E");
   background-size: contain;
   background-repeat: no-repeat;
 }
 .top-casino__modal-disclaimer--btn-close:hover::before {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.80292 2.80268C3.09582 2.50978 3.57069 2.50978 3.86358 2.80268L9.99992 8.93901L16.1363 2.80268C16.4291 2.50978 16.904 2.50978 17.1969 2.80268C17.4898 3.09557 17.4898 3.57044 17.1969 3.86334L11.0606 9.99967L17.1969 16.136C17.4898 16.4289 17.4898 16.9038 17.1969 17.1967C16.904 17.4896 16.4291 17.4896 16.1363 17.1967L9.99992 11.0603L3.86358 17.1967C3.57069 17.4896 3.09582 17.4896 2.80292 17.1967C2.51003 16.9038 2.51003 16.4289 2.80292 16.136L8.93926 9.99967L2.80292 3.86334C2.51003 3.57044 2.51003 3.09557 2.80292 2.80268Z' fill='%23BABABA'/%3E%3C/svg%3E");
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.80292 2.80268C3.09582 2.50978 3.57069 2.50978 3.86358 2.80268L9.99992 8.93901L16.1363 2.80268C16.4291 2.50978 16.904 2.50978 17.1969 2.80268C17.4898 3.09557 17.4898 3.57044 17.1969 3.86334L11.0606 9.99967L17.1969 16.136C17.4898 16.4289 17.4898 16.9038 17.1969 17.1967C16.904 17.4896 16.4291 17.4896 16.1363 17.1967L9.99992 11.0603L3.86358 17.1967C3.57069 17.4896 3.09582 17.4896 2.80292 17.1967C2.51003 16.9038 2.51003 16.4289 2.80292 16.136L8.93926 9.99967L2.80292 3.86334C2.51003 3.57044 2.51003 3.09557 2.80292 2.80268Z' fill='%23BABABA'/%3E%3C/svg%3E");
 }
 @media (min-width: 744px) {
   .top-casino__modal-disclaimer .modal {
@@ -2730,11 +2738,10 @@ table:not(.our-team__table, .benefits-number--table) td a:hover, table:not(.our-
 .contentSection ul li::before {
   margin-top: 3px;
   margin-right: 8px;
-  content: "";
   display: inline-block;
   width: 17px;
   height: 17px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='17' viewBox='0 0 17 17' fill='none'%3E%3Ccircle cx='8.0332' cy='8.04779' r='8' fill='%231A9F3E'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M12.1016 4.61309C12.5259 4.96665 12.5832 5.59722 12.2297 6.0215L8.42015 10.5929C8.24028 10.8088 7.97791 10.939 7.69724 10.9517C7.41657 10.9644 7.14349 10.8585 6.94482 10.6598L4.6591 8.37413C4.26858 7.98361 4.26858 7.35044 4.6591 6.95992C5.04963 6.5694 5.68279 6.5694 6.07332 6.95992L7.58473 8.47133L10.6932 4.74113C11.0468 4.31685 11.6774 4.25953 12.1016 4.61309Z' fill='%23ffffff'/%3E%3C/svg%3E");
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='17' viewBox='0 0 17 17' fill='none'%3E%3Ccircle cx='8.0332' cy='8.04779' r='8' fill='%231A9F3E'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M12.1016 4.61309C12.5259 4.96665 12.5832 5.59722 12.2297 6.0215L8.42015 10.5929C8.24028 10.8088 7.97791 10.939 7.69724 10.9517C7.41657 10.9644 7.14349 10.8585 6.94482 10.6598L4.6591 8.37413C4.26858 7.98361 4.26858 7.35044 4.6591 6.95992C5.04963 6.5694 5.68279 6.5694 6.07332 6.95992L7.58473 8.47133L10.6932 4.74113C11.0468 4.31685 11.6774 4.25953 12.1016 4.61309Z' fill='%23ffffff'/%3E%3C/svg%3E");
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -2929,11 +2936,10 @@ table:not(.our-team__table, .benefits-number--table) td a:hover, table:not(.our-
   transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .table-of-contents__btn::before {
-  content: "";
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 18 18' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M8.60225 4.85225C8.82192 4.63258 9.17808 4.63258 9.39775 4.85225L15.3977 10.8523C15.6174 11.0719 15.6174 11.4281 15.3977 11.6477C15.1781 11.8674 14.8219 11.8674 14.6023 11.6477L9 6.0455L3.39775 11.6477C3.17808 11.8674 2.82192 11.8674 2.60225 11.6477C2.38258 11.4281 2.38258 11.0719 2.60225 10.8523L8.60225 4.85225Z' fill='%23111111'/%3E%3C/svg%3E");
   display: inline-block;
   width: 18px;
   height: 18px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 18 18' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M8.60225 4.85225C8.82192 4.63258 9.17808 4.63258 9.39775 4.85225L15.3977 10.8523C15.6174 11.0719 15.6174 11.4281 15.3977 11.6477C15.1781 11.8674 14.8219 11.8674 14.6023 11.6477L9 6.0455L3.39775 11.6477C3.17808 11.8674 2.82192 11.8674 2.60225 11.6477C2.38258 11.4281 2.38258 11.0719 2.60225 10.8523L8.60225 4.85225Z' fill='%23111111'/%3E%3C/svg%3E");
   background-size: contain;
   background-repeat: no-repeat;
   transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
@@ -3151,11 +3157,10 @@ table:not(.our-team__table, .benefits-number--table) td a:hover, table:not(.our-
 }
 .casino-req__list--item--title::before {
   margin-top: 1px;
-  content: "";
   display: inline-block;
   width: 18px;
   height: 19px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='19' viewBox='0 0 18 19' fill='none'%3E%3Cpath d='M18 9.5C18 14.4706 13.9706 18.5 9 18.5C4.02944 18.5 0 14.4706 0 9.5C0 4.52944 4.02944 0.5 9 0.5C13.9706 0.5 18 4.52944 18 9.5Z' fill='%231A9F3E'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M13.4973 5.7318C13.9216 6.08537 13.9789 6.71593 13.6254 7.14021L9.33965 12.2831C9.15978 12.4989 8.89741 12.6291 8.61674 12.6419C8.33607 12.6546 8.06299 12.5487 7.86432 12.35L5.29289 9.77856C4.90237 9.38804 4.90237 8.75487 5.29289 8.36435C5.68342 7.97382 6.31658 7.97382 6.70711 8.36435L8.50423 10.1615L12.0889 5.85984C12.4425 5.43556 13.0731 5.37824 13.4973 5.7318Z' fill='white'/%3E%3C/svg%3E");
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='19' viewBox='0 0 18 19' fill='none'%3E%3Cpath d='M18 9.5C18 14.4706 13.9706 18.5 9 18.5C4.02944 18.5 0 14.4706 0 9.5C0 4.52944 4.02944 0.5 9 0.5C13.9706 0.5 18 4.52944 18 9.5Z' fill='%231A9F3E'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M13.4973 5.7318C13.9216 6.08537 13.9789 6.71593 13.6254 7.14021L9.33965 12.2831C9.15978 12.4989 8.89741 12.6291 8.61674 12.6419C8.33607 12.6546 8.06299 12.5487 7.86432 12.35L5.29289 9.77856C4.90237 9.38804 4.90237 8.75487 5.29289 8.36435C5.68342 7.97382 6.31658 7.97382 6.70711 8.36435L8.50423 10.1615L12.0889 5.85984C12.4425 5.43556 13.0731 5.37824 13.4973 5.7318Z' fill='white'/%3E%3C/svg%3E");
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -3381,21 +3386,19 @@ table:not(.our-team__table, .benefits-number--table) td a:hover, table:not(.our-
   background-color: rgba(255, 255, 255, 0.02);
 }
 .how-it-work__list--item--btn::before {
-  content: "";
   display: inline-block;
   width: 20px;
   height: 20px;
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none"><g clip-path="url(%23clip0_444_53621)"><path fill-rule="evenodd" clip-rule="evenodd" d="M1.5415 10.1665C1.5415 9.61422 1.98922 9.1665 2.5415 9.1665L19.2082 9.1665C19.7605 9.1665 20.2082 9.61422 20.2082 10.1665C20.2082 10.7188 19.7605 11.1665 19.2082 11.1665L2.5415 11.1665C1.98922 11.1665 1.5415 10.7188 1.5415 10.1665Z" fill="white"/><path fill-rule="evenodd" clip-rule="evenodd" d="M12.6679 3.6259C13.0584 3.23538 13.6916 3.23538 14.0821 3.6259L19.9154 9.45923C20.306 9.84976 20.306 10.4829 19.9154 10.8734L14.0821 16.7068C13.6916 17.0973 13.0584 17.0973 12.6679 16.7068C12.2774 16.3163 12.2774 15.6831 12.6679 15.2926L17.7941 10.1663L12.6679 5.04011C12.2774 4.64959 12.2774 4.01643 12.6679 3.6259Z" fill="white"/></g><defs><clipPath id="clip0_444_53621"><rect width="20" height="20" fill="white" transform="translate(0.875 0.166504)"/></clipPath></defs></svg>');
+  content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none"><g clip-path="url(%23clip0_444_53621)"><path fill-rule="evenodd" clip-rule="evenodd" d="M1.5415 10.1665C1.5415 9.61422 1.98922 9.1665 2.5415 9.1665L19.2082 9.1665C19.7605 9.1665 20.2082 9.61422 20.2082 10.1665C20.2082 10.7188 19.7605 11.1665 19.2082 11.1665L2.5415 11.1665C1.98922 11.1665 1.5415 10.7188 1.5415 10.1665Z" fill="white"/><path fill-rule="evenodd" clip-rule="evenodd" d="M12.6679 3.6259C13.0584 3.23538 13.6916 3.23538 14.0821 3.6259L19.9154 9.45923C20.306 9.84976 20.306 10.4829 19.9154 10.8734L14.0821 16.7068C13.6916 17.0973 13.0584 17.0973 12.6679 16.7068C12.2774 16.3163 12.2774 15.6831 12.6679 15.2926L17.7941 10.1663L12.6679 5.04011C12.2774 4.64959 12.2774 4.01643 12.6679 3.6259Z" fill="white"/></g><defs><clipPath id="clip0_444_53621"><rect width="20" height="20" fill="white" transform="translate(0.875 0.166504)"/></clipPath></defs></svg>');
   background-size: contain;
   background-repeat: no-repeat;
   transform: rotate(90deg);
 }
 .how-it-work__list--item:last-child .how-it-work__list--item--btn:before {
-  content: "";
   display: inline-block;
   width: 25px;
   height: 24px;
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M21.5152 5.2318C21.9395 5.58537 21.9968 6.21593 21.6432 6.64021L11.6432 18.6402C11.4634 18.856 11.201 18.9863 10.9203 18.999C10.6396 19.0117 10.3666 18.9058 10.1679 18.7071L4.16789 12.7071C3.77737 12.3166 3.77737 11.6834 4.16789 11.2929C4.55842 10.9024 5.19158 10.9024 5.58211 11.2929L10.8078 16.5186L20.1068 5.35984C20.4603 4.93556 21.0909 4.87824 21.5152 5.2318Z" fill="white"/></svg>');
+  content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M21.5152 5.2318C21.9395 5.58537 21.9968 6.21593 21.6432 6.64021L11.6432 18.6402C11.4634 18.856 11.201 18.9863 10.9203 18.999C10.6396 19.0117 10.3666 18.9058 10.1679 18.7071L4.16789 12.7071C3.77737 12.3166 3.77737 11.6834 4.16789 11.2929C4.55842 10.9024 5.19158 10.9024 5.58211 11.2929L10.8078 16.5186L20.1068 5.35984C20.4603 4.93556 21.0909 4.87824 21.5152 5.2318Z" fill="white"/></svg>');
   background-size: contain;
   background-repeat: no-repeat;
   transform: rotate(0);
@@ -3426,7 +3429,7 @@ table:not(.our-team__table, .benefits-number--table) td a:hover, table:not(.our-
   .how-it-work__list--item--btn::before {
     width: 24px;
     height: 24px;
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M1 12C1 11.4477 1.44772 11 2 11L22 11C22.5523 11 23 11.4477 23 12C23 12.5523 22.5523 13 22 13L2 13C1.44772 13 1 12.5523 1 12Z" fill="white"/><path fill-rule="evenodd" clip-rule="evenodd" d="M14.2929 4.29289C14.6834 3.90237 15.3166 3.90237 15.7071 4.29289L22.7071 11.2929C23.0976 11.6834 23.0976 12.3166 22.7071 12.7071L15.7071 19.7071C15.3166 20.0976 14.6834 20.0976 14.2929 19.7071C13.9024 19.3166 13.9024 18.6834 14.2929 18.2929L20.5858 12L14.2929 5.70711C13.9024 5.31658 13.9024 4.68342 14.2929 4.29289Z" fill="white"/></svg>');
+    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M1 12C1 11.4477 1.44772 11 2 11L22 11C22.5523 11 23 11.4477 23 12C23 12.5523 22.5523 13 22 13L2 13C1.44772 13 1 12.5523 1 12Z" fill="white"/><path fill-rule="evenodd" clip-rule="evenodd" d="M14.2929 4.29289C14.6834 3.90237 15.3166 3.90237 15.7071 4.29289L22.7071 11.2929C23.0976 11.6834 23.0976 12.3166 22.7071 12.7071L15.7071 19.7071C15.3166 20.0976 14.6834 20.0976 14.2929 19.7071C13.9024 19.3166 13.9024 18.6834 14.2929 18.2929L20.5858 12L14.2929 5.70711C13.9024 5.31658 13.9024 4.68342 14.2929 4.29289Z" fill="white"/></svg>');
     transform: rotate(0deg);
   }
 }
@@ -3485,13 +3488,12 @@ table:not(.our-team__table, .benefits-number--table) td a:hover, table:not(.our-
   font-weight: 500;
 }
 .bad-casinos__list--item__issues--item::before {
-  content: "";
   display: inline-block;
   width: 16px;
   height: 16px;
   min-width: 16px;
   margin-top: 4px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='16' viewBox='0 0 17 16' fill='none'%3E%3Cg clip-path='url(%23clip0_455_53632)'%3E%3Cpath d='M8.875 0C4.46362 0 0.875 3.58862 0.875 8C0.875 12.4114 4.46362 16 8.875 16C13.2864 16 16.875 12.4114 16.875 8C16.875 3.58862 13.2864 0 8.875 0ZM12.375 8.66663H5.375C5.00696 8.66663 4.70837 8.36804 4.70837 8C4.70837 7.63196 5.00696 7.33337 5.375 7.33337H12.375C12.743 7.33337 13.0416 7.63196 13.0416 8C13.0416 8.36804 12.743 8.66663 12.375 8.66663Z' fill='%23F67D7D'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_455_53632'%3E%3Crect width='16' height='16' fill='white' transform='translate(0.875)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='16' viewBox='0 0 17 16' fill='none'%3E%3Cg clip-path='url(%23clip0_455_53632)'%3E%3Cpath d='M8.875 0C4.46362 0 0.875 3.58862 0.875 8C0.875 12.4114 4.46362 16 8.875 16C13.2864 16 16.875 12.4114 16.875 8C16.875 3.58862 13.2864 0 8.875 0ZM12.375 8.66663H5.375C5.00696 8.66663 4.70837 8.36804 4.70837 8C4.70837 7.63196 5.00696 7.33337 5.375 7.33337H12.375C12.743 7.33337 13.0416 7.63196 13.0416 8C13.0416 8.36804 12.743 8.66663 12.375 8.66663Z' fill='%23F67D7D'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_455_53632'%3E%3Crect width='16' height='16' fill='white' transform='translate(0.875)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -3676,7 +3678,7 @@ table:not(.our-team__table, .benefits-number--table) td a:hover, table:not(.our-
   color: #89ECA3;
 }
 .benefits__wrapper--box.advantages .benefits__list--item:before {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M16 8C16 12.4183 12.4183 16 8 16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8Z' fill='%231A9F3E'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M12.0689 4.56481C12.4932 4.91838 12.5505 5.54894 12.197 5.97322L8.38743 10.5446C8.20757 10.7605 7.9452 10.8907 7.66452 10.9034C7.38385 10.9162 7.11077 10.8102 6.9121 10.6116L4.62639 8.32585C4.23586 7.93533 4.23587 7.30216 4.62639 6.91164C5.01691 6.52112 5.65008 6.52112 6.0406 6.91164L7.55201 8.42305L10.6605 4.69285C11.0141 4.26857 11.6446 4.21125 12.0689 4.56481Z' fill='white'/%3E%3C/svg%3E");
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M16 8C16 12.4183 12.4183 16 8 16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8Z' fill='%231A9F3E'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M12.0689 4.56481C12.4932 4.91838 12.5505 5.54894 12.197 5.97322L8.38743 10.5446C8.20757 10.7605 7.9452 10.8907 7.66452 10.9034C7.38385 10.9162 7.11077 10.8102 6.9121 10.6116L4.62639 8.32585C4.23586 7.93533 4.23587 7.30216 4.62639 6.91164C5.01691 6.52112 5.65008 6.52112 6.0406 6.91164L7.55201 8.42305L10.6605 4.69285C11.0141 4.26857 11.6446 4.21125 12.0689 4.56481Z' fill='white'/%3E%3C/svg%3E");
 }
 .benefits__wrapper--box.disadvantages {
   background: rgba(246, 125, 125, 0.12);
@@ -3685,7 +3687,7 @@ table:not(.our-team__table, .benefits-number--table) td a:hover, table:not(.our-
   color: #F67D7D;
 }
 .benefits__wrapper--box.disadvantages .benefits__list--item:before {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cg clip-path='url(%23clip0_507_49740)'%3E%3Cpath d='M8 0C3.58862 0 0 3.58862 0 8C0 12.4114 3.58862 16 8 16C12.4114 16 16 12.4114 16 8C16 3.58862 12.4114 0 8 0ZM11.5 8.66663H4.5C4.13196 8.66663 3.83337 8.36804 3.83337 8C3.83337 7.63196 4.13196 7.33337 4.5 7.33337H11.5C11.868 7.33337 12.1666 7.63196 12.1666 8C12.1666 8.36804 11.868 8.66663 11.5 8.66663Z' fill='%23F67D7D'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_507_49740'%3E%3Crect width='16' height='16' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cg clip-path='url(%23clip0_507_49740)'%3E%3Cpath d='M8 0C3.58862 0 0 3.58862 0 8C0 12.4114 3.58862 16 8 16C12.4114 16 16 12.4114 16 8C16 3.58862 12.4114 0 8 0ZM11.5 8.66663H4.5C4.13196 8.66663 3.83337 8.36804 3.83337 8C3.83337 7.63196 4.13196 7.33337 4.5 7.33337H11.5C11.868 7.33337 12.1666 7.63196 12.1666 8C12.1666 8.36804 11.868 8.66663 11.5 8.66663Z' fill='%23F67D7D'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_507_49740'%3E%3Crect width='16' height='16' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
 }
 @media (min-width: 744px) {
   .benefits__wrapper--box {
@@ -4047,11 +4049,10 @@ table:not(.our-team__table, .benefits-number--table) td a:hover, table:not(.our-
 .fun-fact ul li::before {
   margin-top: 3px;
   margin-right: 8px;
-  content: "";
   display: inline-block;
   width: 17px;
   height: 17px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='17' viewBox='0 0 17 17' fill='none'%3E%3Ccircle cx='8.0332' cy='8.04779' r='8' fill='%231A9F3E'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M12.1016 4.61309C12.5259 4.96665 12.5832 5.59722 12.2297 6.0215L8.42015 10.5929C8.24028 10.8088 7.97791 10.939 7.69724 10.9517C7.41657 10.9644 7.14349 10.8585 6.94482 10.6598L4.6591 8.37413C4.26858 7.98361 4.26858 7.35044 4.6591 6.95992C5.04963 6.5694 5.68279 6.5694 6.07332 6.95992L7.58473 8.47133L10.6932 4.74113C11.0468 4.31685 11.6774 4.25953 12.1016 4.61309Z' fill='%23ffffff'/%3E%3C/svg%3E");
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='17' viewBox='0 0 17 17' fill='none'%3E%3Ccircle cx='8.0332' cy='8.04779' r='8' fill='%231A9F3E'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M12.1016 4.61309C12.5259 4.96665 12.5832 5.59722 12.2297 6.0215L8.42015 10.5929C8.24028 10.8088 7.97791 10.939 7.69724 10.9517C7.41657 10.9644 7.14349 10.8585 6.94482 10.6598L4.6591 8.37413C4.26858 7.98361 4.26858 7.35044 4.6591 6.95992C5.04963 6.5694 5.68279 6.5694 6.07332 6.95992L7.58473 8.47133L10.6932 4.74113C11.0468 4.31685 11.6774 4.25953 12.1016 4.61309Z' fill='%23ffffff'/%3E%3C/svg%3E");
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -4129,8 +4130,8 @@ table:not(.our-team__table, .benefits-number--table) td a:hover, table:not(.our-
 .favourite-slots__item--top-box {
   overflow: hidden;
   position: relative;
-  height: 140px;
-  min-height: 140px;
+  height: 200px;
+  min-height: 200px;
   border-radius: 12px;
 }
 .favourite-slots__item--top-box img {
@@ -4160,12 +4161,18 @@ table:not(.our-team__table, .benefits-number--table) td a:hover, table:not(.our-
   width: 100%;
   max-width: 200px;
 }
+@media (min-width: 744px) {
+  .favourite-slots__item--top-box {
+    height: 140px;
+    min-height: 140px;
+  }
+}
 
 .favourite-slots__item--info {
   display: flex;
   flex-direction: column;
   height: 100%;
-  gap: 3px;
+  gap: 8px;
   padding: 16px;
 }
 .favourite-slots__item--info--box {
@@ -4307,11 +4314,10 @@ table:not(.our-team__table, .benefits-number--table) td a:hover, table:not(.our-
   transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header__burger-btn::before, .header__search-btn::before {
-  content: "";
   display: inline-flex;
   width: 18px;
   height: 18px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 18 18' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M1.75 4.5C1.75 4.22386 1.97386 4 2.25 4H15.75C16.0261 4 16.25 4.22386 16.25 4.5C16.25 4.77614 16.0261 5 15.75 5H2.25C1.97386 5 1.75 4.77614 1.75 4.5ZM1.75 9C1.75 8.72386 1.97386 8.5 2.25 8.5H15.75C16.0261 8.5 16.25 8.72386 16.25 9C16.25 9.27614 16.0261 9.5 15.75 9.5H2.25C1.97386 9.5 1.75 9.27614 1.75 9ZM10 13.5C10 13.2239 10.2239 13 10.5 13H15.75C16.0261 13 16.25 13.2239 16.25 13.5C16.25 13.7761 16.0261 14 15.75 14H10.5C10.2239 14 10 13.7761 10 13.5Z' fill='white' fill-opacity='0.8'/%3E%3C/svg%3E");
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 18 18' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M1.75 4.5C1.75 4.22386 1.97386 4 2.25 4H15.75C16.0261 4 16.25 4.22386 16.25 4.5C16.25 4.77614 16.0261 5 15.75 5H2.25C1.97386 5 1.75 4.77614 1.75 4.5ZM1.75 9C1.75 8.72386 1.97386 8.5 2.25 8.5H15.75C16.0261 8.5 16.25 8.72386 16.25 9C16.25 9.27614 16.0261 9.5 15.75 9.5H2.25C1.97386 9.5 1.75 9.27614 1.75 9ZM10 13.5C10 13.2239 10.2239 13 10.5 13H15.75C16.0261 13 16.25 13.2239 16.25 13.5C16.25 13.7761 16.0261 14 15.75 14H10.5C10.2239 14 10 13.7761 10 13.5Z' fill='white' fill-opacity='0.8'/%3E%3C/svg%3E");
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -4319,7 +4325,7 @@ table:not(.our-team__table, .benefits-number--table) td a:hover, table:not(.our-
   background-color: #FFFFFF;
 }
 .header__burger-btn.show::before, .show.header__search-btn::before {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 18 18' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.64645 2.64645C2.84171 2.45118 3.15829 2.45118 3.35355 2.64645L9 8.29289L14.6464 2.64645C14.8417 2.45118 15.1583 2.45118 15.3536 2.64645C15.5488 2.84171 15.5488 3.15829 15.3536 3.35355L9.70711 9L15.3536 14.6464C15.5488 14.8417 15.5488 15.1583 15.3536 15.3536C15.1583 15.5488 14.8417 15.5488 14.6464 15.3536L9 9.70711L3.35355 15.3536C3.15829 15.5488 2.84171 15.5488 2.64645 15.3536C2.45118 15.1583 2.45118 14.8417 2.64645 14.6464L8.29289 9L2.64645 3.35355C2.45118 3.15829 2.45118 2.84171 2.64645 2.64645Z' fill='%23111111'/%3E%3C/svg%3E");
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 18 18' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.64645 2.64645C2.84171 2.45118 3.15829 2.45118 3.35355 2.64645L9 8.29289L14.6464 2.64645C14.8417 2.45118 15.1583 2.45118 15.3536 2.64645C15.5488 2.84171 15.5488 3.15829 15.3536 3.35355L9.70711 9L15.3536 14.6464C15.5488 14.8417 15.5488 15.1583 15.3536 15.3536C15.1583 15.5488 14.8417 15.5488 14.6464 15.3536L9 9.70711L3.35355 15.3536C3.15829 15.5488 2.84171 15.5488 2.64645 15.3536C2.45118 15.1583 2.45118 14.8417 2.64645 14.6464L8.29289 9L2.64645 3.35355C2.45118 3.15829 2.45118 2.84171 2.64645 2.64645Z' fill='%23111111'/%3E%3C/svg%3E");
 }
 .header__burger-btn.isHidden, .isHidden.header__search-btn {
   display: none;
@@ -4428,10 +4434,10 @@ table:not(.our-team__table, .benefits-number--table) td a:hover, table:not(.our-
 }
 
 .header__search-btn::before {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 18 18' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M7.875 2C6.31685 2 4.82252 2.61897 3.72075 3.72075C2.61897 4.82252 2 6.31685 2 7.875C2 9.43315 2.61897 10.9275 3.72075 12.0293C4.82252 13.131 6.31685 13.75 7.875 13.75C9.42774 13.75 10.9171 13.1353 12.0178 12.0407C12.0225 12.0356 12.0273 12.0306 12.0323 12.0256C12.0368 12.0211 12.0415 12.0166 12.0462 12.0122C13.1374 10.9121 13.75 9.42514 13.75 7.875C13.75 6.31685 13.131 4.82252 12.0293 3.72075C10.9275 2.61897 9.43315 2 7.875 2ZM13.0795 12.367C14.1535 11.1229 14.75 9.52969 14.75 7.875C14.75 6.05164 14.0257 4.30295 12.7364 3.01364C11.447 1.72433 9.69836 1 7.875 1C6.05164 1 4.30295 1.72433 3.01364 3.01364C1.72433 4.30295 1 6.05164 1 7.875C1 9.69836 1.72433 11.447 3.01364 12.7364C4.30295 14.0257 6.05164 14.75 7.875 14.75C9.53225 14.75 11.1278 14.1516 12.3728 13.0745L15.3961 16.1032C15.5912 16.2987 15.9078 16.299 16.1032 16.1039C16.2987 15.9088 16.299 15.5922 16.1039 15.3968L13.0795 12.367Z' fill='%23ffffff'/%3E%3C/svg%3E");
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 18 18' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M7.875 2C6.31685 2 4.82252 2.61897 3.72075 3.72075C2.61897 4.82252 2 6.31685 2 7.875C2 9.43315 2.61897 10.9275 3.72075 12.0293C4.82252 13.131 6.31685 13.75 7.875 13.75C9.42774 13.75 10.9171 13.1353 12.0178 12.0407C12.0225 12.0356 12.0273 12.0306 12.0323 12.0256C12.0368 12.0211 12.0415 12.0166 12.0462 12.0122C13.1374 10.9121 13.75 9.42514 13.75 7.875C13.75 6.31685 13.131 4.82252 12.0293 3.72075C10.9275 2.61897 9.43315 2 7.875 2ZM13.0795 12.367C14.1535 11.1229 14.75 9.52969 14.75 7.875C14.75 6.05164 14.0257 4.30295 12.7364 3.01364C11.447 1.72433 9.69836 1 7.875 1C6.05164 1 4.30295 1.72433 3.01364 3.01364C1.72433 4.30295 1 6.05164 1 7.875C1 9.69836 1.72433 11.447 3.01364 12.7364C4.30295 14.0257 6.05164 14.75 7.875 14.75C9.53225 14.75 11.1278 14.1516 12.3728 13.0745L15.3961 16.1032C15.5912 16.2987 15.9078 16.299 16.1032 16.1039C16.2987 15.9088 16.299 15.5922 16.1039 15.3968L13.0795 12.367Z' fill='%23ffffff'/%3E%3C/svg%3E");
 }
 .header__search-btn.show::before {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 18 18' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M7.875 2C6.31685 2 4.82252 2.61897 3.72075 3.72075C2.61897 4.82252 2 6.31685 2 7.875C2 9.43315 2.61897 10.9275 3.72075 12.0293C4.82252 13.131 6.31685 13.75 7.875 13.75C9.42774 13.75 10.9171 13.1353 12.0178 12.0407C12.0225 12.0356 12.0273 12.0306 12.0323 12.0256C12.0368 12.0211 12.0415 12.0166 12.0462 12.0122C13.1374 10.9121 13.75 9.42514 13.75 7.875C13.75 6.31685 13.131 4.82252 12.0293 3.72075C10.9275 2.61897 9.43315 2 7.875 2ZM13.0795 12.367C14.1535 11.1229 14.75 9.52969 14.75 7.875C14.75 6.05164 14.0257 4.30295 12.7364 3.01364C11.447 1.72433 9.69836 1 7.875 1C6.05164 1 4.30295 1.72433 3.01364 3.01364C1.72433 4.30295 1 6.05164 1 7.875C1 9.69836 1.72433 11.447 3.01364 12.7364C4.30295 14.0257 6.05164 14.75 7.875 14.75C9.53225 14.75 11.1278 14.1516 12.3728 13.0745L15.3961 16.1032C15.5912 16.2987 15.9078 16.299 16.1032 16.1039C16.2987 15.9088 16.299 15.5922 16.1039 15.3968L13.0795 12.367Z' fill='%23111111'/%3E%3C/svg%3E");
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 18 18' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M7.875 2C6.31685 2 4.82252 2.61897 3.72075 3.72075C2.61897 4.82252 2 6.31685 2 7.875C2 9.43315 2.61897 10.9275 3.72075 12.0293C4.82252 13.131 6.31685 13.75 7.875 13.75C9.42774 13.75 10.9171 13.1353 12.0178 12.0407C12.0225 12.0356 12.0273 12.0306 12.0323 12.0256C12.0368 12.0211 12.0415 12.0166 12.0462 12.0122C13.1374 10.9121 13.75 9.42514 13.75 7.875C13.75 6.31685 13.131 4.82252 12.0293 3.72075C10.9275 2.61897 9.43315 2 7.875 2ZM13.0795 12.367C14.1535 11.1229 14.75 9.52969 14.75 7.875C14.75 6.05164 14.0257 4.30295 12.7364 3.01364C11.447 1.72433 9.69836 1 7.875 1C6.05164 1 4.30295 1.72433 3.01364 3.01364C1.72433 4.30295 1 6.05164 1 7.875C1 9.69836 1.72433 11.447 3.01364 12.7364C4.30295 14.0257 6.05164 14.75 7.875 14.75C9.53225 14.75 11.1278 14.1516 12.3728 13.0745L15.3961 16.1032C15.5912 16.2987 15.9078 16.299 16.1032 16.1039C16.2987 15.9088 16.299 15.5922 16.1039 15.3968L13.0795 12.367Z' fill='%23111111'/%3E%3C/svg%3E");
 }
 @media (min-width: 1280px) {
   .header__search-btn {
@@ -4442,7 +4448,7 @@ table:not(.our-team__table, .benefits-number--table) td a:hover, table:not(.our-
   display: none;
 }
 .header__search-btn.close-btn:before {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 18 18' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.64645 2.64645C2.84171 2.45118 3.15829 2.45118 3.35355 2.64645L9 8.29289L14.6464 2.64645C14.8417 2.45118 15.1583 2.45118 15.3536 2.64645C15.5488 2.84171 15.5488 3.15829 15.3536 3.35355L9.70711 9L15.3536 14.6464C15.5488 14.8417 15.5488 15.1583 15.3536 15.3536C15.1583 15.5488 14.8417 15.5488 14.6464 15.3536L9 9.70711L3.35355 15.3536C3.15829 15.5488 2.84171 15.5488 2.64645 15.3536C2.45118 15.1583 2.45118 14.8417 2.64645 14.6464L8.29289 9L2.64645 3.35355C2.45118 3.15829 2.45118 2.84171 2.64645 2.64645Z' fill='%23ffffff'/%3E%3C/svg%3E");
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 18 18' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.64645 2.64645C2.84171 2.45118 3.15829 2.45118 3.35355 2.64645L9 8.29289L14.6464 2.64645C14.8417 2.45118 15.1583 2.45118 15.3536 2.64645C15.5488 2.84171 15.5488 3.15829 15.3536 3.35355L9.70711 9L15.3536 14.6464C15.5488 14.8417 15.5488 15.1583 15.3536 15.3536C15.1583 15.5488 14.8417 15.5488 14.6464 15.3536L9 9.70711L3.35355 15.3536C3.15829 15.5488 2.84171 15.5488 2.64645 15.3536C2.45118 15.1583 2.45118 14.8417 2.64645 14.6464L8.29289 9L2.64645 3.35355C2.45118 3.15829 2.45118 2.84171 2.64645 2.64645Z' fill='%23ffffff'/%3E%3C/svg%3E");
 }
 
 @media (max-width: 1279px) {
@@ -4497,11 +4503,10 @@ table:not(.our-team__table, .benefits-number--table) td a:hover, table:not(.our-
     background: none;
   }
   .header__nav--item--btn::before {
-    content: "";
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M4.80317 2.13569C5.09606 1.84279 5.57093 1.84279 5.86383 2.13569L11.1972 7.46902C11.3378 7.60967 11.4168 7.80044 11.4168 7.99935C11.4168 8.19826 11.3378 8.38903 11.1972 8.52968L5.86383 13.863C5.57093 14.1559 5.09606 14.1559 4.80317 13.863C4.51027 13.5701 4.51027 13.0952 4.80317 12.8024L9.60617 7.99935L4.80317 3.19635C4.51027 2.90345 4.51027 2.42858 4.80317 2.13569Z' fill='white' fill-opacity='0.6'/%3E%3C/svg%3E");
     display: inline-block;
     width: 16px;
     height: 16px;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M4.80317 2.13569C5.09606 1.84279 5.57093 1.84279 5.86383 2.13569L11.1972 7.46902C11.3378 7.60967 11.4168 7.80044 11.4168 7.99935C11.4168 8.19826 11.3378 8.38903 11.1972 8.52968L5.86383 13.863C5.57093 14.1559 5.09606 14.1559 4.80317 13.863C4.51027 13.5701 4.51027 13.0952 4.80317 12.8024L9.60617 7.99935L4.80317 3.19635C4.51027 2.90345 4.51027 2.42858 4.80317 2.13569Z' fill='white' fill-opacity='0.6'/%3E%3C/svg%3E");
     background-size: contain;
   }
   .header__nav--dropdown-list {
@@ -4645,11 +4650,12 @@ table:not(.our-team__table, .benefits-number--table) td a:hover, table:not(.our-
     transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   }
   .header__nav--item--btn::before {
-    content: "";
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     width: 12px;
     height: 12px;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M1.64645 4.14645C1.84171 3.95118 2.15829 3.95118 2.35355 4.14645L6 7.79289L9.64645 4.14645C9.84171 3.95118 10.1583 3.95118 10.3536 4.14645C10.5488 4.34171 10.5488 4.65829 10.3536 4.85355L6.35355 8.85355C6.15829 9.04882 5.84171 9.04882 5.64645 8.85355L1.64645 4.85355C1.45118 4.65829 1.45118 4.34171 1.64645 4.14645Z' fill='%23ffffff' fill-opacity='0.44'/%3E%3C/svg%3E");
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M1.64645 4.14645C1.84171 3.95118 2.15829 3.95118 2.35355 4.14645L6 7.79289L9.64645 4.14645C9.84171 3.95118 10.1583 3.95118 10.3536 4.14645C10.5488 4.34171 10.5488 4.65829 10.3536 4.85355L6.35355 8.85355C6.15829 9.04882 5.84171 9.04882 5.64645 8.85355L1.64645 4.85355C1.45118 4.65829 1.45118 4.34171 1.64645 4.14645Z' fill='%23ffffff' fill-opacity='0.44'/%3E%3C/svg%3E");
     background-size: contain;
     background-repeat: no-repeat;
   }
@@ -4663,13 +4669,7 @@ table:not(.our-team__table, .benefits-number--table) td a:hover, table:not(.our-
     transform: translateY(-50%) rotate(180deg);
   }
   .header__nav--item:hover .header__nav--item--btn::before {
-    content: "";
-    display: inline-block;
-    width: 12px;
-    height: 12px;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M1.64645 4.14645C1.84171 3.95118 2.15829 3.95118 2.35355 4.14645L6 7.79289L9.64645 4.14645C9.84171 3.95118 10.1583 3.95118 10.3536 4.14645C10.5488 4.34171 10.5488 4.65829 10.3536 4.85355L6.35355 8.85355C6.15829 9.04882 5.84171 9.04882 5.64645 8.85355L1.64645 4.85355C1.45118 4.65829 1.45118 4.34171 1.64645 4.14645Z' fill='%23ffffff' /%3E%3C/svg%3E");
-    background-size: contain;
-    background-repeat: no-repeat;
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M1.64645 4.14645C1.84171 3.95118 2.15829 3.95118 2.35355 4.14645L6 7.79289L9.64645 4.14645C9.84171 3.95118 10.1583 3.95118 10.3536 4.14645C10.5488 4.34171 10.5488 4.65829 10.3536 4.85355L6.35355 8.85355C6.15829 9.04882 5.84171 9.04882 5.64645 8.85355L1.64645 4.85355C1.45118 4.65829 1.45118 4.34171 1.64645 4.14645Z' fill='%23ffffff' /%3E%3C/svg%3E");
   }
   .header__nav--item:hover .header__nav--dropdown-list {
     max-height: fit-content;
@@ -4714,7 +4714,6 @@ table:not(.our-team__table, .benefits-number--table) td a:hover, table:not(.our-
   background-color: transparent;
 }
 .header__language-switcher .select__dropdown-item.active::after {
-  content: "";
   position: absolute;
   top: 50%;
   right: 16px;
@@ -4722,7 +4721,7 @@ table:not(.our-team__table, .benefits-number--table) td a:hover, table:not(.our-
   display: inline-block;
   width: 14px;
   height: 14px;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 14 14' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M12.147 2.92385C12.4652 3.18903 12.5082 3.66195 12.243 3.98016L6.40966 10.9802C6.27476 11.142 6.07799 11.2397 5.86748 11.2492C5.65698 11.2588 5.45217 11.1794 5.30317 11.0303L1.80317 7.53035C1.51027 7.23746 1.51027 6.76258 1.80317 6.46969C2.09606 6.1768 2.57093 6.1768 2.86383 6.46969L5.7831 9.38896L11.0907 3.01988C11.3558 2.70167 11.8288 2.65868 12.147 2.92385Z' fill='url(%23paint0_linear_316_45653)'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_316_45653' x1='1.5835' y1='6.98129' x2='12.4168' y2='6.98129' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23F0C645'/%3E%3Cstop offset='0.495' stop-color='%23FAF283'/%3E%3Cstop offset='1' stop-color='%23EBC944'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E");
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 14 14' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M12.147 2.92385C12.4652 3.18903 12.5082 3.66195 12.243 3.98016L6.40966 10.9802C6.27476 11.142 6.07799 11.2397 5.86748 11.2492C5.65698 11.2588 5.45217 11.1794 5.30317 11.0303L1.80317 7.53035C1.51027 7.23746 1.51027 6.76258 1.80317 6.46969C2.09606 6.1768 2.57093 6.1768 2.86383 6.46969L5.7831 9.38896L11.0907 3.01988C11.3558 2.70167 11.8288 2.65868 12.147 2.92385Z' fill='url(%23paint0_linear_316_45653)'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear_316_45653' x1='1.5835' y1='6.98129' x2='12.4168' y2='6.98129' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23F0C645'/%3E%3Cstop offset='0.495' stop-color='%23FAF283'/%3E%3Cstop offset='1' stop-color='%23EBC944'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E");
   background-size: contain;
   background-repeat: no-repeat;
 }

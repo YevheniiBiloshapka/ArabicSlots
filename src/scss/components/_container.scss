@@ -1,12 +1,23 @@
 
 .container {
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0 16px;
-    @include media-query(mob){width: 375px;}
-    @include media-query(tab){width: 744px;}
-    @include media-query(desk){width: 1280px;}
-    @include media-query(deskL){width: 1344px;}
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 16px;
+  @include media-query(mob) {
+    width: 375px;
+  }
+  @media (min-width: 400px) {
+    width: 400px;
+  }
+  @include media-query(tab) {
+    width: 744px;
+  }
+  @include media-query(desk) {
+    width: 1280px;
+  }
+  @include media-query(deskL) {
+    width: 1344px;
+  }
 }
 
 
