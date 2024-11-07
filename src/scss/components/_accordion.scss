@@ -97,7 +97,7 @@ $bgContent: #2B2B2B;
   pointer-events: none;
   overflow: hidden;
 
-  transition: max-height $animHeightClose;
+  transition: max-height 0.4s ease-out;
 }
 
 .accordion.show {
@@ -110,7 +110,7 @@ $bgContent: #2B2B2B;
   & .accordion__content {
     max-height: 1000px;
     pointer-events: unset;
-    transition: max-height $animHeightOpen;
+    transition: max-height 0.6s ease;
   }
 
   & .accordion__header--btn::before {
