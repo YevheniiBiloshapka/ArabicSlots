@@ -447,7 +447,7 @@
     & .casino-card__dropdown-rating {
       max-height: 1000px;
       pointer-events: unset;
-      transition: max-height 0.6s linear;;
+      transition: max-height 0.4s ease;
     }
   }
 
@@ -463,7 +463,7 @@
   z-index: 600;
   overflow: hidden;
   pointer-events: none;
-  transition: max-height 0.6s linear;;
+  transition: max-height 0.3s ease;
 
 
   &--wrapper {
@@ -644,7 +644,7 @@
 
   & .casino-card__bottom {
     max-height: 1000px;
-    transition: max-height 0.3s linear;
+    transition: max-height 0.3s ease;
   }
 
   & .casino-details {
@@ -656,7 +656,7 @@
 .casino-card__bottom {
   padding-top: 8px;
   max-height: 0;
-  transition: max-height 0.4s linear;
+  transition: max-height 0.4s ease-out;
 
   & .casino-details {
     pointer-events: none;

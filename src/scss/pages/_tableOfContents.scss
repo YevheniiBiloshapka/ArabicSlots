@@ -39,33 +39,36 @@
       background-size: contain;
       background-repeat: no-repeat;
       @include transition();
+      transform: rotate(180deg);
     }
 
-    &:hover {
-      background: $cl-white-50;
-
-      &:before {
-        transform: rotate(180deg);
-      }
-    }
   }
 
   &.show {
     & .table-of-contents__btn {
       &:before {
-        transform: rotate(180deg);
+        transform: rotate(0deg);
       }
     }
 
     & .table-of-contents__wrapper {
       max-height: 2000px;
       pointer-events: unset;
-      transition: max-height 0.8s linear;
+      transition: max-height $animHeightOpen;
     }
   }
 
   @include media-query(tab) {
     padding: 16px;
+    &__btn {
+      &:hover {
+        background: $cl-white-50;
+
+        &:before {
+          transform: rotate(180deg);
+        }
+      }
+    }
   }
 }
 
@@ -73,7 +76,7 @@
   max-height: 0;
   pointer-events: none;
   overflow: hidden;
-  transition: max-height 0.6s linear;
+  transition: max-height $animHeightCloseSpeed;
 }
 
 .table-of-contents__list {

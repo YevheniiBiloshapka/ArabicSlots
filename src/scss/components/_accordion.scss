@@ -30,6 +30,7 @@ $bgContent: #2B2B2B;
   & .accordion__header--title {
     color: $cl-white-900;
     @include font-body(14-bold);
+    letter-spacing: 0.8px;
   }
 
   @include media-query(tab) {

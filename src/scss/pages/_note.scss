@@ -1,22 +1,26 @@
-.note{
+.note {
   display: flex;
   gap: 8px;
   padding: 8px 12px;
-  margin:48px auto 32px;
-  border-radius:$br12;
+  margin: 48px auto 32px;
+  border-radius: $br12;
   background: rgba(137, 236, 163, 0.08);
-  &__title{
+
+  &__title {
     color: $cl-white-500;
     @include font-body(14-reg);
   }
-  &__content{
+
+  &__content {
     color: $cl-white-900;
     @include font-body(14-med);
+    letter-spacing: 0.7px;
   }
-  @include media-query(tab){
-    padding:12px 24px;
+
+  @include media-query(tab) {
+    padding: 12px 24px;
     margin: 100px auto 24px;
-    &__content{
+    &__content {
       @include font-body(16-med);
     }
   }

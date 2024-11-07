@@ -1,97 +1,109 @@
 
-
-.table__wrapper{
+.table__wrapper {
   width: 100%;
-  overflow-x:auto;
+  overflow-x: auto;
   padding-bottom: 6px;
 }
 
-table:not(.our-team__table,.benefits-number--table){
+table:not(.our-team__table,.benefits-number--table) {
   width: 100%;
   min-width: 100%;
   overflow: hidden;
   border-spacing: 1;
   border-collapse: collapse;
   border-radius: $br16;
-  background-color:$cl-white-25;
+  background-color: $cl-white-25;
 }
 
-table:not(.our-team__table,.benefits-number--table) thead:not(.our-team__table,.benefits-number--table){
-  background-color:$cl-white-25;
-  & tr{
+table:not(.our-team__table,.benefits-number--table) thead:not(.our-team__table,.benefits-number--table) {
+  background-color: $cl-white-25;
+
+  & tr {
     border-bottom: 1px solid $cl-white-50;
   }
-  & tr th{
+
+  & tr th {
     white-space: nowrap;
     color: $cl-white-900;
     @include font-body(16-bold);
     text-align: start;
-    padding: 13px 16px 12px ;
+    padding: 13px 16px 12px;
     border-right: 1px solid $cl-white-50;
-    &:last-child{
+
+    &:last-child {
       border-bottom: 0;
       border-right: 0;
     }
   }
-  @include media-query(desk){
-    & tr th{
+
+  @include media-query(desk) {
+    & tr th {
       white-space: normal;
     }
   }
 }
-table:not(.our-team__table,.benefits-number--table) tbody:not(.our-team__table){
-  & tr{
+
+table:not(.our-team__table,.benefits-number--table) tbody:not(.our-team__table) {
+  & tr {
     border-bottom: 1px solid $cl-white-50;
     @include transition();
-    &:last-child{
+
+    &:last-child {
       border-bottom: 0;
     }
-    &:hover{
+
+    &:hover {
       background-color: $cl-white-0;
     }
   }
-  & tr td{
+
+  & tr td {
     white-space: nowrap;
     padding: 12px 16px;
     border-right: 1px solid $cl-white-50;
     color: $cl-white-900;
     @include font-body(14-reg);
-    &:last-child{
+
+    &:last-child {
       border-right: 0;
     }
   }
-  & tr th{
+
+  & tr th {
     white-space: nowrap;
     color: $cl-white-900;
     @include font-body(16-bold);
     text-align: start;
-    padding: 13px 16px 12px ;
+    padding: 13px 16px 12px;
     border-right: 1px solid $cl-white-50;
-    background-color:$cl-white-25;
-    &:last-child{
+    background-color: $cl-white-25;
+
+    &:last-child {
       border-bottom: 0;
       border-right: 0;
     }
   }
-  @include media-query(desk){
-    & tr td{
+
+  @include media-query(desk) {
+    & tr td {
       white-space: normal;
 
     }
-    & tr th{
+    & tr th {
       white-space: normal;
     }
   }
 }
 
 table:not(.our-team__table,.benefits-number--table) {
-  & td a, & th a{
-     @include font-body(14-bold);
+  & td a:not(.button), & th a:not(.button) {
+    @include font-body(14-bold);
     background: $gr-gold;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    &:hover{
+
+    &:hover {
       background: $gr-gold-hover;
       background-clip: text;
       -webkit-background-clip: text;

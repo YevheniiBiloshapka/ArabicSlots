@@ -1,69 +1,79 @@
-.hero{
+.hero {
   padding: 24px 16px 32px;
-  &__wrapper{
+
+  &__wrapper {
 
   }
-  &__title{
+
+  &__title {
     color: $cl-white-900;
     @include font-title(h1-mob);
     margin-bottom: 12px;
   }
-  &__desc{
+
+  &__desc {
     color: $cl-white-700;
     @include font-body(14-reg);
     margin-bottom: 8px;
   }
-  &__btn{
+
+  &__btn {
     width: fit-content;
     margin-bottom: 32px;
-    & svg{
+
+    & svg {
       @include transition();
     }
-    &.show{
-      & svg{
+
+    &.show {
+      & svg {
         transform: rotate(180deg);
       }
     }
   }
-  @include media-query(tab){
+
+  @include media-query(tab) {
     padding: 82px 16px;
-    &__wrapper{
-      display:flex;
+    &__wrapper {
+      display: flex;
       flex-direction: column;
       align-items: center;
       max-width: 1000px;
       margin: 0 auto;
     }
-    &__title, &__desc{
+    &__title, &__desc {
       text-align: center;
     }
 
   }
-  @include media-query(desk){
-    &__title{
+  @include media-query(desk) {
+    &__title {
       @include font-title(h1);
       margin-bottom: 24px;
     }
-    &__desc{
+    &__desc {
       @include font-body(18-reg);
     }
   }
 }
 
 
-.hero__hidden-box{
-  max-height: 0;
-  overflow: hidden ;
-  & .container{
+.hero__hidden-box {
+  display: none;
+  overflow: hidden;
+
+  & .container {
     width: 100%;
   }
-  $transitionHeight:  max-height 0.5s ease-out;
+
+  $transitionHeight: max-height 0.5s ease-out;
   -webkit-transition: $transitionHeight;
   -moz-transition: $transitionHeight;
   -o-transition: $transitionHeight;
   transition: $transitionHeight;
-  &.show{
-    max-height:  2000px;
+
+  &.show {
+    display: block;
     //закрытие
     $transitionHeight: max-height 0.8s ease;
     -webkit-transition: $transitionHeight;
