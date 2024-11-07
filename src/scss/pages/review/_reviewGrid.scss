@@ -1,0 +1,33 @@
+.review__grid {
+  &--first {
+    background-color: red;
+  }
+
+  &--second {
+
+  }
+
+  @include media-query(desk) {
+    position: relative;
+    display: flex;
+    gap: 24px;
+    &--first {
+      flex: 1;
+      height: 200vh;
+    }
+
+    &--second {
+      position: sticky;
+      top: 100px;
+      flex: 1;
+      max-width: 440px;
+      height: fit-content;
+    }
+  }
+}
+
+.top-casinos-list {
+  width: 100%;
+  height: 300px;
+  background-color: gold;
+}

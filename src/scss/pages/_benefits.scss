@@ -106,7 +106,7 @@
     padding-left: 28px;
     @include font-body(18-reg);
     &:before {
-      top: 4px;
+      top: 1px;
       $size: 16px;
       width: $size;
       height: $size;
