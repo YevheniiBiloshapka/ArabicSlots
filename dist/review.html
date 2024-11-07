@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no'>
+  <link rel='stylesheet' href='css/index.min.css'>
+
+  <title>Review</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="./files/favicon_io/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="./files/favicon_io/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="./files/favicon_io/favicon-16x16.png">
+<link rel="manifest" href="./files/favicon_io/site.webmanifest">
+
+</head>
+
+<body>
+<header class="header " data-action="header-wrapper">
+    <div class='container header__container'>
+      <img class='header__logo' src="./img/logotype.svg" alt='logotype' width='180' height='44'/>
+      <!--      navigation-->
+      <nav class='header__nav' data-action='header-nav'>
+        <!--  TODO:   Language Switcher-->
+        <div class='header__nav--switcher-box'>
+          <div class='select small icon header__language-switcher' data-action='header-language-switcher'>
+            <div class='select__wrapper'>
+              <div class='select__wrapper--field'>
+                <svg class='input--icon__before' width='18' height='18'>
+                  <use href='./img/icons/icons.svg#NZ'></use>
+                </svg>
+                <p class='select__wrapper--field-value'>NZ </p>
+                <svg class='select__wrapper--field-icon' xmlns='http://www.w3.org/2000/svg' width='12' height='12'
+                     viewBox='0 0 12 12' fill='none'>
+                  <path fill-rule='evenodd' clip-rule='evenodd'
+                        d='M1.64645 4.14645C1.84171 3.95118 2.15829 3.95118 2.35355 4.14645L6 7.79289L9.64645 4.14645C9.84171 3.95118 10.1583 3.95118 10.3536 4.14645C10.5488 4.34171 10.5488 4.65829 10.3536 4.85355L6.35355 8.85355C6.15829 9.04882 5.84171 9.04882 5.64645 8.85355L1.64645 4.85355C1.45118 4.65829 1.45118 4.34171 1.64645 4.14645Z' />
+                </svg>
+              </div>
+              <div class='select__dropdown'>
+                <div class='select__dropdown-list'>
+                  <a href='#' class='select__dropdown-item' data-value='NZ'>
+                    <svg class='input--icon__before' width='18' height='18'>
+                      <use href='./img/icons/icons.svg#NZ'></use>
+                    </svg>
+                    <p>
+                      New Zealand
+                    </p>
+                  </a>
+                  <a href='#' class='select__dropdown-item' data-value='SA'>
+                    <svg class='input--icon__before' width='18' height='18'>
+                      <use href='./img/icons/icons.svg#SA'></use>
+                    </svg>
+                    <p>
+                      Saudi Arabia
+                    </p>
+                  </a>
+                  <a href='#' class='select__dropdown-item' data-value='AE'>
+                    <svg class='input--icon__before' width='18' height='18'>
+                      <use href='./img/icons/icons.svg#AE'></use>
+                    </svg>
+                    <p>
+                      United Arab Emirates
+                    </p>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+          <ul class='header__nav--list'>
+            <li class='header__nav--item ' data-action='nav-item'>
+              <div class='header__nav--item__category'>
+                <a href='#' class='header__nav--item--name'>Online Casinos</a>
+                <button class='header__nav--item--btn' data-action='show-dropdown'></button>
+              </div>
+              <div class='header__nav--dropdown-list'>
+                <a class='header__nav--dropdown-item' href='#'>Penny Slots</a>
+                <a class='header__nav--dropdown-item' href='#'>New Slots</a>
+                <a class='header__nav--dropdown-item' href='#'>Mobile Slots</a>
+              </div>
+            </li>
+            <li class='header__nav--item' data-action='nav-item'>
+              <div class='header__nav--item__category'>
+                <a href='#' class='header__nav--item--name'>Real Money Casinos</a>
+                <button class='header__nav--item--btn' data-action='show-dropdown'></button>
+              </div>
+              <div class='header__nav--dropdown-list'>
+                <a class='header__nav--dropdown-item' href='#'>Penny Slots</a>
+                <a class='header__nav--dropdown-item' href='#'>New Slots</a>
+                <a class='header__nav--dropdown-item' href='#'>Mobile Slots</a>
+              </div>
+            </li>
+            <li class='header__nav--item' data-action='nav-item'>
+              <div class='header__nav--item__category'>
+                <a href='#' class='header__nav--item--name'>Online Pokies</a>
+                <button class='header__nav--item--btn' data-action='show-dropdown'></button>
+              </div>
+              <div class='header__nav--dropdown-list'>
+                <a class='header__nav--dropdown-item' href='#'>Penny Slots</a>
+                <a class='header__nav--dropdown-item' href='#'>New Slots</a>
+                <a class='header__nav--dropdown-item' href='#'>Mobile Slots</a>
+              </div>
+            </li>
+            <li class='header__nav--item' data-action='nav-item'>
+              <div class='header__nav--item__category'>
+                <a href='#' class='header__nav--item--name'>Casino Games</a>
+                <button class='header__nav--item--btn' data-action='show-dropdown'></button>
+              </div>
+              <div class='header__nav--dropdown-list'>
+                <a class='header__nav--dropdown-item' href='#'>Penny Slots</a>
+                <a class='header__nav--dropdown-item' href='#'>New Slots</a>
+                <a class='header__nav--dropdown-item' href='#'>Mobile Slots</a>
+              </div>
+            </li>
+            <li class='header__nav--item' data-action='nav-item'>
+              <div class='header__nav--item__category'>
+                <a href='#' class='header__nav--item--name'>Casino Bonuses</a>
+                <button class='header__nav--item--btn' data-action='show-dropdown'></button>
+              </div>
+              <div class='header__nav--dropdown-list'>
+                <a class='header__nav--dropdown-item' href='#'>Penny Slots</a>
+                <a class='header__nav--dropdown-item' href='#'>New Slots</a>
+                <a class='header__nav--dropdown-item' href='#'>Mobile Slots</a>
+              </div>
+            </li>
+            <li class='header__nav--item' data-action='nav-item'>
+              <div class='header__nav--item__category'>
+                <a href='#' class='header__nav--item--name'>About Us</a>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      <!--      Button Box-->
+      <div class='header__button-box'>
+        <button type='button' class='button second small'>Sign up</button>
+        <!--  TODO:   Language Switcher-->
+        <div class='select small icon header__language-switcher' data-action='header-language-switcher'>
+          <div class='select__wrapper'>
+            <div class='select__wrapper--field'>
+              <svg class="input--icon__before" width="18" height="18" >
+                <use href="./img/icons/icons.svg#NZ"></use>
+              </svg>
+              <p class='select__wrapper--field-value'>NZ </p>
+              <svg class='select__wrapper--field-icon' xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M1.64645 4.14645C1.84171 3.95118 2.15829 3.95118 2.35355 4.14645L6 7.79289L9.64645 4.14645C9.84171 3.95118 10.1583 3.95118 10.3536 4.14645C10.5488 4.34171 10.5488 4.65829 10.3536 4.85355L6.35355 8.85355C6.15829 9.04882 5.84171 9.04882 5.64645 8.85355L1.64645 4.85355C1.45118 4.65829 1.45118 4.34171 1.64645 4.14645Z" />
+              </svg>
+            </div>
+            <div class='select__dropdown'>
+              <div class='select__dropdown-list'>
+                <a href='#' class='select__dropdown-item' data-value='NZ'>
+                  <svg class="input--icon__before" width="18" height="18" >
+                    <use href="./img/icons/icons.svg#NZ"></use>
+                  </svg>
+                  <p>
+                    New Zealand
+                  </p>
+                </a>
+                <a href='#' class='select__dropdown-item' data-value='SA'>
+                  <svg class="input--icon__before" width="18" height="18" >
+                    <use href="./img/icons/icons.svg#SA"></use>
+                  </svg>
+                  <p>
+                    Saudi Arabia
+                  </p>
+                </a>
+                <a href='#' class='select__dropdown-item' data-value='AE'>
+                  <svg class="input--icon__before" width="18" height="18" >
+                    <use href="./img/icons/icons.svg#AE"></use>
+                  </svg>
+                  <p>
+                    United Arab Emirates
+                  </p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--      Search show-->
+        <div class='header__search' data-action='search-box'>
+          <button class='header__search-btn' type='button' data-action='search-open'></button>
+          <!--      close Button-->
+          <button class='header__search-btn close-btn' data-action='search-close'></button>
+          <!--      Search show-->
+          <div class='header__search__modal'>
+            <div  class='input'  >
+              <label class='input__wrapper icon before' for='header_search' >
+                <svg class="input--icon__before" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M7.875 2C6.31685 2 4.82252 2.61897 3.72075 3.72075C2.61897 4.82252 2 6.31685 2 7.875C2 9.43315 2.61897 10.9275 3.72075 12.0293C4.82252 13.131 6.31685 13.75 7.875 13.75C9.42774 13.75 10.9171 13.1353 12.0178 12.0407C12.0225 12.0356 12.0273 12.0306 12.0323 12.0256C12.0368 12.0211 12.0415 12.0166 12.0462 12.0122C13.1374 10.9121 13.75 9.42514 13.75 7.875C13.75 6.31685 13.131 4.82252 12.0293 3.72075C10.9275 2.61897 9.43315 2 7.875 2ZM13.0795 12.367C14.1535 11.1229 14.75 9.52969 14.75 7.875C14.75 6.05164 14.0257 4.30295 12.7364 3.01364C11.447 1.72433 9.69836 1 7.875 1C6.05164 1 4.30295 1.72433 3.01364 3.01364C1.72433 4.30295 1 6.05164 1 7.875C1 9.69836 1.72433 11.447 3.01364 12.7364C4.30295 14.0257 6.05164 14.75 7.875 14.75C9.53225 14.75 11.1278 14.1516 12.3728 13.0745L15.3961 16.1032C15.5912 16.2987 15.9078 16.299 16.1032 16.1039C16.2987 15.9088 16.299 15.5922 16.1039 15.3968L13.0795 12.367Z" fill="white" fill-opacity="0.6"/>
+                </svg>
+                <input id='header_search' class='input__field' type='text' placeholder='Search' data-value='search-input'>
+              </label>
+            </div>
+          <!--         !   recomendation-->
+            <div class='header__search--results' data-action='reccomendations'>
+              <p class='header__search--results__title'>Reccomendations</p>
+              <ul class='header__search--results__list'>
+                <li class='header__search--results__link'>
+                  <a  href='#'>Penny Slots</a>
+                </li>
+                <li class='header__search--results__link'>
+                  <a href='#'>Penny Slots Penny Slots Penny Slots Penny Slots Penny Slots Penny Slots Penny Slots Penny Slots Penny Slots</a>
+                </li>
+                <li class='header__search--results__link'>
+                  <a href='#'>Hot.Bet Casino</a>
+                </li>
+              </ul>
+            </div>
+            <!--         !   results-->
+            <div class='header__search--results' data-action='results' style='display: none;'>
+              <p class='header__search--results__title'>Results</p>
+              <ul class='header__search--results__list'>
+                <li class='header__search--results__link'>
+                  <a  href='#'>Penny Slots</a>
+                </li>
+                <li class='header__search--results__link'>
+                  <a href='#'>Penny Slots Penny Slots Penny Slots Penny Slots Penny Slots Penny Slots Penny Slots Penny Slots Penny Slots</a>
+                </li>
+                <li class='header__search--results__link'>
+                  <a href='#'>Hot.Bet Casino</a>
+                </li>
+                <li class='header__search--results__link'>
+                  <a href='#'>Jonny Jackpot Casino</a>
+                </li>
+                <li class='header__search--results__link'>
+                  <a href='#'>SkyCity Casino</a>
+                </li>
+                <li class='header__search--results__link'>
+                  <a href='#'>Vegas Kings Casino</a>
+                </li>
+                <li class='header__search--results__link'>
+                  <a href='#'>Twin Casino</a>
+                </li>
+                <li class='header__search--results__link'>
+                  <a  href='#'>Penny Slots</a>
+                </li>
+                <li class='header__search--results__link'>
+                  <a href='#'>Penny Slots Penny Slots Penny Slots Penny Slots Penny Slots Penny Slots Penny Slots Penny Slots Penny Slots</a>
+                </li>
+                <li class='header__search--results__link'>
+                  <a href='#'>Hot.Bet Casino</a>
+                </li>
+                <li class='header__search--results__link'>
+                  <a href='#'>Jonny Jackpot Casino</a>
+                </li>
+                <li class='header__search--results__link'>
+                  <a href='#'>SkyCity Casino</a>
+                </li>
+                <li class='header__search--results__link'>
+                  <a href='#'>Vegas Kings Casino</a>
+                </li>
+                <li class='header__search--results__link'>
+                  <a href='#'>Twin Casino</a>
+                </li>
+                <li class='header__search--results__link'>
+                  <a  href='#'>Penny Slots</a>
+                </li>
+                <li class='header__search--results__link'>
+                  <a href='#'>Penny Slots Penny Slots Penny Slots Penny Slots Penny Slots Penny Slots Penny Slots Penny Slots Penny Slots</a>
+                </li>
+                <li class='header__search--results__link'>
+                  <a href='#'>Hot.Bet Casino</a>
+                </li>
+                <li class='header__search--results__link'>
+                  <a href='#'>Jonny Jackpot Casino</a>
+                </li>
+                <li class='header__search--results__link'>
+                  <a href='#'>SkyCity Casino</a>
+                </li>
+                <li class='header__search--results__link'>
+                  <a href='#'>Vegas Kings Casino</a>
+                </li>
+                <li class='header__search--results__link'>
+                  <a href='#'>Twin Casino</a>
+                </li>
+                <li class='header__search--results__link'>
+                  <a  href='#'>Penny Slots</a>
+                </li>
+                <li class='header__search--results__link'>
+                  <a href='#'>Penny Slots Penny Slots Penny Slots Penny Slots Penny Slots Penny Slots Penny Slots Penny Slots Penny Slots</a>
+                </li>
+                <li class='header__search--results__link'>
+                  <a href='#'>Hot.Bet Casino</a>
+                </li>
+                <li class='header__search--results__link'>
+                  <a href='#'>Jonny Jackpot Casino</a>
+                </li>
+                <li class='header__search--results__link'>
+                  <a href='#'>SkyCity Casino</a>
+                </li>
+                <li class='header__search--results__link'>
+                  <a href='#'>Vegas Kings Casino</a>
+                </li>
+                <li class='header__search--results__link'>
+                  <a href='#'>Twin Casino</a>
+                </li>
+
+
+              </ul>
+            </div>
+            <!--         ! ничего не найдено-->
+            <div class='header__search--results' data-action='notFound' >
+              <p class='header__search--results__title'>nothing found</p>
+            </div>
+          </div>
+        </div>
+
+        <!--      Burger btn show-->
+          <button class='header__burger-btn ' type='button' data-action='show-nav'> </button>
+      </div>
+    </div>
+</header>
+
+<!-- !main-->
+<main>
+  <!--  !  hero-->
+  <section class='grey review-hero'>
+    <!--!	breadcrumbs-->
+    <div class='container '>
+  <ul class='breadcrumb'>
+    <li><a href='#'>Home</a></li>
+    <li><a href='#'>NZ Online Casinos</a></li>
+    <li><a href='#'>Free Slots</a></li>
+    <li><p>Penny Slots Penny Slots Penny Slots Penny Slots Penny Slots Penny Slots Penny Slots Penny Slots Penny Slots
+      Penny Slots Penny Slots Penny Slots Penny Slots Penny Slots Penny Slots Penny Slots Penny Slots Penny Slots Penny
+      Slots
+      Penny Slots</p></li>
+  </ul>
+</div>
+    <!--  !  hero-->
+    <div class='container review-hero__wrapper'>
+      <div class='review-hero__box img'>
+        <img class='skeleton' src='./img/demoImg/demo6.webp' alt='img  casino'>
+        <div class='review-hero__info'>
+          <p class='review-hero__info--label'>CasinoHEX rating</p>
+          <div class='review-hero__info--stars'>
+            <svg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 14 14' fill='none'>
+              <g clip-path='url(#clip0_364_77045)'>
+                <path
+                  d='M6.003 1.32952C6.36907 0.434812 7.6602 0.445758 8.00697 1.35752L8.00999 1.36546L9.21513 4.70395C9.22557 4.72861 9.25279 4.74935 9.2873 4.74935H12.2547C13.2576 4.74935 13.7307 6.00884 12.9337 6.64846L10.8339 8.53771C10.8243 8.54633 10.8144 8.55457 10.8042 8.56242C10.7934 8.57075 10.7855 8.58229 10.7816 8.5954C10.7777 8.60851 10.7781 8.6225 10.7827 8.63537C10.7888 8.65268 10.794 8.67031 10.7983 8.6882L11.5638 11.9328C11.8906 12.9246 10.7538 13.7083 9.92664 13.1409L7.06699 11.3264C7.06035 11.3221 7.05381 11.3178 7.04738 11.3133C7.03335 11.3034 7.01662 11.2981 6.99946 11.2981C6.98231 11.2981 6.96558 11.3034 6.95155 11.3133C6.94511 11.3178 6.93858 11.3221 6.93194 11.3264L4.0724 13.1408C3.24554 13.7086 2.10834 12.9237 2.43512 11.9328L3.20066 8.6882C3.20488 8.67031 3.21008 8.65268 3.21624 8.63537C3.22082 8.6225 3.22121 8.6085 3.21734 8.5954C3.21348 8.58229 3.20556 8.57075 3.19473 8.56242C3.18452 8.55457 3.17461 8.54633 3.16504 8.53771L1.06533 6.64855C0.266588 6.00827 0.743067 4.74935 1.74363 4.74935H4.71271C4.72829 4.7494 4.74352 4.74472 4.75638 4.73593C4.76843 4.72769 4.77788 4.7162 4.78363 4.70282L5.98842 1.36549C5.99284 1.35324 5.99771 1.34125 6.003 1.32952Z'
+                  fill='url(#paint0_linear_364_77045)'></path>
+              </g>
+              <defs>
+                <linearGradient id='paint0_linear_364_77045' x1='0.663086' y1='6.97108' x2='13.3356' y2='6.97108'
+                                gradientUnits='userSpaceOnUse'>
+                  <stop stop-color='#F0C645'></stop>
+                  <stop offset='0.495' stop-color='#FAF283'></stop>
+                  <stop offset='1' stop-color='#EBC944'></stop>
+                </linearGradient>
+                <clipPath id='clip0_364_77045'>
+                  <rect width='14' height='14' fill='white'></rect>
+                </clipPath>
+              </defs>
+            </svg>
+            <p><span>8</span> /10</p>
+          </div>
+          <div class='button-like'>
+            <input id='like' type='checkbox' class='button-like--checkbox'>
+            <label for='like' class='button-like--label'>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class='review-hero__box description'>
+        <div class='top-info-bar__labels'>
+          <div class='top-info-bar__labels--item'>
+            <p class='top-info-bar__labels--item--name'>Author:</p>
+            <p class='top-info-bar__labels--item--value'>Grace Tennet</p>
+          </div>
+          <div class='top-info-bar__labels--item'>
+            <p class='top-info-bar__labels--item--name'>Reviewer:</p>
+            <p class='top-info-bar__labels--item--value'>Lucas Hurley</p>
+          </div>
+          <div class='top-info-bar__labels--item'>
+            <p class='top-info-bar__labels--item--name'>Update:</p>
+            <p class='top-info-bar__labels--item--value'>September 24, 2024</p>
+          </div>
+        </div>
+        <h1>Hot.Bet Casino</h1>
+        <ul class='marked'>
+          <li>Lucky Nugget Casino launched in 1998</li>
+          <li>970+ casino games</li>
+          <li>Offers Live Dealer & Mobile Games</li>
+          <li>Offers VIP Program & Dedicated VIP Manager</li>
+          <li>Players from Ukraine accepted</li>
+        </ul>
+      </div>
+      <div class='review-hero__box buttons'>
+        <div class='review-hero__bonus'>
+          <p>Welcome Bonus</p>
+          <p>NZ$1100 + 375 FS</p>
+        </div>
+        <div class='review-hero__buttons'>
+          <button type='button' class='button'>Play now</button>
+          <p class='review-hero__buttons--secure'>
+            <svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10' fill='none'>
+              <path
+                d='M8.54166 3.75H7.91666V2.91666C7.91666 1.3084 6.60828 0 5 0C3.39172 0 2.08334 1.3084 2.08334 2.91666V3.75H1.45834C1.34318 3.75 1.25 3.84318 1.25 3.95834V9.16668C1.25 9.62627 1.62373 10 2.08334 10H7.91668C8.37627 10 8.75 9.62627 8.75 9.16666V3.95834C8.75 3.84318 8.65682 3.75 8.54166 3.75ZM5.62379 8.10201C5.63029 8.1608 5.61139 8.2198 5.57191 8.26396C5.53244 8.30811 5.47588 8.33334 5.41668 8.33334H4.58334C4.52414 8.33334 4.46758 8.30811 4.42811 8.26396C4.38863 8.21982 4.36971 8.16082 4.37623 8.10201L4.50766 6.92018C4.29424 6.76494 4.16668 6.51937 4.16668 6.25C4.16668 5.79041 4.54041 5.41666 5.00002 5.41666C5.45963 5.41666 5.83336 5.79039 5.83336 6.25C5.83336 6.51937 5.7058 6.76494 5.49238 6.92018L5.62379 8.10201ZM6.66666 3.75H3.33334V2.91666C3.33334 1.99768 4.08102 1.25 5 1.25C5.91898 1.25 6.66666 1.99768 6.66666 2.91666V3.75Z'
+                fill='white' fill-opacity='0.44' />
+            </svg>
+            Secure Link
+          </p>
+        </div>
+        <div class='review-hero__deposit-methods'>
+          <p class='review-hero__deposit-methods--title'>Deposit Methods</p>
+          <ul class='review-hero__deposit-methods--list'>
+            <li>
+              <svg width='51' height='23'>
+                <use href='./img/icons/icons.svg#visa'></use>
+              </svg>
+            </li>
+            <li>
+              <svg width='51' height='23'>
+                <use href='./img/icons/icons.svg#mastercard'></use>
+              </svg>
+            </li>
+            <li>
+              <svg width='51' height='23'>
+                <use href='./img/icons/icons.svg#scrill'></use>
+              </svg>
+            </li>
+            <li>
+              <svg width='51' height='23'>
+                <use href='./img/icons/icons.svg#neteller'></use>
+              </svg>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+</main>
+<footer class="footer">
+
+    <div class='container footer__container'>
+      <div class='footer__social'>
+        <a href='#'>
+        <img class='footer__logo' src='./img/logotype.svg' alt='logotype' width='180' height='44' />
+        </a>
+        <ul class='footer__social--list'>
+          <li>
+            <a class='footer__social--list-item' href='#'>
+              <svg  width="16" height="16" >
+                <use href="./img/icons/icons.svg#facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a class='footer__social--list-item' href='#'>
+              <svg  width="16" height="16" >
+                <use href="./img/icons/icons.svg#youtube"></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a class='footer__social--list-item' href='#'>
+              <svg  width="16" height="16" >
+                <use href="./img/icons/icons.svg#twitter"></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a class='footer__social--list-item' href='#'>
+              <svg  width="16" height="16" >
+                <use href="./img/icons/icons.svg#pinterest"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <nav class='footer__nav'>
+        <!--        Navigation-->
+        <div class='footer__nav--category'>
+          <p class='footer__nav--category--name'>Navigation</p>
+          <a  class='footer__nav--category--link' href='#'>About Us</a>
+          <a class='footer__nav--category--link' href='#'>Contacts</a>
+          <a class='footer__nav--category--link' href='#'>Blog</a>
+          <a class='footer__nav--category--link' href='#'>How We Review</a>
+        </div>
+        <!--        Useful Pages-->
+        <div class='footer__nav--category'>
+          <p class='footer__nav--category--name'>Useful Pages</p>
+          <a  class='footer__nav--category--link' href='#'>T&C</a>
+          <a class='footer__nav--category--link' href='#'>Privacy Policy</a>
+          <a class='footer__nav--category--link' href='#'>Responsible Gambling</a>
+          <a class='footer__nav--category--link' href='#'>Advertiser Disclosure</a>
+        </div>
+        <!--        Best Casino Brands-->
+        <div class='footer__nav--category'>
+          <p class='footer__nav--category--name'>Best Casino Brands</p>
+          <a  class='footer__nav--category--link' href='#'>Jackpot City Casino</a>
+          <a class='footer__nav--category--link' href='#'>Jonny Jackpot</a>
+          <a class='footer__nav--category--link' href='#'>Casigo Casino</a>
+          <a class='footer__nav--category--link' href='#'>Ruby Fortune</a>
+          <a class='footer__nav--category--link' href='#'>All Casino Reviews</a>
+        </div>
+        <!--        Siser Casino Sites-->
+        <div class='footer__nav--category'>
+          <p class='footer__nav--category--name'>Siser Casino Sites</p>
+          <a  class='footer__nav--category--link' href='#'>Jackpot City Sister Sites</a>
+          <a class='footer__nav--category--link' href='#'>SpinCasino Sister Sites</a>
+          <a class='footer__nav--category--link' href='#'>Zodiac Casino Sister Sites</a>
+          <a class='footer__nav--category--link' href='#'>Boo Casino Sister Sites</a>
+        </div>
+        <!--        Best Casino bonuses-->
+        <div class='footer__nav--category long'>
+          <p class='footer__nav--category--name'>Best Casino bonuses</p>
+          <a  class='footer__nav--category--link' href='#'>Golden Tiger Casino $1 deposit</a>
+          <a class='footer__nav--category--link' href='#'>Mummys Gold Casino $1 deposit</a>
+          <a class='footer__nav--category--link' href='#'>Quatro Casino $1 deposit</a>
+          <a class='footer__nav--category--link' href='#'>Cosmo Casino $1 deposit</a>
+        </div>
+      </nav>
+    </div>
+  <div class='container footer__copyright'>
+    <p class='footer__copyright--text'>Copyright © 2024 arabicslots.com. All Rights Reserved.</p>
+    <div class='footer__copyright--icons'>
+      <svg  width="32" height="32" >
+        <use href="./img/icons/icons.svg#18plus"></use>
+      </svg>
+      <svg  width="74" height="32" >
+        <use href="./img/icons/icons.svg#dmca-seal"></use>
+      </svg>
+      <svg  width="28" height="32" >
+        <use href="./img/icons/icons.svg#gamcare"></use>
+      </svg>
+      <svg  width="51" height="32" >
+        <use href="./img/icons/icons.svg#gamblers-anonymous"></use>
+      </svg>
+      <svg  width="98" height="32" >
+        <use href="./img/icons/icons.svg#gambling-helpline"></use>
+      </svg>
+      <svg  width="212" height="32" >
+        <use href="./img/icons/icons.svg#gambleaware"></use>
+      </svg>
+    </div>
+  </div>
+</footer>
+
+<script src='js/index.min.js'></script>
+
+</body>
+</html>

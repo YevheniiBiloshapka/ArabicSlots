@@ -1,0 +1,245 @@
+.review-hero {
+  padding-top: 0 !important;
+  margin-bottom: 48px;
+}
+
+.review-hero__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  @include media-query(tab) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    //justify-content: space-between;
+    & .review-hero__box.img {
+      order: 1;
+      flex: 1 0 calc(50% - 24px);
+    }
+    & .review-hero__box.description {
+      order: 3;
+      flex: 1;
+    }
+    & .review-hero__box.buttons {
+      order: 2;
+      width: 100%;
+      flex: 1 0 calc(50% - 24px);
+
+    }
+  }
+  @include media-query(desk) {
+    & .review-hero__box.img {
+      order: 1;
+      flex: auto;
+      max-width: 320px;
+    }
+    & .review-hero__box.description {
+      order: 2;
+      flex: auto;
+      max-width: fit-content;
+    }
+    & .review-hero__box.buttons {
+      order: 3;
+      flex: auto;
+      max-width: 300px;
+    }
+  }
+}
+
+.review-hero__box {
+  display: flex;
+  flex-direction: column;
+
+  & img {
+    width: 100%;
+    height: 220px;
+    min-height: 220px;
+    object-position: center;
+    object-fit: cover;
+    border-radius: $br12;
+    overflow: hidden;
+    margin-bottom: 24px;
+  }
+
+  & h1 {
+    color: $cl-white-900;
+    @include font-title(h2-mob);
+    margin-bottom: 8px;
+  }
+
+  & ul {
+    font-weight: 400;
+    color: $cl-white-600;
+  }
+
+  & .top-info-bar__labels {
+    margin: 0 0 12px;
+
+
+    & p {
+      font-size: 14px;
+    }
+  }
+
+  @include media-query(tab) {
+    & img {
+      max-width: 100%;
+    }
+    & h1 {
+      @include font-title(h2);
+    }
+    & .top-info-bar__labels {
+      gap: 24px;
+    }
+    & .review-hero__deposit-methods {
+      order: 2;
+    }
+  }
+  @include media-query(desk) {
+    & img {
+      max-width: 320px;
+    }
+  }
+}
+
+.review-hero__info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  &--label, &--stars {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 8px;
+    width: fit-content;
+    border-radius: $br6;
+    outline: 1px solid transparent;
+    @include font-body(14-reg);
+    background-color: $cl-white-25;
+  }
+
+  &--stars {
+    background: none;
+
+    & p {
+      color: $cl-white-500;
+
+      & span {
+        font-weight: 700;
+        background: $gr-gold;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+  }
+
+  &--btn {
+    width: fit-content;
+    padding: 7px !important;
+
+    & .notLiked {
+      display: flex;
+    }
+
+    & .liked {
+      display: none;
+    }
+
+    &.isLiked {
+      & .notLiked {
+        display: none;
+      }
+
+      & .liked {
+        display: flex;
+      }
+    }
+  }
+}
+
+.review-hero__box {
+  & .review-hero__bonus, & .review-hero__buttons, & .review-hero__deposit-methods, {
+    display: flex;
+    flex-direction: column;
+
+    &:not(.review-hero__deposit-methods) {
+      margin-bottom: 24px;
+    }
+  }
+
+  & .review-hero__bonus {
+    border-radius: $br12;
+    background: rgba(84, 219, 120, 0.12);
+    padding: 12px;
+
+    & p:first-child {
+      @include font-body(14-reg);
+      color: $cl-white-900;
+      margin-bottom: 6px;
+    }
+
+    & p:last-child {
+      @include font-body(20-bold);
+      color: $cl-green-400;
+    }
+  }
+
+  & .review-hero__buttons {
+    gap: 4px;
+    align-items: center;
+
+    &--secure {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      color: $cl-white-400;
+      @include font(10px, 700, 120%);
+      text-align: center;
+    }
+  }
+
+  & .review-hero__deposit-methods {
+
+    &--title {
+      color: $cl-white-900;
+      @include font-body(16-bold);
+      margin-bottom: 12px;
+    }
+
+    &--list {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+
+      & li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: $br6;
+        background: $cl-white-25;
+        padding: 4px 6px;
+        width: 51px;
+        height: 34px;
+
+        & svg {
+          border-radius: $br4;
+          overflow: hidden;
+        }
+      }
+    }
+
+  }
+
+  @include media-query(tab) {
+    & .review-hero__deposit-methods {
+      margin-top: auto;
+    }
+  }
+  @include media-query(tab) {
+    & .review-hero__deposit-methods {
+      margin-top: 0;
+    }
+  }
+}

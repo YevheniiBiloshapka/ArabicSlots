@@ -112,7 +112,8 @@ body.modal-open {
   }
 }
 
-.section__header ul {
+
+.marked, .section__header ul,.contentSection ul {
   display: flex;
   flex-direction: column;
   gap: 12px;

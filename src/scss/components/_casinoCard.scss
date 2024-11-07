@@ -383,26 +383,15 @@
         }
       }
 
-      &.button {
-        padding: 7px;
+    }
 
-        & .liked {
-          display: none;
-        }
-
-        & .notLiked {
-          display: flex;
-        }
-
-        &.isLiked {
-          & .liked {
-            display: flex;
-          }
-
-          & .notLiked {
-            display: none;
-          }
-        }
+    & .button-like {
+      &--label {
+        $size: 33px;
+        width: $size;
+        height: $size;
+        min-height: $size;
+        min-width: $size;
       }
     }
   }
