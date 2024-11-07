@@ -57,3 +57,33 @@
     }
   }
 }
+.table-card-games__list--item--links {
+  margin-top: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+
+  & a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: $cl-blue-400;
+    @include font-body(14-reg);
+    text-decoration-line: underline;
+    white-space: normal;
+    word-break: break-all;
+  }
+
+  & a[href^="tel:"] {
+    text-decoration-line: none;
+    color: $cl-white-700;
+  }
+
+  @include media-query(tab) {
+
+    & a {
+      gap: 12px;
+      @include font-body(16-reg);
+    }
+  }
+}

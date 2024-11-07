@@ -188,3 +188,27 @@
     }
   }
 }
+
+.how-it-work.two-column {
+  @include media-query(tab) {
+
+    & .how-it-work__list--item {
+      flex: 1 0 calc(50% - 24px);
+    }
+  }
+}
+
+
+.how-it-work.three-column {
+  @include media-query(tab) {
+
+    & .how-it-work__list--item {
+      flex: 1 0 calc(50% - 24px);
+    }
+  }
+  @include media-query(desk) {
+    & .how-it-work__list--item {
+      flex: 1 0 calc(33.3333% - 24px);
+    }
+  }
+}

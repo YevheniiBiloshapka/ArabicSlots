@@ -483,7 +483,6 @@ body {
   font-style: normal;
   color: #FFFFFF;
   background-color: #111;
-  overflow-x: hidden;
   margin: 0;
   position: relative;
 }
@@ -573,6 +572,41 @@ body.modal-open {
   }
   .section__header p:not(:last-child) {
     margin-bottom: 12px;
+  }
+}
+
+.section__header ul {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  color: #FFFFFF;
+  font-size: 16px;
+  line-height: 1.4;
+  font-weight: 500;
+}
+.section__header ul li {
+  position: relative;
+  display: inline-flex;
+}
+.section__header ul li::before {
+  margin-top: 3px;
+  margin-right: 8px;
+  display: inline-block;
+  width: 17px;
+  height: 17px;
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='17' viewBox='0 0 17 17' fill='none'%3E%3Ccircle cx='8.0332' cy='8.04779' r='8' fill='%231A9F3E'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M12.1016 4.61309C12.5259 4.96665 12.5832 5.59722 12.2297 6.0215L8.42015 10.5929C8.24028 10.8088 7.97791 10.939 7.69724 10.9517C7.41657 10.9644 7.14349 10.8585 6.94482 10.6598L4.6591 8.37413C4.26858 7.98361 4.26858 7.35044 4.6591 6.95992C5.04963 6.5694 5.68279 6.5694 6.07332 6.95992L7.58473 8.47133L10.6932 4.74113C11.0468 4.31685 11.6774 4.25953 12.1016 4.61309Z' fill='%23ffffff'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.section__header ul:not(:last-child) {
+  margin-bottom: 16px;
+}
+@media (min-width: 1280px) {
+  .section__header ul {
+    color: #FFFFFF;
+    font-size: 18px;
+    line-height: 1.4;
+    font-weight: 500;
   }
 }
 
@@ -1563,6 +1597,71 @@ table:not(.our-team__table, .benefits-number--table) td a:hover, table:not(.our-
 }
 .rating label:hover ~ label::after {
   scale: 1;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+.breadcrumb li {
+  display: inline-flex;
+  gap: 4px;
+  width: fit-content;
+}
+.breadcrumb li:not(:last-child)::after {
+  margin-top: 1px;
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12' fill='none'%3E%3Cpath d='M8.51552 6.26552L4.76552 10.0155C4.73068 10.0504 4.68932 10.078 4.64379 10.0969C4.59827 10.1157 4.54948 10.1254 4.50021 10.1254C4.45094 10.1254 4.40214 10.1157 4.35662 10.0969C4.3111 10.078 4.26974 10.0504 4.2349 10.0155C4.20005 9.98068 4.17242 9.93932 4.15356 9.8938C4.1347 9.84827 4.125 9.79948 4.125 9.75021C4.125 9.70094 4.1347 9.65215 4.15356 9.60662C4.17242 9.5611 4.20005 9.51974 4.2349 9.4849L7.72005 6.00021L4.2349 2.51552C4.16453 2.44516 4.125 2.34972 4.125 2.25021C4.125 2.1507 4.16453 2.05526 4.2349 1.9849C4.30526 1.91453 4.4007 1.875 4.50021 1.875C4.59972 1.875 4.69516 1.91453 4.76552 1.9849L8.51552 5.7349C8.55039 5.76972 8.57805 5.81108 8.59692 5.85661C8.61579 5.90213 8.6255 5.95093 8.6255 6.00021C8.6255 6.04949 8.61579 6.09829 8.59692 6.14381C8.57805 6.18934 8.55039 6.23069 8.51552 6.26552Z' fill='%23A5A4A4'/%3E%3C/svg%3E");
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+}
+.breadcrumb a, .breadcrumb p {
+  padding-bottom: 2px;
+  gap: 4px;
+  border-bottom: 1px solid transparent;
+  white-space: nowrap;
+  color: #FFFFFF;
+  font-size: 14px;
+  line-height: 1.4;
+  font-weight: 500;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.breadcrumb a:hover:not(p), .breadcrumb p:hover:not(p) {
+  border-bottom: 1px solid #FFFFFF;
+}
+.breadcrumb p:last-child {
+  white-space: normal;
+  display: -webkit-box;
+  width: fit-content;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-line-clamp: 1;
+}
+.breadcrumb p {
+  color: rgba(255, 255, 255, 0.44);
+  white-space: normal;
+  display: -webkit-box;
+  width: fit-content;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-line-clamp: 1;
+}
+@media (min-width: 744px) {
+  .breadcrumb {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+}
+@media (min-width: 1280px) {
+  .breadcrumb {
+    flex-wrap: nowrap;
+  }
 }
 
 .casino-card__number-list {
@@ -3090,6 +3189,24 @@ table:not(.our-team__table, .benefits-number--table) td a:hover, table:not(.our-
   }
 }
 
+img.casino-criteria__list--item--icon {
+  object-fit: cover;
+  object-position: center;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.04);
+  padding: 0;
+  width: 60px;
+  height: 40px;
+  min-height: 40px;
+}
+@media (min-width: 744px) {
+  img.casino-criteria__list--item--icon {
+    width: 82px;
+    height: 64px;
+    min-height: 64px;
+  }
+}
+
 .casino-criteria__list--item--icon {
   display: flex;
   align-items: center;
@@ -3128,6 +3245,37 @@ table:not(.our-team__table, .benefits-number--table) td a:hover, table:not(.our-
     width: 32px;
     height: 32px;
     min-width: 32px;
+  }
+}
+
+.casino-criteria__list--item--links {
+  margin-top: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+}
+.casino-criteria__list--item--links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #32DBDE;
+  font-size: 14px;
+  line-height: 1.4;
+  font-weight: 400;
+  text-decoration-line: underline;
+  white-space: normal;
+  word-break: break-all;
+}
+.casino-criteria__list--item--links a[href^="tel:"] {
+  text-decoration-line: none;
+  color: rgba(255, 255, 255, 0.8);
+}
+@media (min-width: 744px) {
+  .casino-criteria__list--item--links a {
+    gap: 12px;
+    font-size: 16px;
+    line-height: 1.4;
+    font-weight: 400;
   }
 }
 
@@ -3440,6 +3588,23 @@ table:not(.our-team__table, .benefits-number--table) td a:hover, table:not(.our-
   }
 }
 
+@media (min-width: 744px) {
+  .how-it-work.two-column .how-it-work__list--item {
+    flex: 1 0 calc(50% - 24px);
+  }
+}
+
+@media (min-width: 744px) {
+  .how-it-work.three-column .how-it-work__list--item {
+    flex: 1 0 calc(50% - 24px);
+  }
+}
+@media (min-width: 1280px) {
+  .how-it-work.three-column .how-it-work__list--item {
+    flex: 1 0 calc(33.3333% - 24px);
+  }
+}
+
 .bad-casinos__list {
   display: flex;
   flex-direction: column;
@@ -3620,6 +3785,37 @@ table:not(.our-team__table, .benefits-number--table) td a:hover, table:not(.our-
   }
   .table-card-games .contentSection {
     margin-bottom: 48px;
+  }
+}
+
+.table-card-games__list--item--links {
+  margin-top: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+}
+.table-card-games__list--item--links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #32DBDE;
+  font-size: 14px;
+  line-height: 1.4;
+  font-weight: 400;
+  text-decoration-line: underline;
+  white-space: normal;
+  word-break: break-all;
+}
+.table-card-games__list--item--links a[href^="tel:"] {
+  text-decoration-line: none;
+  color: rgba(255, 255, 255, 0.8);
+}
+@media (min-width: 744px) {
+  .table-card-games__list--item--links a {
+    gap: 12px;
+    font-size: 16px;
+    line-height: 1.4;
+    font-weight: 400;
   }
 }
 
