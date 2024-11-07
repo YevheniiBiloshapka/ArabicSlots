@@ -588,20 +588,33 @@ body.modal-open {
 }
 .marked li, .marked li.positive, .marked.positive li, .section__header ul li, .section__header ul li.positive, .section__header ul.positive li, .contentSection ul li, .contentSection ul li.positive, .contentSection ul.positive li {
   position: relative;
-  display: inline-flex;
+  padding-left: 18px;
+}
+.marked li:has(span), .marked li.positive:has(span), .marked.positive li:has(span), .section__header ul li:has(span), .section__header ul li.positive:has(span), .section__header ul.positive li:has(span), .contentSection ul li:has(span), .contentSection ul li.positive:has(span), .contentSection ul.positive li:has(span) {
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.7);
+}
+.marked li span, .marked li p span, .marked li.positive span, .marked li.positive p span, .marked.positive li span, .marked.positive li p span, .section__header ul li span, .section__header ul li p span, .section__header ul li.positive span, .section__header ul li.positive p span, .section__header ul.positive li span, .section__header ul.positive li p span, .contentSection ul li span, .contentSection ul li p span, .contentSection ul li.positive span, .contentSection ul li.positive p span, .contentSection ul.positive li span, .contentSection ul.positive li p span {
+  font-weight: 500;
+  color: #FFFFFF;
+}
+.marked li p, .marked li.positive p, .marked.positive li p, .section__header ul li p, .section__header ul li.positive p, .section__header ul.positive li p, .contentSection ul li p, .contentSection ul li.positive p, .contentSection ul.positive li p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 16px;
+  line-height: 1.4;
+  font-weight: 400;
 }
 .marked li::before, .marked li.positive::before, .marked.positive li::before, .section__header ul li::before, .section__header ul li.positive::before, .section__header ul.positive li::before, .contentSection ul li::before, .contentSection ul li.positive::before, .contentSection ul.positive li::before {
-  margin-top: 1px;
-  margin-right: 8px;
+  position: absolute;
+  top: 0;
+  left: 0;
   display: inline-block;
-  width: 17px;
-  height: 17px;
-  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='17' viewBox='0 0 17 17' fill='none'%3E%3Ccircle cx='8.0332' cy='8.04779' r='8' fill='%231A9F3E'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M12.1016 4.61309C12.5259 4.96665 12.5832 5.59722 12.2297 6.0215L8.42015 10.5929C8.24028 10.8088 7.97791 10.939 7.69724 10.9517C7.41657 10.9644 7.14349 10.8585 6.94482 10.6598L4.6591 8.37413C4.26858 7.98361 4.26858 7.35044 4.6591 6.95992C5.04963 6.5694 5.68279 6.5694 6.07332 6.95992L7.58473 8.47133L10.6932 4.74113C11.0468 4.31685 11.6774 4.25953 12.1016 4.61309Z' fill='%23ffffff'/%3E%3C/svg%3E");
-  background-size: contain;
-  background-repeat: no-repeat;
+  width: 13px;
+  height: 13px;
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='12' viewBox='0 0 13 12' fill='none'%3E%3Cpath d='M12.5725 6C12.5725 9.31371 9.88622 12 6.57251 12C3.2588 12 0.57251 9.31371 0.57251 6C0.57251 2.68629 3.2588 0 6.57251 0C9.88622 0 12.5725 2.68629 12.5725 6Z' fill='%231A9F3E'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M9.78412 3.2318C10.2084 3.58537 10.2657 4.21593 9.91216 4.64021L7.05502 8.06878C6.87515 8.28462 6.61278 8.41484 6.33211 8.42757C6.05144 8.4403 5.77836 8.33437 5.57969 8.1357L3.8654 6.42142C3.47488 6.03089 3.47488 5.39773 3.8654 5.0072C4.25593 4.61668 4.88909 4.61668 5.27962 5.0072L6.2196 5.94719L8.37572 3.35984C8.72928 2.93556 9.35985 2.87824 9.78412 3.2318Z' fill='white'/%3E%3C/svg%3E");
 }
 .marked.negative li::before, .marked li.negative::before, .section__header ul.negative li::before, .section__header ul li.negative::before, .contentSection ul.negative li::before, .contentSection ul li.negative::before {
-  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='16' viewBox='0 0 17 16' fill='none'%3E%3Cg clip-path='url(%23clip0_455_53632)'%3E%3Cpath d='M8.875 0C4.46362 0 0.875 3.58862 0.875 8C0.875 12.4114 4.46362 16 8.875 16C13.2864 16 16.875 12.4114 16.875 8C16.875 3.58862 13.2864 0 8.875 0ZM12.375 8.66663H5.375C5.00696 8.66663 4.70837 8.36804 4.70837 8C4.70837 7.63196 5.00696 7.33337 5.375 7.33337H12.375C12.743 7.33337 13.0416 7.63196 13.0416 8C13.0416 8.36804 12.743 8.66663 12.375 8.66663Z' fill='%23F67D7D'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_455_53632'%3E%3Crect width='16' height='16' fill='white' transform='translate(0.875)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12' fill='none'%3E%3Cg clip-path='url(%23clip0_603_53811)'%3E%3Cpath d='M6 0C2.69147 0 0 2.69147 0 6C0 9.30853 2.69147 12 6 12C9.30853 12 12 9.30853 12 6C12 2.69147 9.30853 0 6 0ZM8.625 6.49997H3.375C3.09897 6.49997 2.87503 6.27603 2.87503 6C2.87503 5.72397 3.09897 5.50003 3.375 5.50003H8.625C8.90103 5.50003 9.12497 5.72397 9.12497 6C9.12497 6.27603 8.90103 6.49997 8.625 6.49997Z' fill='%23F67D7D'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_603_53811'%3E%3Crect width='12' height='12' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
 }
 .marked:not(:last-child), .section__header ul:not(:last-child), .contentSection ul:not(:last-child) {
   margin-bottom: 16px;
@@ -612,6 +625,18 @@ body.modal-open {
     font-size: 18px;
     line-height: 1.4;
     font-weight: 500;
+  }
+  .marked li, .marked li.positive, .marked.positive li, .section__header ul li, .section__header ul li.positive, .section__header ul.positive li, .contentSection ul li, .contentSection ul li.positive, .contentSection ul.positive li {
+    padding-left: 28px;
+  }
+  .marked li:before, .marked li.positive:before, .marked.positive li:before, .section__header ul li:before, .section__header ul li.positive:before, .section__header ul.positive li:before, .contentSection ul li:before, .contentSection ul li.positive:before, .contentSection ul.positive li:before {
+    top: 1px;
+    width: 17px;
+    height: 17px;
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='17' viewBox='0 0 17 17' fill='none'%3E%3Ccircle cx='8.0332' cy='8.04779' r='8' fill='%231A9F3E'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M12.1016 4.61309C12.5259 4.96665 12.5832 5.59722 12.2297 6.0215L8.42015 10.5929C8.24028 10.8088 7.97791 10.939 7.69724 10.9517C7.41657 10.9644 7.14349 10.8585 6.94482 10.6598L4.6591 8.37413C4.26858 7.98361 4.26858 7.35044 4.6591 6.95992C5.04963 6.5694 5.68279 6.5694 6.07332 6.95992L7.58473 8.47133L10.6932 4.74113C11.0468 4.31685 11.6774 4.25953 12.1016 4.61309Z' fill='%23ffffff'/%3E%3C/svg%3E");
+  }
+  .marked.negative li::before, .marked li.negative::before, .section__header ul.negative li::before, .section__header ul li.negative::before, .contentSection ul.negative li::before, .contentSection ul li.negative::before {
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='16' viewBox='0 0 17 16' fill='none'%3E%3Cg clip-path='url(%23clip0_455_53632)'%3E%3Cpath d='M8.875 0C4.46362 0 0.875 3.58862 0.875 8C0.875 12.4114 4.46362 16 8.875 16C13.2864 16 16.875 12.4114 16.875 8C16.875 3.58862 13.2864 0 8.875 0ZM12.375 8.66663H5.375C5.00696 8.66663 4.70837 8.36804 4.70837 8C4.70837 7.63196 5.00696 7.33337 5.375 7.33337H12.375C12.743 7.33337 13.0416 7.63196 13.0416 8C13.0416 8.36804 12.743 8.66663 12.375 8.66663Z' fill='%23F67D7D'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_455_53632'%3E%3Crect width='16' height='16' fill='white' transform='translate(0.875)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
   }
 }
 
@@ -1901,8 +1926,14 @@ table:not(.our-team__table, .benefits-number--table) td a:not(.button):hover, ta
 .casino-best-card__list--item .casino-best-card__list--item--box .casino-best-card__list--item__benefits.advantages {
   background: rgba(137, 236, 163, 0.12);
 }
+.casino-best-card__list--item .casino-best-card__list--item--box .casino-best-card__list--item__benefits.advantages .casino-best-card__list--item__benefits--title {
+  color: #89ECA3;
+}
 .casino-best-card__list--item .casino-best-card__list--item--box .casino-best-card__list--item__benefits.disadvantages {
   background: rgba(246, 125, 125, 0.12);
+}
+.casino-best-card__list--item .casino-best-card__list--item--box .casino-best-card__list--item__benefits.disadvantages .casino-best-card__list--item__benefits--title {
+  color: #F67D7D;
 }
 @media (min-width: 744px) {
   .casino-best-card__list--item .casino-best-card__list--item--box {
@@ -4640,13 +4671,18 @@ img.casino-criteria__list--item--icon {
   }
 }
 
+.review__grid {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
 .review__grid--first {
-  background-color: red;
+  background-color: #191919;
 }
 @media (min-width: 1280px) {
   .review__grid {
     position: relative;
-    display: flex;
+    flex-direction: row;
     gap: 24px;
   }
   .review__grid--first {
@@ -4658,14 +4694,201 @@ img.casino-criteria__list--item--icon {
     top: 100px;
     flex: 1;
     max-width: 440px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding-bottom: 15px;
     height: fit-content;
   }
 }
 
-.top-casinos-list {
+.review__grid--second--box {
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  height: 300px;
-  background-color: gold;
+  padding: 24px;
+  border-radius: 12px;
+  background: #191919;
+}
+.review__grid--second--box--title {
+  color: #FFFFFF;
+  font-size: 24px;
+  line-height: 1.4;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.review__top-casinos-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  counter-reset: custom-counter;
+}
+.review__top-casinos-list li:nth-child(1) .review__top-casinos-list--item .review__top-casinos-list--item__box:before {
+  background: linear-gradient(90deg, #FDB80A 0%, #B1870A 100%);
+}
+.review__top-casinos-list li:nth-child(1) .review__top-casinos-list--item::after {
+  background: linear-gradient(90deg, #FDB80A 0%, #B1870A 100%);
+}
+.review__top-casinos-list li:nth-child(2) .review__top-casinos-list--item .review__top-casinos-list--item__box:before {
+  background: linear-gradient(90deg, #495860 0%, #39464C 100%);
+}
+.review__top-casinos-list li:nth-child(2) .review__top-casinos-list--item::after {
+  background: linear-gradient(90deg, #495860 0%, #39464C 100%);
+}
+.review__top-casinos-list li:nth-child(3) .review__top-casinos-list--item .review__top-casinos-list--item__box:before {
+  background: linear-gradient(90deg, #7A5630 0%, #694A29 100%);
+}
+.review__top-casinos-list li:nth-child(3) .review__top-casinos-list--item::after {
+  background: linear-gradient(90deg, #7A5630 0%, #694A29 100%);
+}
+
+.review__top-casinos-list--item {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  z-index: 0;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.04);
+}
+.review__top-casinos-list--item__box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  counter-increment: custom-counter;
+}
+.review__top-casinos-list--item__box::before {
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  z-index: 3;
+  content: counter(custom-counter);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 30px;
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 14px;
+  line-height: 1.4;
+  font-weight: 700;
+  background: #414141;
+}
+.review__top-casinos-list--item__img {
+  width: 100px;
+  height: 68px;
+  border-radius: 8px;
+  object-fit: cover;
+  object-position: center;
+}
+.review__top-casinos-list--item__info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.review__top-casinos-list--item__info--title {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-line-clamp: 1;
+  color: #FFFFFF;
+  font-size: 18px;
+  line-height: 1.4;
+  font-weight: 700;
+}
+.review__top-casinos-list--item__info--label {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  justify-content: center;
+  padding: 4px 6px;
+  color: #54DB78;
+  font-size: 14px;
+  line-height: 1.4;
+  font-weight: 700;
+  border-radius: 6px;
+  background: rgba(84, 219, 120, 0.12);
+}
+.review__top-casinos-list--item--btn {
+  display: flex;
+  width: 48px;
+  height: fit-content;
+  padding: 8px 16px;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #F0C645 0%, #FAF283 49.5%, #EBC944 100%);
+}
+.review__top-casinos-list--item::after {
+  position: absolute;
+  top: 18px;
+  left: -6px;
+  z-index: -1;
+  content: "";
+  border-radius: 12px 0 0 12px;
+  background: #414141;
+  width: 6px;
+  height: 56px;
+}
+
+.review__bonus {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.review__bonus--img {
+  width: 148px;
+  height: 107px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 12px;
+}
+.review__bonus__info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.review__bonus__info--name {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-line-clamp: 1;
+  color: #FFFFFF;
+  font-size: 24px;
+  line-height: 1.4;
+  font-weight: 700;
+}
+.review__bonus__info--box {
+  display: flex;
+  flex-direction: column;
+  padding: 8px 12px;
+  gap: 6px;
+  border-radius: 12px;
+  background: rgba(84, 219, 120, 0.12);
+}
+.review__bonus__info--box p:first-child {
+  color: #FFFFFF;
+  font-size: 14px;
+  line-height: 1.4;
+  font-weight: 400;
+}
+.review__bonus__info--box p:last-child {
+  color: #54DB78;
+  font-size: 18px;
+  line-height: 1.4;
+  font-weight: 700;
 }
 
 .header {

@@ -182,10 +182,18 @@
 
     &.advantages {
       background: rgba(137, 236, 163, 0.12);
+
+      & .casino-best-card__list--item__benefits--title {
+        color: $cl-green-300;
+      }
     }
 
     &.disadvantages {
       background: rgba(246, 125, 125, 0.12);
+
+      & .casino-best-card__list--item__benefits--title {
+        color: $cl-red-400;
+      }
     }
   }
 
